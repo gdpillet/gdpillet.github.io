@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: North Star UX Strategy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Learn more about Gastón Pillet, a Senior Product Designer specializing in B2B/SaaS platforms with a dual-edge approach combining technical viability and enterprise strategy.">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">Gastón Pillet</a></div>
+            <a href="index.html" class="back-link">← Back</a>
+        </header>
+
+        <section class="case-study-hero">
+            <!-- Update this tag for each case study in the series -->
+            <div class="case-study-tag">CASE STUDY 02</div>
+            <h1>North Star UX Strategy: Scaling Fintech Loan Conversion</h1>
+            <p class="tagline">Redefining a personal loan application flow to increase qualified conversion, reduce drop-off, and elevate the customer experience at a major fintech platform.</p>
+            <img src="../gdpillet.github.io/img/loan-process.png" alt="North Star UX Strategy">
+        </section>
+
+        <div class="metadata">
+            <div class="meta-item">
+                <h4>Role</h4>
+                <p>Sr. Product Designer</p>
+            </div>
+            <div class="meta-item">
+                <h4>Timeline</h4>
+                <p>4-6 months</p>
+            </div>
+            <div class="meta-item">
+                <h4>Cross-Functional Team</h4>
+                <p>8-10 stakeholders</p>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>The Problem</h2>
+            <p>Despite a best-in-class UI and brand, our personal loan application funnel was underperforming:</p>
+            <ul>
+                <li><strong>High Drop-off Rates:</strong> Many users started applications but did not complete them, particularly during verification steps.</li>
+                <li><strong>Unclear Expectations:</strong> Users did not know how long the process would take or what information they'd need to provide, leading to frustration.</li>
+                <li><strong>Low Trust Signal:</strong> The application didn't clearly communicate security, data privacy, or approval likelihood, creating hesitation.</li>
+            </ul>
+            <p>Our stakeholders (product, leadership, and customer support) agreed: <strong>we needed a North Star UX strategy to reimagine our loan flow</strong>, balancing higher conversion with better user experience.</p>
+
+            <div class="impact-stats">
+                <h3>Business Impact</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">18%</div>
+                        <div class="stat-label">increase in qualified loan application conversion rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">-22%</div>
+                        <div class="stat-label">reduction in application drop-off during identity verification and final review steps</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+35%</div>
+                        <div class="stat-label">user satisfaction scores (post-apply NPS) improved significantly</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+12%</div>
+                        <div class="stat-label">increase in total completed loan applications submitted</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Role & Context</h2>
+            <p>I was brought into this initiative as the <strong>Senior Product Designer</strong> responsible for reimagining our entire loan application UX. This was the most high-priority and highest-visibility project for our Product and Business teams.</p>
+            
+            <p><strong>What I Owned:</strong> The full design lifecycle from research to high-fidelity UI, prototyping, and design QA. I was responsible for presenting design recommendations to leadership and running stakeholder design reviews.</p>
+            
+            <p><strong>Collaborators:</strong> I worked closely with our Head of Product (who owned the north-star vision), a Product Manager (for requirements and metrics), a Customer Insights Analyst (for quantitative and qualitative data), Engineering leads (for feasibility), Compliance and Legal (for regulatory constraints), and Customer Support (for feedback on pain points).</p>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="content-section">
+            <h2>Design Process & Solution</h2>
+            
+            <h3>Phase 1: Strategic Foundation (Metrics + UX)</h3>
+            <p>I started by aligning with stakeholders on core metrics. We agreed our north star metric was <strong>"Qualified Conversion Rate"</strong>, the % of users who successfully completed a loan application after starting one.</p>
+            
+            <p>Secondary metrics included:</p>
+            <ul>
+                <li>Drop-off rate at each stage (initiation, identity verification, final review)</li>
+                <li>Time-to-completion (average time users spent completing the flow)</li>
+                <li>Support ticket volume related to application confusion</li>
+            </ul>
+            
+            <p><strong>Initial Research:</strong> I collaborated with our Customer Insights team to analyze existing behavioral data (Mixpanel, session recordings). I identified major drop-off points: identity verification (users confused by document upload process) and final loan review (unclear next steps after submission).</p>
+
+            <h3>Phase 2: Strategic Competitive Benchmarking (+ UX)</h3>
+            <p>I conducted a competitive analysis of top fintech loan applications (SoFi, LendingClub, Upstart, Marcus by Goldman Sachs). I documented:</p>
+            <ul>
+                <li>How competitors structured their flows (single-page vs. multi-step)</li>
+                <li>How they set user expectations (progress indicators, time estimates)</li>
+                <li>How they built trust (security badges, privacy statements, approval likelihood)</li>
+                <li>How they handled document verification (automation vs. manual upload)</li>
+            </ul>
+            
+            <p><strong>Key Insight:</strong> The best-performing fintechs used <strong>progressive disclosure</strong>, they only asked for information when it was contextually necessary, reducing cognitive overload. They also emphasized <strong>transparency</strong> (showing exactly what would happen next).</p>
+
+            <h3>Phase 3: Design / Ideation (Core UX Workflows + UI)</h3>
+            <p>Based on research insights, I designed 3 major improvements to our loan application flow:</p>
+            
+            <h4>1. Streamlined Multi-Step Flow with Clear Expectations</h4>
+            <ul>
+                <li>Redesigned the application as a clean, linear multi-step experience with a persistent progress bar showing % completion and estimated time remaining.</li>
+                <li>Introduced contextual help tooltips and inline validation (real-time feedback on fields like income, employment status).</li>
+                <li>Added micro-copy that explained why we needed each piece of information ("We ask for your employment info to verify income and ensure you qualify").</li>
+            </ul>
+
+            <h4>2. Improved Identity Verification & Document Upload</h4>
+            <ul>
+                <li>Simplified document upload by integrating an automated ID scanning tool (using a third-party API).</li>
+                <li>Designed a drag-and-drop upload interface with clear visual feedback (file preview, upload success/error states).</li>
+                <li>Added reassurance messaging around data security ("Your documents are encrypted and never shared").</li>
+            </ul>
+
+            <h4>3. Post-Submission Clarity & Next Steps</h4>
+            <ul>
+                <li>Redesigned the confirmation screen to clearly show: (1) What happens next, (2) When users would hear back, (3) How to track their application status.</li>
+                <li>Introduced email and SMS notifications at key milestones (application received, under review, approved/denied).</li>
+                <li>Created a "Track Your Application" dashboard where users could log back in and see real-time status updates.</li>
+            </ul>
+
+            <h3>Phase 4: Prototyping & User Testing</h3>
+            <p>I created high-fidelity Figma prototypes and conducted moderated usability testing with 12 participants (mix of existing customers and prospects). Key findings:</p>
+            <ul>
+                <li><strong>Progress indicators</strong> significantly reduced anxiety ("I know exactly where I am and how much is left").</li>
+                <li><strong>Inline validation</strong> prevented errors and reduced form abandonment.</li>
+                <li><strong>Document upload clarity</strong> was a major improvement ("I finally understand what I need to submit").</li>
+                <li><strong>Post-submission tracking</strong> was highly valued ("I don't feel left in the dark anymore").</li>
+            </ul>
+            
+            <p>Based on feedback, I refined the design to add more prominent CTAs and clearer error messaging.</p>
+
+            <h3>Phase 5: Handoff to Engineering & A/B Test Measurement</h3>
+            <p>I worked closely with engineering to ensure pixel-perfect implementation and smooth handoff. We launched the new flow as an A/B test (50/50 split between old and new experience).</p>
+            
+            <p><strong>Results after 2 months:</strong></p>
+            <ul>
+                <li>18% increase in qualified conversion rate</li>
+                <li>22% reduction in drop-off during verification</li>
+                <li>35% improvement in post-application NPS</li>
+                <li>12% increase in total applications submitted</li>
+            </ul>
+            
+            <p>The new flow became the default experience and was adopted company-wide.</p>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="content-section">
+            <h2>Trade-offs & Constraints</h2>
+            
+            <h3>Balancing Simplicity with Legal/Compliance Requirements</h3>
+            <p><strong>Challenge:</strong> Legal and Compliance required extensive disclosures and consent forms throughout the application. This added friction and increased cognitive load.</p>
+            
+            <p><strong>Trade-off:</strong> I worked with Legal to identify which disclosures were legally required vs. "nice to have." We moved non-critical disclosures to collapsible sections and summarized key points in plain language.</p>
+            
+            <p><strong>Resolution:</strong> We created a "progressive disclosure" model where users could expand sections if they wanted more details, but the core flow remained clean and scannable. This satisfied Legal while improving UX.</p>
+
+            <h3>Technical Limitations with ID Verification</h3>
+            <p><strong>Challenge:</strong> Our initial plan was to integrate a fully automated ID verification API (like Persona or Onfido). However, engineering flagged significant integration challenges and cost concerns.</p>
+            
+            <p><strong>Trade-off:</strong> We had to compromise on a semi-automated solution: users could still upload documents manually, but we added smarter validation (e.g., detecting blurry images, flagging missing info).</p>
+            
+            <p><strong>Resolution:</strong> This reduced some of the UX smoothness I envisioned, but we still saw a 22% reduction in verification drop-off. We documented the fully automated solution as a future enhancement.</p>
+
+            <h3>Adoption Resistance from Internal Teams</h3>
+            <p><strong>Challenge:</strong> Customer Support was initially resistant to the new flow, worried it would create confusion and increase support tickets during the transition.</p>
+            
+            <p><strong>Approach:</strong> I organized training sessions and created detailed documentation (including annotated screenshots and FAQs) to help Support understand the new experience and how to guide customers through it.</p>
+            
+            <p><strong>Resolution:</strong> Post-launch, support tickets actually decreased by 15% because the new flow was more intuitive. Support became advocates for the redesign.</p>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="content-section">
+            <h2>Collaboration & Conflict Resolution</h2>
+            
+            <h3>Aligning Sales & Engineering Priorities</h3>
+            <p><strong>Challenge:</strong> Sales wanted aggressive conversion optimization (e.g., removing friction points, simplifying the application to the bare minimum). Engineering wanted to minimize scope and ship quickly. These priorities were at odds.</p>
+            
+            <p><strong>Approach:</strong> I facilitated a prioritization workshop where we mapped out the user journey and identified which improvements would have the highest impact with the lowest engineering lift. We used a "high-impact, low-effort" matrix to align on priorities.</p>
+            
+            <p><strong>Resolution:</strong> We agreed on a phased rollout: Phase 1 focused on quick wins (progress indicators, inline validation), Phase 2 on more complex features (automated document upload, application tracking dashboard). This satisfied both teams.</p>
+
+            <h3>Convincing a Skeptical Head of Product</h3>
+            <p><strong>Challenge:</strong> Our Head of Product was initially skeptical about investing in a "North Star" redesign, worried it would delay other priorities and might not deliver ROI.</p>
+            
+            <p><strong>Approach:</strong> I presented a data-driven case: competitive benchmarks showing how competitors with better loan UX had higher conversion rates, user research highlighting major pain points, and a projected ROI model based on expected conversion lift.</p>
+            
+            <p><strong>Resolution:</strong> The Head of Product became a strong advocate for the project and helped secure executive buy-in. The 18% conversion lift validated the investment.</p>
+
+            <h3>Dealing with Mid-Project Requirement Changes</h3>
+            <p><strong>Challenge:</strong> Midway through design, Compliance introduced new regulatory requirements (additional disclosures for certain loan types). This threatened to derail our simplified flow.</p>
+            
+            <p><strong>Approach:</strong> I quickly iterated on the design to accommodate the new requirements without sacrificing UX. I proposed conditional logic: only showing additional disclosures for loan types that required them, rather than adding them universally.</p>
+            
+            <p><strong>Resolution:</strong> Engineering implemented the conditional logic, and we maintained the clean experience for most users while staying compliant.</p>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="impact-section">
+            <h2>Impact & Reflection</h2>
+            
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>18% Conversion Lift</h4>
+                    <p>The new loan application flow drove an 18% increase in qualified conversion, translating to millions in additional loan volume.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>-22% Drop-off Reduction</h4>
+                    <p>Identity verification and final review steps saw a 22% reduction in abandonment, significantly improving completion rates.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>+35% NPS Improvement</h4>
+                    <p>Post-application user satisfaction scores improved by 35%, with users praising the clarity and ease of the new flow.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>-15% Support Tickets</h4>
+                    <p>Customer support tickets related to loan applications decreased by 15%, reducing operational burden.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p>"This redesign transformed our loan application experience. Our customers tell us it's now the easiest loan application they've ever completed, and the business impact speaks for itself." ,  Head of Product</p>
+            </div>
+
+            <h3>Learnings</h3>
+            <p><strong>Trust and transparency are conversion drivers.</strong> Users need to feel confident in the process. Clear expectations, progress indicators, and security messaging were as important as visual polish.</p>
+            
+            <p><strong>Progressive disclosure reduces cognitive overload.</strong> By only asking for information when it was contextually relevant, we kept users engaged and reduced abandonment.</p>
+            
+            <p><strong>Data-driven design builds stakeholder trust.</strong> Presenting competitive benchmarks, user research, and projected ROI helped secure buy-in from skeptical stakeholders and ensured alignment throughout the project.</p>
+            
+            <p><strong>Cross-functional collaboration is critical.</strong> Working closely with Legal, Compliance, Engineering, and Support ensured the final design was both user-friendly and technically/legally feasible. Facilitating alignment workshops and maintaining open communication prevented conflicts and kept the project on track.</p>
+            
+            <p><strong>Iteration and testing are non-negotiable.</strong> User testing revealed critical insights that shaped the final design. Without validating assumptions with real users, we would have missed key opportunities to improve the experience.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">← Home</a>
+            <a href="benchmarking-data-platform.html">Next Case Study →</a>
+        </div>
+        <p>© 2025 Gastón Pillet. All rights reserved.</p>
+    </footer>
+</body>
+</html>

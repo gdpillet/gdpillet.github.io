@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Transforming Complex Benchmarking Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Learn more about Gastón Pillet, a Senior Product Designer specializing in B2B/SaaS platforms with a dual-edge approach combining technical viability and enterprise strategy.">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">Gastón Pillet</a></div>
+            <a href="index.html" class="back-link">← Back</a>
+        </header>
+
+        <section class="case-study-hero">
+            <div class="case-study-tag">CASE STUDY 03</div>
+            <h1>Transforming Complex Benchmarking Data into Actionable Insights</h1>
+            <p class="tagline">For an AI-first SaaS product for significant enterprise customer bases, I led the end-to-end design of a benchmarking analytics platform that transforms massive data into clear, actionable business intelligence for leadership teams.</p>
+            <img src="../gdpillet.github.io/img/quantum-leap.png" alt="Benchmarking Data Insights">
+        </section>
+
+        <div class="metadata">
+            <div class="meta-item">
+                <h4>Role</h4>
+                <p>Senior Product Designer</p>
+            </div>
+            <div class="meta-item">
+                <h4>Timeline</h4>
+                <p>3 months</p>
+            </div>
+            <div class="meta-item">
+                <h4>Impact</h4>
+                <p>Enterprise-scale platform</p>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>The Problem</h2>
+            <p>Large organizations were collecting massive datasets across thousands of employees and locations, but leaders couldn't effectively use this data to make critical decisions. The key challenges were:</p>
+            <ul>
+                <li><strong>No comparative context:</strong> Organizations had rich internal metrics but no way to understand if they were performing well relative to industry peers and best-in-class performers.</li>
+                <li><strong>Information overload:</strong> Raw datasets were overwhelming. Leaders needed aggregated, synthesized insights that highlighted what truly mattered, not endless dashboards of numbers.</li>
+                <li><strong>Unclear action paths:</strong> Even when trends were visible, it wasn't clear what steps to take. Data needed to translate directly into strategic recommendations.</li>
+            </ul>
+            <p>The lack of actionable benchmarking was limiting platform value for our most valuable enterprise customers. Leadership viewed this as a critical product gap that, if solved, could differentiate us in a competitive market.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Role & Context</h2>
+            <p>I joined as the <strong>Senior Product Designer</strong> for this strategic initiative. This was a greenfield project, no benchmarking functionality existed, and stakeholders had varied visions for what it should be.</p>
+            
+            <p><strong>My Responsibilities:</strong> Leading all design activities from discovery through post-launch iteration. This included user research, competitive analysis, information architecture, interaction design, visual design, prototyping, and ongoing design QA after launch.</p>
+            
+            <p><strong>Collaborators:</strong> I worked with a cross-functional team including a Product Manager (business strategy, roadmap, metrics), Data Science & Analytics team (algorithms, data modeling, benchmarking methodology), Engineering team (4 engineers, 2 frontend, 2 backend), Customer Success (customer insights, feedback loops), and Executive Sponsors (C-suite leaders who championed the initiative and approved scope/investment).</p>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="content-section">
+            <h2>Design Process & Solution</h2>
+            
+            <h3>Phase 1: Discovery & User Research</h3>
+            <p>I started by deeply understanding the problem space through multiple research methods:</p>
+            
+            <h4>User Interviews</h4>
+            <p>Conducted 18 in-depth interviews with enterprise customers spanning different roles (C-suite executives, operations leaders, data analysts, HR leaders). Key questions focused on: How do you currently use performance data? What decisions require benchmarking? What's frustrating about your current tools?</p>
+            
+            <h4>Key Insights:</h4>
+            <ul>
+                <li>Executives needed <strong>high-level summaries</strong> for board presentations and strategic planning, while analysts needed <strong>granular drill-downs</strong> for operational optimization. These were fundamentally different use cases requiring different interface designs.</li>
+                <li>Trust in benchmarking required <strong>transparency about methodology</strong>. Users were skeptical of "black box" comparisons where they couldn't verify peer selection criteria or data sources.</li>
+                <li>The most valuable insights came from <strong>peer comparisons</strong> (similar industry, company size, geography) rather than generic population averages. "Comparing ourselves to companies like us" was the repeated phrase.</li>
+            </ul>
+
+            <h4>Competitive Analysis</h4>
+            <p>I analyzed benchmarking features in adjacent platforms including business intelligence tools (Tableau, Power BI), industry-specific platforms, and HR analytics systems. I documented strengths, weaknesses, and opportunities for differentiation.</p>
+            
+            <p><strong>Key Takeaways:</strong></p>
+            <ul>
+                <li>Most tools focused on <strong>data visualization</strong> but lacked <strong>interpretation and recommendations</strong>. Charts alone weren't enough, users needed "so what" insights.</li>
+                <li>Successful tools used <strong>progressive disclosure</strong>: simple overviews by default, with optional complexity for power users.</li>
+                <li>The best experiences had <strong>interactive filtering</strong> that let users explore different peer groups and see how rankings changed dynamically.</li>
+            </ul>
+
+            <h3>Phase 2: Information Architecture & Workflow Design</h3>
+            <p>Based on research insights, I structured the benchmarking experience around three core user journeys:</p>
+            
+            <h4>Journey 1: Executive Summary View</h4>
+            <p>Designed for C-suite and board-level reporting. This view surfaced top-line metrics, year-over-year trends, and peer rankings in a scannable, presentation-ready format. Users could export reports with one click.</p>
+            
+            <h4>Journey 2: Operational Deep-Dive</h4>
+            <p>Designed for analysts and operations managers. This view provided granular metric breakdowns, historical trend analysis, cohort filtering (by department, location, time period), and downloadable datasets for further analysis.</p>
+            
+            <h4>Journey 3: Insights & Recommendations</h4>
+            <p>An AI-powered insights engine that automatically surfaced the most important findings (e.g., "Your employee retention dropped 12% below peer average in Q3") and linked them to recommended actions or help resources. This was the "so what" layer users needed most.</p>
+
+            <h3>Phase 3: Data Visualization & Interaction Design</h3>
+            <p>I designed the core UI components that made complex data comprehensible:</p>
+            
+            <h4>Peer Group Selection Interface</h4>
+            <p>An intuitive filtering system where users selected comparison criteria (industry, company size, geography, growth stage) and saw real-time updates on peer group composition (e.g., "47 companies match your filters: 65% North America, 80% in your industry"). This transparency built trust.</p>
+            
+            <h4>Performance Scorecards</h4>
+            <p>Card-based layouts showing key metrics with clear visual indicators: color-coded performance levels (above average/average/below average), percentile rankings, and trend arrows. Users could scan their performance at a glance.</p>
+            
+            <h4>Comparative Charts</h4>
+            <p>Distribution curves showing where the user's organization fell within the peer group, time-series comparisons showing performance over time vs. peer averages, and drill-down capability to explore underlying data.</p>
+            
+            <h4>Automated Insights Panel</h4>
+            <p>A prioritized list of the most important findings, ranked by business impact. Each insight included: the finding (e.g., "Churn rate 2x peer average"), context (why it matters), and recommended actions (what to do about it).</p>
+
+            <h3>Phase 4: Prototyping & Usability Testing</h3>
+            <p>I created high-fidelity Figma prototypes and conducted moderated usability tests with 12 participants (mix of executives and analysts from current customers).</p>
+            
+            <p><strong>Key Findings:</strong></p>
+            <ul>
+                <li><strong>Dual-view approach was highly effective.</strong> Executives loved the summary view for its simplicity; analysts loved the deep-dive for its flexibility. Having both prevented compromise and satisfied both segments.</li>
+                <li><strong>Peer group transparency was critical for trust.</strong> Users initially questioned the validity of comparisons until they could see the peer composition. Once visible, skepticism disappeared.</li>
+                <li><strong>Insights panel was the highest-value feature.</strong> Users consistently said "this is what I actually need", the automated interpretation saved them hours of analysis time.</li>
+                <li><strong>Users wanted to save and share views.</strong> The ability to bookmark specific peer groups, export reports, and share insights with teams was a must-have for collaboration.</li>
+            </ul>
+            
+            <p>I iterated on the design based on this feedback, adding saved views, export functionality, and enhanced insight explanations.</p>
+
+            <h3>Phase 5: Design System Consistency & Handoff</h3>
+            <p>I worked closely with our Design Systems team to ensure all components aligned with our existing patterns. Where gaps existed (e.g., data visualization styles, comparison charts), I designed new reusable components and contributed them to the design system for future use across products.</p>
+            
+            <p>I created comprehensive design specifications including interaction states, error handling, loading states, edge cases (empty states, outlier data), and accessibility considerations. Weekly design review sessions with engineering ensured accurate implementation.</p>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="content-section">
+            <h2>Trade-offs & Constraints</h2>
+            
+            <h3>Data Privacy vs. Workflow</h3>
+            <p><strong>Challenge:</strong> Our platform had strict data privacy requirements, we couldn't expose raw data from individual organizations in the peer group, only aggregated benchmarks. However, users wanted to understand "who" they were being compared to for context and credibility.</p>
+            
+            <p><strong>Trade-off:</strong> I designed a transparency layer that showed anonymized metadata about the peer group (e.g., "Your peer group includes 47 companies: 60% in North America, average company size 500-1000 employees, 75% high-growth companies") without revealing individual customer identities. This built trust while maintaining privacy.</p>
+            
+            <p><strong>Resolution:</strong> Usability testing validated this approach, users felt confident in the comparisons once they could see peer group composition, and privacy concerns from Legal were satisfied.</p>
+
+            <h3>MVP Scope vs. Rich Features</h3>
+            <p><strong>Challenge:</strong> During discovery, users requested advanced features like custom benchmarking formulas, multi-metric correlation analysis, and predictive forecasting. However, these would have extended the timeline by 6+ months and required significant data science investment.</p>
+            
+            <p><strong>Trade-off:</strong> I collaborated with Product to define a phased roadmap. MVP focused on core functionality that addressed 80% of user needs: peer group selection, performance scorecards, and basic insights. Advanced features were documented as future enhancements, and I designed the system architecture to accommodate expansion without requiring major redesigns.</p>
+            
+            <p><strong>Resolution:</strong> We launched MVP on schedule. Post-launch feedback validated that core features satisfied the highest-priority needs, and demand for advanced features was lower than initially expected. We deprioritized some of the "nice to have" features indefinitely based on actual usage data.</p>
+
+            <h3>Customization vs. Complexity</h3>
+            <p><strong>Challenge:</strong> Power users (typically data analysts) wanted extensive customization: custom peer groups, custom metrics, custom dashboards, and white-label reporting. However, this level of flexibility would overwhelm most users and significantly increase both design and engineering complexity.</p>
+            
+            <p><strong>Trade-off:</strong> I proposed a progressive disclosure approach: the default experience was simple and guided (suitable for 85% of users), but advanced users could unlock customization through an "Advanced Mode" toggle. This kept the primary interface clean while satisfying power user requirements.</p>
+            
+            <p><strong>Resolution:</strong> Post-launch analytics showed that 87% of users stayed in default mode, validating the decision to optimize for simplicity. The 13% who used Advanced Mode reported high satisfaction, and feature adoption among that segment was strong.</p>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="content-section">
+            <h2>Collaboration & Conflict Resolution</h2>
+            
+            <h3>Bridging Technical & Business Stakeholders</h3>
+            <p><strong>Challenge:</strong> Data Science wanted to showcase sophisticated algorithms that could detect subtle patterns and anomalies in benchmarking data. Product wanted simple, easy-to-understand metrics that customers could immediately act on. These goals were at odds, sophisticated algorithms created "black box" insights that were hard to explain or trust.</p>
+            
+            <p><strong>Approach:</strong> I facilitated a series of collaborative workshops where Data Science and Product co-designed the insights engine. I advocated for a hybrid approach: use sophisticated algorithms behind the scenes to detect important patterns, but surface insights in simple, human-readable language with clear explanations of the underlying logic. I mocked up an "explain this insight" feature that would drill into the methodology on demand.</p>
+            
+            <p><strong>Resolution:</strong> The hybrid approach satisfied both teams. Data Science could use their advanced models, and Product got the simplicity they needed for customer adoption. The "explain" feature became a differentiator, it built trust by demystifying the analysis without overwhelming users who just wanted the bottom line.</p>
+
+            <h3>Advocating for User-Centered Design</h3>
+            <p><strong>Challenge:</strong> Midway through the project, Engineering proposed a significant scope reduction: eliminating customizable peer groups and instead using a single "smart default" peer group for all customers. This would save 4-6 weeks of development time but limit user control.</p>
+            
+            <p><strong>Approach:</strong> I presented compelling evidence from user research showing that peer group customization was the most valued feature, users didn't trust benchmarks unless they could verify they were being compared to relevant peers. I also demonstrated that removing this feature would undermine the core value proposition and likely result in low adoption, making the entire project a waste of investment.</p>
+            
+            <p><strong>Resolution:</strong> Engineering agreed to keep peer group customization in MVP. To hit the timeline, we jointly identified lower-priority features to descope instead (custom metric formulas, white-label reports), which research had shown were less critical for initial launch. This was a collaborative negotiation where data-driven insights helped align priorities.</p>
+
+            <h3>Navigating Conflicting Customer Feedback</h3>
+            <p><strong>Challenge:</strong> During user testing, we encountered opposing feedback: some customers wanted highly detailed benchmarks with dozens of metrics and granular drill-downs, while others wanted an ultra-simplified view with only 3-5 top-line metrics. These needs seemed mutually exclusive.</p>
+            
+            <p><strong>Approach:</strong> I analyzed the feedback more deeply and discovered a clear pattern: detailed users were typically data analysts (who needed granularity for operational optimization), while simplified users were executives (who needed high-level summaries for strategic decision-making). Rather than compromise with a middle-ground solution that would satisfy no one, I proposed designing two complementary views optimized for each segment: Executive Summary View and Operational Deep-Dive View.</p>
+            
+            <p><strong>Resolution:</strong> Both user segments were highly satisfied with the dual-view approach. Post-launch analytics confirmed the segmentation: executives primarily used Summary View (92% of the time), while analysts spent 78% of their time in Deep-Dive View. This validated that designing for specific user needs rather than trying to create a one-size-fits-all solution was the right approach.</p>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="impact-section">
+            <h2>Impact & Reflection</h2>
+            
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>80% Enterprise Adoption</h4>
+                    <p>Within 3 months of launch, 80% of eligible enterprise customers had activated benchmarking features, far exceeding the 50% adoption target.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>40% Churn Reduction</h4>
+                    <p>Customers actively using benchmarking had 40% lower churn rates vs. non-users, demonstrating significant impact on product stickiness and retention.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Design System Contribution</h4>
+                    <p>Created 8 reusable components (comparison charts, insight cards, peer filters) now used across 5+ product areas, accelerating future development velocity.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>+35 NPS Point Lift</h4>
+                    <p>NPS among customers using benchmarking increased by 35 points (from 42 to 77), with qualitative feedback praising ease of use and actionable insights.</p>
+                </div>
+            </div>
+
+            <h3>Learnings</h3>
+            <p><strong>Context matters more than data.</strong> Users don't just want numbers, they want to understand what those numbers mean and what actions to take. Designing for interpretation and recommendations (the "so what" layer) was more valuable than simply visualizing more data.</p>
+            
+            <p><strong>Trust requires transparency.</strong> Users were skeptical of benchmarking until they could see how peer groups were defined and understand the methodology. Investing in transparency features (peer group composition, insight explanations, methodology documentation) was critical for adoption and trust.</p>
+            
+            <p><strong>Progressive disclosure prevents overwhelming complexity.</strong> By designing a simple default experience with optional advanced features, we served both novice and power users without compromising either experience. Trying to merge these needs would have resulted in a mediocre solution for everyone.</p>
+            
+            <p><strong>User segmentation enables better solutions.</strong> Recognizing that executives and analysts had fundamentally different needs, and designing distinct experiences for each, delivered far more value than a single compromise interface. It's okay to design multiple paths when user needs genuinely diverge.</p>
+            
+            <p><strong>Cross-functional collaboration requires translation.</strong> Technical teams, business stakeholders, and users often speak different languages (technical accuracy vs. business value vs. ease of use). As a designer, I found my most important role was often translating between these perspectives and finding solutions that honored everyone's core requirements without compromising the user experience.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">← Home</a>
+            <a href="byok-case-study.html">Next Case Study →</a>
+        </div>
+        <p>© 2025 Gastón Pillet. All rights reserved.</p>
+    </footer>
+</body>
+</html>

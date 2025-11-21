@@ -5,384 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Specializing in B2B/SaaS Orchestration</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Reset & Base Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F8F9FB; /* Light grayish-blue background from image */
-            color: #2E3A52; /* Dark text color */
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-size: 16px; /* Base font size */
-        }
-
-        .container {
-            max-width: 1100px; /* Adjusted max-width to match image perception */
-            margin: 0 auto;
-            padding: 0 24px; /* Some padding for smaller screens */
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 0; /* Adjusted padding */
-            font-size: 0.9em;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 600;
-            color: #2E3A52;
-            margin-right: 40px; /* Space between logo and subtitle */
-        }
-
-        .header-subtitle {
-            color: #5D6C8A; /* Grayish-blue */
-            font-weight: 500;
-        }
-
-        nav a {
-            color: #5D6C8A;
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover {
-            color: #007BFF; /* A subtle hover effect */
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: left;
-            padding: 60px 0 80px; /* Adjusted padding */
-        }
-
-        .hero h1 {
-            font-size: 3.2em; /* Large heading */
-            color: #2E3A52;
-            margin: 0 0 20px;
-            line-height: 1.15;
-            max-width: 780px; /* Max-width for the heading text */
-            font-weight: 700;
-        }
-
-        .hero .description {
-            font-size: 1.1em; /* Slightly larger description */
-            color: #5D6C8A;
-            max-width: 800px; /* Max-width for description text */
-            margin-bottom: 40px;
-        }
-
-        /* Featured Work Section */
-        .featured-work {
-            padding-top: 40px;
-            padding-bottom: 80px;
-        }
-
-        .section-heading {
-            font-size: 1.6em; /* Adjusted heading size */
-            font-weight: 600;
-            color: #2E3A52;
-            margin-bottom: 8px;
-        }
-
-        .section-subtext {
-            font-size: 1em;
-            color: #5D6C8A;
-            max-width: 700px;
-            margin-bottom: 40px;
-        }
-
-        .main-project-card {
-            background-color: #ffffff;
-            border-radius: 12px; /* Slightly more rounded corners */
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); /* Softer shadow */
-            margin-bottom: 40px;
-        }
-
-        .main-project-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            min-height: 400px; /* Ensure image has some height */
-            object-fit: cover; /* Cover ensures image fills space */
-        }
-
-        .project-content {
-            padding: 30px;
-        }
-
-        .project-content h3 {
-            font-size: 1.8em;
-            color: #2E3A52;
-            margin: 0 0 10px;
-            font-weight: 700;
-        }
-
-        .project-content p.meta {
-            color: #5D6C8A;
-            font-size: 0.9em;
-            margin-bottom: 15px;
-        }
-
-        .project-content p.description {
-            color: #5D6C8A;
-            margin-bottom: 20px;
-        }
-
-        /* Grid Projects */
-        .grid-projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px; /* Gap between cards */
-            margin-bottom: 60px;
-        }
-
-        .grid-project-card {
-            background-color: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .grid-project-card img {
-            width: 100%;
-            height: 200px; /* Fixed height for small images */
-            object-fit: cover;
-            display: block;
-        }
-
-        .grid-project-card .project-content {
-            padding: 25px;
-            flex-grow: 1;
-        }
-
-        .grid-project-card h4 {
-            font-size: 1.4em; /* Slightly larger for grid titles */
-            color: #2E3A52;
-            margin: 0 0 8px;
-            font-weight: 600;
-        }
-
-        .grid-project-card p.meta {
-            font-size: 0.9em;
-            margin-bottom: 10px;
-            color: #5D6C8A;
-        }
-        .grid-project-card p.description {
-            font-size: 1em;
-            color: #5D6C8A;
-        }
-
-        /* Call to action */
-        .view-all-work {
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 80px;
-        }
-
-        .view-all-work a {
-            display: inline-block;
-            background-color: #E6F3FF; /* Light blue from image */
-            color: #007BFF; /* Blue text */
-            padding: 14px 30px; /* Larger padding for button */
-            border-radius: 8px; /* More rounded button */
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
-
-        .view-all-work a:hover {
-            background-color: #CCECFF;
-        }
-
-        /* Info Boxes */
-        .info-boxes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            padding-bottom: 80px;
-        }
-
-        .info-box {
-            background-color: #ffffff;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-        }
-
-        .info-box h4 {
-            font-size: 1.3em;
-            color: #2E3A52;
-            margin: 0 0 10px;
-            font-weight: 600;
-        }
-
-        .info-box p {
-            font-size: 1em;
-            color: #5D6C8A;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #E8F0FE; /* Light blueish-gray for footer */
-            padding: 40px 0;
-            color: #5D6C8A;
-            font-size: 0.9em;
-        }
-
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            text-align: left; /* Align text left */
-        }
-
-        footer .footer-left, footer .footer-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* Align text left */
-        }
-
-        footer .copyright {
-            margin: 0;
-            font-weight: 600;
-            color: #2E3A52; /* Darker for the logo/name */
-            margin-bottom: 5px;
-        }
-        footer .footer-tagline {
-            margin: 0;
-        }
-
-        footer .social-icons {
-            display: flex;
-            gap: 20px; /* Space between icons */
-        }
-
-        footer .social-icons a {
-            color: #5D6C8A;
-            font-size: 1.2em; /* Slightly larger icons */
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        footer .social-icons a:hover {
-            color: #007BFF;
-        }
-
-        .footer-bottom-text {
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.85em;
-            color: #7B8CA9;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 900px) {
-            .hero h1 {
-                font-size: 2.8em;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding-bottom: 20px;
-            }
-            .header-left {
-                margin-bottom: 20px;
-            }
-            nav {
-                width: 100%;
-                display: flex;
-                justify-content: space-around;
-            }
-            nav a {
-                margin: 0 10px;
-            }
-            .hero {
-                padding: 40px 0 60px;
-            }
-            .hero h1 {
-                font-size: 2.2em;
-            }
-            .hero .description {
-                font-size: 1em;
-            }
-            .grid-projects, .info-boxes {
-                grid-template-columns: 1fr;
-            }
-            footer .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            footer .footer-left {
-                margin-bottom: 20px;
-            }
-            footer .social-icons {
-                margin-top: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav a {
-                margin: 5px 0;
-            }
-            .container {
-                padding: 0 15px;
-            }
-            .logo {
-                margin-right: 20px;
-            }
-            .hero h1 {
-                font-size: 1.8em;
-            }
-            .section-heading {
-                font-size: 1.4em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Learn more about Gastón Pillet, a Senior Product Designer specializing in B2B/SaaS platforms with a dual-edge approach combining technical viability and enterprise strategy.">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-left">
                 <div class="logo">Gastón Pillet</div>
-                <div class="header-subtitle">Senior Product Designer</div>
+                <div class="header-subtitle">Product Designer</div>
             </div>
             <nav>
                 <a href="#work">Work</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="about.html">About</a>
+                <a href="mailto:gdpillet@gmail.com">Contact</a>
             </nav>
         </header>
 
         <section class="hero">
             <h1>Specializing in B2B/SaaS orchestration and data platform solutions</h1>
             <p class="description">
-                I leverage deep data insights and technology to develop systems that drive transformation. I build rich, user-friendly interfaces, robust design systems, and processes that empower product teams to solve the most complex challenges.
+                I leverage deep data insights and technology to develop systems that drive transformation. <br />I build rich, user-friendly interfaces, robust design systems, and processes that empower product teams to solve the most complex challenges.
             </p>
         </section>
 
@@ -391,39 +34,44 @@
             <p class="section-subtext">
                 Evolving end-to-end product design projects, from strategy through delivery, I collaborate with product and design teams to create meaningful experiences.
             </p>
-
-            <div class="main-project-card">
-                <img src="https://via.placeholder.com/1050x500/1D2C42/F8F9FB?text=Main+Project+Image+-+BYOK+Implementation" alt="BYOK Implementation project">
-                <div class="project-content">
-                    <h3>BYOK Implementation</h3>
-                    <p class="meta">Product Design</p>
-                    <p class="description">
-                        I crafted a comprehensive end-to-end solution enabling users to seamlessly interact with a UI, securely migrating data into a customer-owned key management system.
-                    </p>
+            <a href="byok-case-study.html" style="text-decoration: none; color: inherit;">
+                <div class="main-project-card">
+                    <img src="../gdpillet.github.io/img/user-journey.png" alt="BYOK Implementation project">
+                    <div class="project-content">
+                        <h3>Bring Your Own Key project Implementation</h3>
+                        <p class="meta">Product Design</p>
+                        <p class="description">
+                            I crafted a comprehensive end-to-end solution enabling users to seamlessly interact with a UI, securely migrating data into a customer-owned key management system.
+                        </p>
+                    </div>
                 </div>
-            </div>
-
+            </a>
+            
             <div class="grid-projects">
                 <div class="grid-project-card">
-                    <img src="https://via.placeholder.com/500x300/F0F2F5/2E3A52?text=North+Star+UX+Strategy" alt="North Star UX Strategy">
-                    <div class="project-content">
-                        <h4>North Star UX Strategy</h4>
-                        <p class="meta">Product Design</p>
-                        <p class="description">
-                            Aligning product strategy and roadmap with user experience, I created a unified vision for product direction.
-                        </p>
-                    </div>
+                    <a href="north-star-case-study.html" style="text-decoration: none; color: inherit;">
+                        <img src="../gdpillet.github.io/img/loan-process.png" alt="North Star UX Strategy">
+                        <div class="project-content">
+                            <h4>North Star UX Strategy</h4>
+                            <p class="meta">Product Design</p>
+                            <p class="description">
+                                Aligning product strategy and roadmap with user experience, I created a unified vision for product direction.
+                            </p>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="grid-project-card">
-                    <img src="https://via.placeholder.com/500x300/F0F2F5/2E3A52?text=Benchmarking+Data+Platform" alt="Benchmarking Data Platform">
-                    <div class="project-content">
-                        <h4>Benchmarking Data Platform</h4>
-                        <p class="meta">Product Design</p>
-                        <p class="description">
-                            I enhanced the data benchmarking platform, utilizing data to inform product strategy.
-                        </p>
-                    </div>
+                    <a href="benchmarking-data-platform.html" style="text-decoration: none; color: inherit;">
+                        <img src="../gdpillet.github.io/img/quantum-leap.png" alt="Benchmarking Data Platform">
+                        <div class="project-content">
+                            <h4>Benchmarking Data Platform</h4>
+                            <p class="meta">Product Design</p>
+                            <p class="description">
+                                I enhanced the data benchmarking platform, utilizing data to inform product strategy.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -460,13 +108,13 @@
                 <p class="copyright">Gastón Pillet</p>
                 <p class="footer-tagline">B2B Product Designer specializing in SaaS orchestration.</p>
             </div>
-            <div class="social-icons">
+<!--             <div class="social-icons">
                 <a href="#">Fb</a>
                 <a href="#">Tw</a>
                 <a href="#">In</a>
-            </div>
+            </div> -->
         </div>
-        <p class="footer-bottom-text container">© 2023 Gastón Pillet. All rights reserved.</p>
+        <p class="footer-bottom-text container">© 2025 Gastón Pillet. All rights reserved.</p>
     </footer>
 </body>
 </html>
