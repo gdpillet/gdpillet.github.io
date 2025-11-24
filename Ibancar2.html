@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibancar - Conversion Funnel Redesign</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Case study on redesigning the loan application experience for Ibancar, focusing on improving conversion rates through user-centered design and simplification of complex financial processes.">
+</head>
+<body>
+    <!-- Header con navegación sticky y responsive -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="index.html" class="logo">Gastón Pillet</a>
+                    <div class="header-subtitle">Product Designer</div>
+                </div>
+                
+                <!-- Botón hamburguesa para móvil -->
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <!-- Navegación -->
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link active">Work</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="container">
+            <h1>Redesigning the Loan Application Experience</h1>
+            <p>How I increased conversion rates by simplifying a complex financial onboarding flow for Ibancar</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Role</strong>
+                    <span>Lead UX/UI Designer</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Timeline</strong>
+                    <span>10 months</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Team</strong>
+                    <span>3 Developers, Marketing, CEO</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Tools</strong>
+                    <span>Figma, Microsoft Clarity, Google Analytics, Useberry, Jira</span>
+                </div>
+            </div>
+
+            <h2>About Ibancar</h2>
+            <p>Ibancar is a car-secured loan platform serving clients across Spain. The company connects investors with borrowers, lending capital with interest while minimizing risk through rigorous verification of both applicants and vehicles offered as collateral.</p>
+        </div>
+
+        <div class="section">
+            <h2>The Problem</h2>
+            <div class="problem-box">
+                <h3>Business Challenge</h3>
+                <p><strong>The existing loan application funnel was hemorrhaging potential customers.</strong> Despite healthy traffic numbers, conversion rates from leads to approved loans remained below expectations. The company needed to understand why qualified applicants were abandoning the process.</p>
+                
+                <p style="margin-top: 20px;"><strong>Key Issues Identified:</strong></p>
+                <ul class="bullet-list">
+                    <li>High drop-off rates at specific funnel stages</li>
+                    <li>Users couldn't complete applications in one session</li>
+                    <li>Complex documentation requirements overwhelming applicants</li>
+                    <li>Mobile users (75-80% of traffic) struggling with desktop-first design</li>
+                </ul>
+            </div>
+
+            <div class="stat-box">
+                <span class="number">75-80%</span>
+                <span class="label">of traffic came from mobile devices</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Research & Discovery</h2>
+            <p>I conducted comprehensive user research combining qualitative and quantitative methods to understand where and why users were dropping off.</p>
+
+            <div class="process-step">
+                <h4>1. Empathize Phase</h4>
+                <p>Conducted contextual inquiry, user observation, and created detailed personas based on real user data.</p>
+            </div>
+
+            <h3>Key Insights from Research</h3>
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4>5-Second Test Failure</h4>
+                    <p>The landing page failed the 5-second test—users couldn't understand what we offered within critical first seconds.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Low Tech Literacy</h4>
+                    <p>Our target users weren't tech-savvy and struggled with complex digital processes.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Mobile-First Necessity</h4>
+                    <p>With 75-80% mobile traffic, the desktop-centric design was failing the majority of users.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Broken User Journey</h4>
+                    <p>A critical bifurcation forced users to leave the form, check email, and access a separate platform—causing massive drop-off.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Documentation Overload</h4>
+                    <p>Requiring 11 separate documents was overwhelming users and creating friction in the upload process.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Technical Jargon Barrier</h4>
+                    <p>Requirements like "technical file of the vehicle" confused users, leading to errors and abandonment.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <h4>2. Define Phase</h4>
+                <p>Analyzed data through funnel analysis, information synthesis, and clusterization to identify pain points and opportunities.</p>
+            </div>
+
+            <div class="highlight">
+                <h3>Core Problem Statement</h3>
+                <p><strong>How might we simplify a complex financial application process for mobile-first, less tech-savvy users while maintaining necessary security and compliance requirements?</strong></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>The Design Process</h2>
+
+            <div class="process-step">
+                <h4>3. Ideate & Prototype</h4>
+                <p>Conducted brainstorming sessions with stakeholders, created wireframes, and developed functional mockups in Figma.</p>
+            </div>
+
+            <h3>Solution 1: Streamlined Form Flow</h3>
+            <p><strong>The Challenge:</strong> Users had to navigate 4 separate form screens, leaving the website to check email mid-process.</p>
+            <p><strong>The Solution:</strong> Reduced the form from 4 screens to just 2, eliminating the email verification step and keeping users within a single, continuous flow.</p>
+
+            <div class="mockup-container">
+                <div class="mockup-placeholder">
+                    Before: 4-screen fragmented flow with email interruption
+                </div>
+                <div class="mockup-placeholder">
+                    After: 2-screen streamlined flow
+                </div>
+            </div>
+
+            <h3>Solution 2: Intelligent Documentation Consolidation</h3>
+            <p><strong>The Challenge:</strong> Requesting 11 separate documents was overwhelming users and causing abandonment.</p>
+            <p><strong>The Solution:</strong> Used card sorting methodology to reorganize documents into 5 logical groups, combining related items (especially photos) to simplify the upload process.</p>
+
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4>From 11 to 5</h4>
+                    <p>Reduced cognitive load by 55% by grouping related documents</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Photo Grouping</h4>
+                    <p>Combined vehicle photos into single uploads for efficiency</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Progressive Disclosure</h4>
+                    <p>Only showed required fields at each step</p>
+                </div>
+            </div>
+
+            <h3>Solution 3: Error Prevention Through Education</h3>
+            <p><strong>The Challenge:</strong> The "technical file" requirement confused users—it's a traffic institution document that's not commonly understood.</p>
+            <p><strong>The Solution:</strong> Applied Nielsen's error prevention heuristic by creating detailed, platform-specific guidance:</p>
+            <ul class="bullet-list">
+                <li>Step-by-step visual instructions for Android and iPhone</li>
+                <li>Explained how to use native camera functions for high-resolution scanning</li>
+                <li>Placed explanatory images using proximity principle—right next to the document description</li>
+            </ul>
+
+            <h3>Solution 4: WhatsApp Integration</h3>
+            <p><strong>The Insight:</strong> Competitor analysis revealed mobile-first companies were leveraging familiar communication channels.</p>
+            <p><strong>The Solution:</strong> Integrated WhatsApp for document uploads and real-time support:</p>
+            <ul class="bullet-list">
+                <li>Added CTA button with WhatsApp link for instant call center connection</li>
+                <li>Integrated with CRM for seamless handoff to support team</li>
+                <li>Offered alternative: direct upload or scheduled callback option</li>
+            </ul>
+
+            <div class="process-step">
+                <h4>4. Test & Iterate</h4>
+                <p>Conducted usability testing, heuristic evaluation, and analyzed heatmaps to validate solutions and identify edge cases.</p>
+            </div>
+
+            <h3>Critical Discovery During Testing</h3>
+            <div class="highlight">
+                <p><strong>Edge Case Identified:</strong> The vehicle detection API (license plate recognition) could fail, leaving users stuck.</p>
+                <p><strong>Solution:</strong> Added fallback screen with manual vehicle identification form, ensuring users could always complete the process even when automation failed.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Results & Impact</h2>
+            <p>The redesigned funnel exceeded growth objectives and significantly improved the user experience:</p>
+
+            <div class="stat-box" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: #fff; padding: 50px; margin: 40px 0;">
+                <span class="number" style="color: #fff; font-size: 4rem;">3.5%</span>
+                <span class="label" style="color: #fff; font-size: 1.4rem; font-weight: 600;">Loan Origination Growth (12 months)</span>
+                <p style="color:#FFFFFF;margin-top: 20px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.95;">
+                    Successfully scaled loan origination by 3.5% over the past 12 months while maintaining credit losses at an exceptionally low 2.2% of revenue—achieving profitability 6 months ahead of plan.
+                </p>
+            </div>
+
+            <div class="results">
+                <div class="result-card">
+                    <div class="metric">2.2%</div>
+                    <p>Credit losses kept at exceptionally low rate of revenue</p>
+                </div>
+                <div class="result-card">
+                    <div class="metric">6 Months Early</div>
+                    <p>Achieved business profitability ahead of plan</p>
+                </div>
+                <div class="result-card">
+                    <div class="metric">50% Reduction</div>
+                    <p>In form complexity (from 4 to 2 screens)</p>
+                </div>
+                <div class="result-card">
+                    <div class="metric">55% Less</div>
+                    <p>Documentation friction (from 11 to 5 items)</p>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <span class="number">✓</span>
+                <span class="label">Successfully eliminated email-based bifurcation in user journey</span>
+            </div>
+
+            <h3>Qualitative Improvements</h3>
+            <ul class="bullet-list">
+                <li><strong>Mobile-first experience:</strong> Optimized for 75-80% of our actual user base</li>
+                <li><strong>Reduced cognitive load:</strong> Simplified technical language and consolidated documentation</li>
+                <li><strong>Error prevention:</strong> Step-by-step guidance reduced user mistakes</li>
+                <li><strong>Instant support:</strong> WhatsApp integration enabled real-time assistance</li>
+                <li><strong>Robust fallbacks:</strong> Manual entry option ensured process completion even with API failures</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Key Learnings</h2>
+            <p>This project was both exciting and complex, given the volume of documentation, process steps, edge cases, and information required for vehicle appraisal and loan qualification.</p>
+
+            <h3>What I Learned</h3>
+            <ul class="bullet-list">
+                <li><strong>Simplification is strategic:</strong> In financial services, reducing friction while maintaining compliance requires careful balance and stakeholder buy-in</li>
+                <li><strong>Mobile-first isn't optional:</strong> When 75%+ of users are mobile, desktop-first design actively harms conversion</li>
+                <li><strong>Error prevention > error handling:</strong> Proactive education (like platform-specific scanning guides) prevents problems before they happen</li>
+                <li><strong>Always plan for failure states:</strong> The API fallback was discovered late but proved critical—automated systems need manual alternatives</li>
+                <li><strong>Meet users where they are:</strong> WhatsApp integration worked because it leveraged existing user behavior</li>
+            </ul>
+
+            <h3>Collaboration & Process</h3>
+            <p>Worked closely with cross-functional teams including developers, marketing department, and CEO to balance user needs with business requirements and technical constraints. Regular testing and iteration based on real user feedback ensured we delivered a solution that worked in the real world, not just in theory.</p>
+        </div>
+
+        <div class="section" style="text-align: center; padding: 60px 40px;">
+            <h2 style="display: block; text-align: center; margin-bottom: 20px;">Want to discuss this project?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">I'd love to share more details about the research process, design decisions, and outcomes.</p>
+        </div>
+    </div>
+
+    <div style="background: #1a1a1a; color: #fff; text-align: center; padding: 40px 20px; margin-top: 60px;">
+        <p style="font-size: 0.9rem; opacity: 0.7;">© 2024 Product Designer Portfolio</p>
+    </div>
+</body>
+</html>

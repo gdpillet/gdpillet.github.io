@@ -11,9 +11,30 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo"><a href="index.html">Gastón Pillet</a></div>
-            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        <!-- Header con navegación sticky y responsive -->
+        <header class="site-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-left">
+                        <a href="index.html" class="logo">Gastón Pillet</a>
+                        <div class="header-subtitle">Product Designer</div>
+                    </div>
+                    
+                    <!-- Botón hamburguesa para móvil -->
+                    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                    
+                    <!-- Navegación -->
+                    <nav class="main-nav">
+                        <a href="index.html" class="nav-link active">Work</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
+                    </nav>
+                </div>
+            </div>
         </header>
 
         <section class="case-study-hero">
@@ -41,7 +62,7 @@
         <section class="content-section">
             <h2>The Problem</h2>
             <p>Customer security is a top-tier business requirement but often difficult, hard to implement, and hard to maintain. Enabling our customer to manage their own encryption keys through BYOK while handling the complexity in our product was critical.</p>
-            <p>Our existing security platform had no native solution to address this need (at-rest encryption keys). Our existing solutions for encryption were centrally managed and had minimal visibility. In addition, we were concerned that building a solution might add friction and complexity to our platform, which could impact conversion. So the questions from the business were: how could we balance seamless user experience with high security? how could we ensure our engineering organization could build this without burning themselves out?</p>
+            <!-- <p>Our existing security platform had no native solution to address this need (at-rest encryption keys). Our existing solutions for encryption were centrally managed and had minimal visibility. In addition, we were concerned that building a solution might add friction and complexity to our platform, which could impact conversion. So the questions from the business were: how could we balance seamless user experience with high security? how could we ensure our engineering organization could build this without burning themselves out?</p> -->
         </section>
 
         <section class="content-section">
@@ -57,25 +78,25 @@
             <h2>Design Process & Solution</h2>
             
             <h3>1. Research & Benchmarking</h3>
-            <p>I led a competitive analysis of BYOK implementations from AWS, Azure, and others, looking at information architecture and workflow design, focusing on how they:</p>
-            <ul>
+            <p>I led a competitive analysis of BYOK implementations from AWS, Azure, and others, looking at information architecture and workflow design.</p>
+            <!-- <ul>
                 <li>Set up Key Management Services</li>
                 <li>Integrated KMS into their Data Pipelines</li>
                 <li>Monitored KMS status and alerting</li>
                 <li>Migrated or rotated encryption keys</li>
-            </ul>
+            </ul> -->
 
             <h3>2. Information Architecture & Workflow Design</h3>
-            <p>I then set up information architecture, focusing on <strong>how the BYOK deployment would exist in our existing product ecosystem</strong>. This included:</p>
-            <ul>
+            <p>I then set up information architecture, focusing on <strong>how the BYOK deployment would exist in our existing product ecosystem</strong>.</p>
+            <!-- <ul>
                 <li>Defining the entry point for KMS onboarding (Settings vs. Data Project level?)</li>
                 <li>How KMA (Key Management Agents) connect and register in our product</li>
                 <li>How to link KMAs to existing data sets and production systems</li>
                 <li>Figuring out the migration path from Legacy Encryption → BYOK</li>
-            </ul>
+            </ul> -->
 
             <h3>3. Design System Application</h3>
-            <p>Applied our existing design system to stay consistent with our platform while designing new components (status monitors, alerts, configuration wizards). The goal was to make it feel native and easy to adopt.</p>
+            <p>Applied our existing design system to stay consistent with our platform while designing new components (status monitors, alerts, configuration wizards).</p>
 
             <h3>4. Prototyping & Validation</h3>
             <p>Created interactive prototypes in Figma and conducted usability testing with customers who needed BYOK immediately (we were actively in sales conversations with these customers). We focused on the complexity of: migration downtime, KMA deployment, and what support they'd expect from us. I integrated this feedback into a revised flow, and design handover was completed for dev in 4 sprints.</p>
