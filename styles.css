@@ -7,6 +7,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    /* font-family: 'Halyard Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif; */
     line-height: 1.6;
     color: #2E3A52;
     background: #F8F9FB;
@@ -24,7 +25,9 @@ body {
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin: auto;
+    max-width: 800px;
     font-weight: 700;
     color: #2E3A52;
 }
@@ -356,6 +359,25 @@ footer p {
 /* ===================================
    PROJECT CARD IMAGE STYLES
    =================================== */
+.main-project-card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 8px 20px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.main-project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 400px;
+    object-fit: cover;
+}
+.main-project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 28px;
+}
  .grid-projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -375,13 +397,6 @@ footer p {
     transform: translateY(-5px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
 }
-.main-project-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    min-height: 400px;
-    object-fit: cover;
-}
 .grid-project-card img {
     width: 100%;
     height: 200px;
@@ -392,6 +407,9 @@ footer p {
 .grid-project-card .project-content {
     padding: 25px;
 }
+.project-content {
+    padding: 30px;
+}
 .project-content h3 {
     font-size: 1.8em;
     color: rgb(46, 58, 82);
@@ -401,7 +419,9 @@ footer p {
 .project-content p.meta {
     color: rgb(93, 108, 138);
     font-size: 0.9em;
-    margin-bottom: 15px;
+    margin: 20px 0px;
+    border-bottom: none;
+    padding: 10px 0px;
 }
 .project-content p.description {
     color: rgb(93, 108, 138);
