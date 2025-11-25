@@ -10,33 +10,59 @@
     <meta name="description" content="Learn more about Gastón Pillet, a Senior Product Designer specializing in B2B/SaaS platforms with a dual-edge approach combining technical viability and enterprise strategy.">
 </head>
 <body>
+    <!-- Header con navegación sticky y responsive -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="index.html" class="logo">Gastón Pillet</a>
+                    <div class="header-subtitle">Product Designer</div>
+                </div>
+                
+                <!-- Botón hamburguesa para móvil -->
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <!-- Navegación -->
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link active">Work</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
     <div class="container">
-        <header>
-            <div class="logo"><a href="index.html">Gastón Pillet</a></div>
-            <a href="index.html" class="back-link">← Back</a>
-        </header>
-
         <section class="case-study-hero">
             <div class="case-study-tag">CASE STUDY 03</div>
             <h1>Transforming Complex Benchmarking Data into Actionable Insights</h1>
             <p class="tagline">For an AI-first SaaS product for significant enterprise customer bases, I led the end-to-end design of a benchmarking analytics platform that transforms massive data into clear, actionable business intelligence for leadership teams.</p>
-            <img src="./img/quantum-leap.png" alt="Benchmarking Data Insights">
+            <div class="study-project-card">
+                <img src="./img/quantum-leap.png" alt="Benchmarking Data Insights">
+            </div>
         </section>
+    </div>
 
-        <div class="metadata">
-            <div class="meta-item">
-                <h4>Role</h4>
-                <p>Senior Product Designer</p>
+    <div class="container">
+        <!-- <div class="section"> -->
+            <div class="meta">
+                <div class="meta-item">
+                    <h4>Role</h4>
+                    <p>Senior Product Designer</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Timeline</h4>
+                    <p>3 months</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Impact</h4>
+                    <p>Enterprise-scale platform</p>
+                </div>
             </div>
-            <div class="meta-item">
-                <h4>Timeline</h4>
-                <p>3 months</p>
-            </div>
-            <div class="meta-item">
-                <h4>Impact</h4>
-                <p>Enterprise-scale platform</p>
-            </div>
-        </div>
+        <!-- </div> -->
 
         <section class="content-section">
             <h2>The Problem</h2>
@@ -226,9 +252,10 @@
     <footer>
         <div class="footer-nav">
             <a href="index.html">← Home</a>
-            <a href="byok-case-study.html">Next Case Study →</a>
+            <a href="camunda.html">Next Case Study →</a>
         </div>
         <p>© 2025 Gastón Pillet. All rights reserved.</p>
     </footer>
+    <script src="./js/menu.js" defer></script>
 </body>
 </html>

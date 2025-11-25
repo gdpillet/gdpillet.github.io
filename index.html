@@ -54,9 +54,9 @@
         
     <div class="container">
         <section class="featured-work">
-            <a href="byok-case-study.html" style="text-decoration: none; color: inherit;">
+            <a href="camunda.html" style="text-decoration: none; color: inherit;">
                 <div class="main-project-card">
-                    <img src="./img/user-journey.png" alt="BYOK Implementation project">
+                    <img src="./img/byokmac.png" alt="BYOK Implementation project">
                     <div class="project-content">
                         <h3>Bring your own encryption key project implementation</h3>
                         <p class="meta">Product Design</p>
@@ -69,20 +69,20 @@
             
             <div class="grid-projects">
                 <div class="grid-project-card">
-                    <a href="north-star-case-study.html" style="text-decoration: none; color: inherit;">
+                    <a href="ibancar.html" style="text-decoration: none; color: inherit;">
                         <img src="./img/loan-process.png" alt="North Star UX Strategy">
                         <div class="project-content">
-                            <h4>North Star UX Strategy</h4>
+                            <h4>Redesigning the loan application experience</h4>
                             <p class="meta">Product Design</p>
                             <p class="description">
-                                Aligning product strategy and roadmap with user experience, I created a unified vision for product direction.
+                                How I increased conversion rates by simplifying a complex financial onboarding flow for Ibancar's loan application process.
                             </p>
                         </div>
                     </a>
                 </div>
 
                 <div class="grid-project-card">
-                    <a href="benchmarking-data-platform.html" style="text-decoration: none; color: inherit;">
+                    <a href="thg.html" style="text-decoration: none; color: inherit;">
                         <img src="./img/quantum-leap.png" alt="Benchmarking Data Platform">
                         <div class="project-content">
                             <h4>Benchmarking Data Platform</h4>
@@ -125,39 +125,11 @@
     <footer>
         <div class="container">
             <div class="footer-left">
-                <p class="copyright">Gastón Pillet</p>
-                <p class="footer-tagline">B2B Product Designer specializing in SaaS orchestration.</p>
+                <p class="footer-tagline">Crafting usable enterprise SaaS B2B & B2C experiences.</p>
             </div>
         </div>
         <p class="footer-bottom-text container">© 2025 Gastón Pillet. All rights reserved.</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('.main-nav');
-            const body = document.body;
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            // Función para abrir/cerrar menú
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                nav.classList.toggle('active');
-                body.classList.toggle('menu-open'); // Prevenir scroll de fondo
-                
-                // Accesibilidad
-                const isExpanded = hamburger.classList.contains('active');
-                hamburger.setAttribute('aria-expanded', isExpanded);
-            });
-
-            // Cerrar menú al hacer clic en un enlace
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    nav.classList.remove('active');
-                    body.classList.remove('menu-open');
-                });
-            });
-        });
-    </script>
+    <script src="./js/menu.js" defer></script>
 </body>
 </html>
