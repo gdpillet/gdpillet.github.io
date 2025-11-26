@@ -339,6 +339,7 @@ footer p {
 }
 .view-all-work a {
     display: inline-block;
+    margin: 4px;
     background-color: #E6F3FF;
     color: #007BFF;
     padding: 14px 30px;
@@ -350,6 +351,9 @@ footer p {
 }
 .view-all-work a:hover {
     background-color: #CCECFF;
+}
+.view-all-work.no-margin-bottom {
+    margin-bottom: 0;
 }
 /* ===================================
    PROJECT CARD IMAGE STYLES
@@ -373,10 +377,6 @@ footer p {
     transform: translateY(-4px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 28px;
 }
-
-
-
-
 
  .grid-projects {
     display: grid;
@@ -653,7 +653,35 @@ footer p {
 body.menu-open {
     overflow: hidden;
 }
+/* ===================================
+   INTRO LAYOUT - 2 COLUMNAS
+   =================================== */
+/* 1. Contenedor principal para 2 columnas */
+.intro-layout {
+    display: flex;
+    align-items: center; /* Alineación vertical central */
+    gap: 40px; /* Espacio entre el texto y la imagen */
+    padding: 40px 20px;
+}
 
+/* 2. Sección de texto: Ocupa el espacio que queda */
+.intro-layout .page-intro {
+    flex: 1; 
+    padding: 0; /* Eliminar el padding extra del .page-intro para este layout */
+}
+
+/* 3. Contenedor de la imagen: ancho fijo y forzado a la derecha */
+.intro-layout .study-project-card {
+    flex-shrink: 0; /* Evita que se encoja */
+    width: 300px; /* O el ancho que prefieras para la imagen */
+    margin-bottom: 0; /* Elimina el margen inferior innecesario */
+}
+
+/* Asegurar que la imagen dentro del contenedor tenga el tamaño correcto */
+.intro-layout .study-project-card img {
+    min-height: auto; 
+    height: auto;
+}
 /* ===================================
    RESPONSIVE - TABLET Y MÓVIL
    =================================== */
@@ -728,6 +756,27 @@ body.menu-open {
     .header-subtitle {
         font-size: 0.8125rem;
     }
+
+    /* 1. Deshacer el Flexbox para forzar el apilamiento (texto arriba, imagen abajo) */
+    .intro-layout {
+        display: block; /* Vuelve a ser un bloque normal */
+        padding: 0; /* Quitar el padding extra de flexbox */
+    }
+
+    /* 2. Devolver los estilos originales a las secciones */
+    .intro-layout .page-intro {
+        padding: 40px 20px; /* Vuelve al padding original del page-intro */
+    }
+    
+    .intro-layout .study-project-card {
+        width: 100%; /* La imagen debe ocupar el ancho completo en móvil */
+        margin-bottom: 40px; /* Devuelve el margen inferior original */
+    }
+    
+    /* 3. Asegurar la imagen */
+    .intro-layout .study-project-card img {
+        min-height: 10px; /* Vuelve a la regla de móvil para evitar que sea muy alta */
+    }
 }
 
 /* Para pantallas muy pequeñas */
@@ -755,4 +804,91 @@ body.menu-open {
     .nav-link {
         font-size: 0.9375rem;
     }
+}
+
+.page-intro {
+    padding: 40px 20px;
+}
+/* Content Section */
+.content-section {
+    padding: 20px;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding: 20px;
+}
+.philosophy-item {
+    margin-bottom: 20px;
+}
+
+/* Expertise Section */
+.expertise-section {
+    padding: 20px;
+}
+
+/* Career Timeline Section */
+.career-section {
+    padding: 20px;
+}
+/* Beyond design section */
+.beyond-design-section {
+    padding: 20px;
+}
+/* cta section */
+.cta-section {
+    padding: 40px;
+}
+.career-timeline {
+    position: relative;
+    padding-left: 36px;
+}
+
+.career-timeline:before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background-color: #E0E4EB;
+}
+
+.career-item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.career-item:before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    box-shadow: 0 0 0 4px #E8F4FD;
+}
+
+.career-item h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: #2E3A52;
+}
+
+.career-item .year {
+    color: #007BFF;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.career-item p {
+    color: #5D6C8A;
+    line-height: 1.7;
+    margin: 0;
 }

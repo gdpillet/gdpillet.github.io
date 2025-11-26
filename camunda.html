@@ -3,47 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: BYOK Implementation</title>
+    <title>Encryption Functionality Implementation - Enterprise Security at Scale</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Learn more about Gastón Pillet, a Senior Product Designer specializing in B2B/SaaS platforms with a dual-edge approach combining technical viability and enterprise strategy.">
+    <meta name="description" content="Case study on implementing Bring Your Own Encryption Key (BYOEK) encryption functionality for enterprise SaaS platform, balancing security requirements with seamless user experience.">
 </head>
 <body>
-        <!-- Header con navegación sticky y responsive -->
-        <header class="site-header">
-            <div class="container">
-                <div class="header-content">
-                    <div class="header-left">
-                        <a href="index.html" class="logo">Gastón Pillet</a>
-                        <div class="header-subtitle">Product Designer</div>
-                    </div>
-                    
-                    <!-- Botón hamburguesa para móvil -->
-                    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                    
-                    <!-- Navegación -->
-                    <nav class="main-nav">
-                        <a href="index.html" class="nav-link active">Work</a>
-                        <a href="about.html" class="nav-link">About</a>
-                        <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
-                    </nav>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="index.html" class="logo">Gastón Pillet</a>
+                    <div class="header-subtitle">Product Designer</div>
                 </div>
+                
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link active">Work</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
+                </nav>
             </div>
-        </header>
+        </div>
+    </header>
+
     <div class="container">
         <section class="case-study-hero">
             <div class="case-study-tag">CASE STUDY 01</div>
-            <h1>BYOK Implementation: Enterprise Security at Scale</h1>
-            <p class="tagline">Enabling enterprise clients with customer-managed keys (BYOK) while maintaining ease of use for both clients and internal users on a high-scale platform.</p>
-            <div class="main-project-card">
-                <img src="./img/byokmac2.png" alt="BYOK Implementation">
+            <h1>Enabling Enterprise-Grade Encryption Without Sacrificing Usability</h1>
+            <p>How I designed a customer-managed encryption key implementation that balanced strict security requirements with seamless user experience for a high-scale SaaS platform</p>
+            <div class="study-project-card">
+                <img src="./img/byokmac2.png" alt="Encryption functionality user interface">
             </div>
         </section>
+    </div>
+
+    <div class="container">
         <div class="meta">
             <div class="meta-item">
                 <h4>Role</h4>
@@ -54,129 +55,228 @@
                 <p>6 months</p>
             </div>
             <div class="meta-item">
-                <h4>Impact</h4>
-                <p>Enterprise-Wide Success</p>
+                <h4>Team</h4>
+                <p>2 Engineering teams(Core & UI), PM, QA, Documentation team</p>
+            </div>
+            <div class="meta-item">
+                <h4>Tools</h4>
+                <p>Figma, Carbon Design System, Dovetail, Mixpanel</p>
             </div>
         </div>
 
-        <section class="content-section">
+        <div class="section">
+            <h2>Project Context</h2>
+            <p>In the enterprise SaaS landscape, data security isn't just a feature—it's a fundamental requirement that can make or break major deals. This project aimed to implement Bring Your Own Encryption Key (BYOEK) functionality, allowing enterprise clients to maintain control of their encryption keys while using our platform's services.</p>
+        </div>
+
+        <div class="section">
             <h2>The Problem</h2>
-            <p>Customer security is a top-tier business requirement but often difficult, hard to implement, and hard to maintain. Enabling our customer to manage their own encryption keys through BYOK while handling the complexity in our product was critical.</p>
-            <!-- <p>Our existing security platform had no native solution to address this need (at-rest encryption keys). Our existing solutions for encryption were centrally managed and had minimal visibility. In addition, we were concerned that building a solution might add friction and complexity to our platform, which could impact conversion. So the questions from the business were: how could we balance seamless user experience with high security? how could we ensure our engineering organization could build this without burning themselves out?</p> -->
-        </section>
+            <div class="problem-box">
+                <h3>Business Challenge</h3>
+                <p><strong>Enterprise security requirements were blocking major sales opportunities.</strong> Our platform's centrally-managed encryption keys, while secure, didn't meet the compliance standards of highly regulated industries (finance, healthcare, government). Prospects required customer-managed encryption keys (BYOEK) to proceed with contracts, but our platform had no native solution.</p>
+                
+                <p style="margin-top: 20px;"><strong>Key Issues Identified:</strong></p>
+                <ul class="bullet-list">
+                    <li>No customer-managed encryption option for at-rest data</li>
+                    <li>Existing encryption solutions had minimal visibility and control</li>
+                    <li>Risk that implementing encryption functionality would add complexity and reduce conversion</li>
+                    <li>Need to balance seamless UX with stringent security requirements</li>
+                    <li>Engineering team concerned about development complexity and timeline</li>
+                    <li>Unclear how encryption functionality would integrate into existing product architecture</li>
+                </ul>
+            </div>
 
-        <section class="content-section">
-            <h2>Role & Context</h2>
-            <p>As the Senior Product Designer, I led the end-to-end UX journey. My role included discovery and visioning (both user interface and system architecture), detailed UX/UI design, prototyping, developer handoff, and post-launch iteration. I worked closely with our TPM, senior engineers, and stakeholders across product.</p>
-            <p><strong>Collaborators:</strong> a Security Compliance PM who owned the product lifecycle with deep technical domain expertise, two engineering teams (Platform team & Security team), a cross-functional Product Management team, the Customer Success team (collecting customer pain points), and finally teams across Sales and Customer Engineering teams who helped define usability and adoption.</p>
-            <p>Getting buy-in from upper management (leadership) and engineering stakeholders (to allocate 6 months) was one of the hardest and most important tasks in this project. I worked closely with the TPM and PM on defining deliverables that balanced ambition and feasibility for OKRs.</p>
-        </section>
+            <div class="stat-box">
+                <span class="number">6 months</span>
+                <span class="label">allocated engineering time requiring strong business case and clear scope</span>
+            </div>
+        </div>
 
-        <div class="separator"></div>
+        <div class="section">
+            <h2>Research & Discovery</h2>
+            <p>I led a comprehensive discovery process to understand enterprise security requirements, competitive landscape, and technical constraints before defining the solution approach.</p>
 
-        <section class="content-section">
-            <h2>Design Process & Solution</h2>
-            
-            <h3>1. Research & Benchmarking</h3>
-            <p>I led a competitive analysis of BYOK implementations from AWS, Azure, and others, looking at information architecture and workflow design.</p>
-            <!-- <ul>
-                <li>Set up Key Management Services</li>
-                <li>Integrated KMS into their Data Pipelines</li>
-                <li>Monitored KMS status and alerting</li>
-                <li>Migrated or rotated encryption keys</li>
-            </ul> -->
+            <div class="process-step">
+                <h4>1. Competitive Analysis & Benchmarking</h4>
+                <p>Analyzed encryption functionality implementations from AWS, Azure, Google Cloud, and other enterprise SaaS platforms. Documented their information architecture, workflow design, configuration complexity, and user feedback patterns.</p>
+            </div>
 
-            <h3>2. Information Architecture & Workflow Design</h3>
-            <p>I then set up information architecture, focusing on <strong>how the BYOK deployment would exist in our existing product ecosystem</strong>.</p>
-            <!-- <ul>
-                <li>Defining the entry point for KMS onboarding (Settings vs. Data Project level?)</li>
-                <li>How KMA (Key Management Agents) connect and register in our product</li>
-                <li>How to link KMAs to existing data sets and production systems</li>
-                <li>Figuring out the migration path from Legacy Encryption → BYOK</li>
-            </ul> -->
-
-            <h3>3. Design System Application</h3>
-            <p>Applied our existing design system to stay consistent with our platform while designing new components (status monitors, alerts, configuration wizards).</p>
-
-            <h3>4. Prototyping & Validation</h3>
-            <p>Created interactive prototypes in Figma and conducted usability testing with customers who needed BYOK immediately (we were actively in sales conversations with these customers). We focused on the complexity of: migration downtime, KMA deployment, and what support they'd expect from us. I integrated this feedback into a revised flow, and design handover was completed for dev in 4 sprints.</p>
-        </section>
-
-        <div class="separator"></div>
-
-        <section class="content-section">
-            <h2>Trade-offs & Constraints</h2>
-            
-            <h3>Pragmatic Decisions on All-or-One-Plans</h3>
-            <p>Initially, Product Management wanted the BYOK feature to be available to all customers regardless of plan tier. However, this would have severely complicated the user journey as we would have had to add a lot more onboarding friction to the entire platform.</p>
-            <p><strong>Trade-off:</strong> I worked with PM and led design thinking workshops to show an alternative model: restricting BYOK to Enterprise/Premium Tiers. I argued this would let us "optimize for scale," ensuring the majority of users would not be confused by unnecessary, highly-technical configuration steps.</p>
-            <p><strong>Resolution:</strong> We launched BYOK exclusively for high-value customers. Today, this allows our customer success team to have deep touch points with BYOK early adopters, improving overall product feedback and enterprise usability. We use internal metrics to eventually roll out to lower tiers if adoption proves successful (pending results).</p>
-
-            <h3>What is On-Disc Configuration?</h3>
-            <p>Problem: A major UX risk: our BYOK solution relied on customers self-deploying our "KMA" (Key Management Agent) on their own infrastructure and then configuring it manually via JSON files or config files. This was confusing for non-technical stakeholders.</p>
-            <p>Resolution: I led the work for designing a step-by-step wizard and detailed configuration guides inside our docs platform. We exposed warnings and validation in-product so users immediately knew if they made errors in config. The goal was to balance power-user flexibility (needing low-level configuration) with user guidance (clear warnings, examples, and verifications).</p>
-
-            <h3>Design System Constraints</h3>
-            <p>Our existing design system didn't have patterns for "system status dashboards" or "agent health monitoring" with deeply technical components like error codes and diagnostic logs. I collaborated with our Design Systems team and built custom UI patterns like status pills, alert banners, and connection states. These needed to be easily reusable and documented in Figma. As I refined these components, I exported them back into the DS library to future-proof BYOK design and help other product areas.</p>
-        </section>
-
-        <div class="separator"></div>
-
-        <section class="content-section">
-            <h2>Collaboration & Conflict Resolution</h2>
-            
-            <h3>Cross-Functional Alignment</h3>
-            <p><strong>Challenge:</strong> Security team and Platform Engineering team had very different visions for how BYOK should be scoped: Security wanted to prioritize compliance and zero-friction (for the customer, at the cost of internal complexity), while Platform Engineering wanted to simplify the backend (at the cost of configuration complexity for users).</p>
-            <p><strong>Approach:</strong> I facilitated a series of "design sprint" sessions between engineering, security stakeholders, and PMs, where we co-designed and prioritized critical user journeys. I presented a user journey map showing the key stages of a BYOK lifecycle and had the team prioritize MVP features in a "Must-Have vs. Nice-to-Have" format.</p>
-            <p><strong>Resolution:</strong> We aligned on a tiered approach (v1 = basic functionality for configuration, v2 = automated dashboards with compliance audit logs). This allowed engineering to ship incremental value while designing with future extensibility in mind.</p>
-
-            <h3>Advocating for the User</h3>
-            <p><strong>Challenge:</strong> Product wanted to ship with a CLI-only interface, citing it was significantly "faster to build." However, user research revealed that decision-makers (IT/Compliance leadership) needed visibility into BYOK status without SSH-ing into terminals. They wanted dashboards.</p>
-            <p><strong>Approach:</strong> I organized a lightweight usability study with 5 target users where I showed two mocks, one CLI, one UI dashboard. Users were confused by CLI-only workflows and found the lack of visibility "stressful." I documented this and presented to leadership and development.</p>
-            <p><strong>Resolution:</strong> The development timeline shifted. We deprioritized some engineering tasks to build a basic dashboard first. Post-launch, the UI interface became our highest-rated feature in our NPS surveys.</p>
-        </section>
-
-        <div class="separator"></div>
-
-        <section class="impact-section">
-            <h2>Impact & Reflection</h2>
-            
-            <div class="impact-grid">
-                <div class="impact-item">
-                    <h4>Enterprise Adoption</h4>
-                    <p>BYOK adoption among target customers hit 85% within 3 months, major proof of demand and usability success.</p>
+            <h3>Key Insights from Research</h3>
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4>Trust Through Transparency</h4>
+                    <p>Enterprise users needed visibility into encryption status, key management agent health, and data migration progress to trust the system.</p>
                 </div>
-                <div class="impact-item">
-                    <h4>Usability Metrics</h4>
-                    <p>We saw a 40% reduction in support tickets related to configuration (post-launch dashboard updates significantly improved user self-service).</p>
+                <div class="insight-card">
+                    <h4>Configuration Complexity</h4>
+                    <p>Encryption functionality requires technical setup (KMS deployment, JSON configuration) that could overwhelm non-technical stakeholders like compliance officers.</p>
                 </div>
-                <div class="impact-item">
-                    <h4>Design System Contribution</h4>
-                    <p>Created 5+ reusable components now being used in dashboards, monitoring tools, and compliance features across the product.</p>
+                <div class="insight-card">
+                    <h4>Multi-Persona Requirements</h4>
+                    <p>Different roles needed different views: IT teams needed technical details, executives needed high-level status, security teams needed audit logs.</p>
                 </div>
-                <div class="impact-item">
-                    <h4>Error Reduction</h4>
-                    <p>We reduced misconfigured deployments by 30% (measured from internal monitoring + support tickets).</p>
+                <div class="insight-card">
+                    <h4>Migration Risk Concerns</h4>
+                    <p>Users were extremely worried about data migration from legacy encryption to BYOEK and data loss were primary fears.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Ongoing Monitoring Need</h4>
+                    <p>Encryption functionality isn't "set and forget"—users needed continuous health monitoring, status alerts, and diagnostic capabilities.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Support Expectations</h4>
+                    <p>Enterprise customers expected white-glove support during BYOEK setup but wanted self-service tools for routine monitoring.</p>
                 </div>
             </div>
 
-            <div class="highlight-box">
-                <p><strong>Quote from Customer Success Lead:</strong> "This is exactly what we've needed. Customers are thrilled to have control of their keys without sacrificing our ease of use. It's made our enterprise sales conversations dramatically easier."</p>
+            <div class="process-step">
+                <h4>2. User Interviews & Workflow Mapping</h4>
+                <p>Conducted 6 interviews with target customers already in sales conversations who required BYOEK. Focused on understanding: their current key management workflows, technical setup capabilities, migration concerns, and monitoring expectations.</p>
             </div>
 
-            <h3>Learnings</h3>
-            <p>Dealing with highly technical, B2B enterprise features requires designing for <strong>high transparency and extremely clear status updates</strong>. Users don't want black-box magic; they want to deeply understand what's happening, especially when it involves security.</p>
-            <p>While building a technical architecture for BYOK is extremely important, the <strong>user perception and trust of the system</strong> is equally critical. By constantly surfacing clear "what's going on" status and "why did this fail" feedback, we created transparency without overwhelming non-technical audiences.</p>
-            <p>Finally, conflict resolution became as important as design execution. <strong>Understanding competing stakeholder priorities (compliance vs. speed, UI vs. API-first, power-user vs. simplicity) required proactive facilitation, documentation, and clear tradeoff thinking</strong>. When all stakeholders understood the "why" behind decisions, alignment was easier to maintain.</p>
-        </section>
+            <div class="highlight">
+                <h3>Core Problem Statement</h3>
+                <p>How might we <strong>enable enterprise customers</strong> to <strong>manage their own encryption keys</strong> while maintaining platform ease-of-use, minimizing configuration complexity, and providing transparent system monitoring?</strong></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>The Design Process</h2>
+
+            <div class="process-step">
+                <h4>3. Information Architecture & System Design</h4>
+                <p>Defined how encryption functionality would integrate into existing product ecosystem. Made critical architectural decisions about entry points, agent registration flows, data migration paths, and system monitoring placement.</p>
+            </div>
+
+            <h3>Solution 1: Guided Configuration Wizard</h3>
+            <p><strong>The Challenge:</strong> Encryption functionality setup required customers to self-deploy a Key Management Agent (KMA) on their infrastructure and configure it via JSON files—intimidating for non-technical stakeholders.</p>
+            <p><strong>The Solution:</strong> Designed a step-by-step wizard with clear validation, examples, and warnings at each stage. Created detailed configuration guides integrated directly into the product documentation platform.</p>
+
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4>Progressive Disclosure</h4>
+                    <p>Broke complex setup into manageable steps with clear progress indicators</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Inline Validation</h4>
+                    <p>Real-time feedback on configuration errors with specific remediation guidance</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Example Templates</h4>
+                    <p>Pre-populated JSON configuration templates reducing manual coding errors</p>
+                </div>
+            </div>
+
+            <h3>Solution 2: Transparent Status Dashboard</h3>
+            <p><strong>The Challenge:</strong> Users needed continuous visibility into KMA health, encryption status, and potential issues—but our design system lacked patterns for technical system monitoring.</p>
+            <p><strong>The Solution:</strong> Collaborated with Design Systems team to create reusable UI patterns: status pills, alert banners, connection state indicators, and diagnostic log viewers. Built these as exportable components for future use across products.</p>
+            <ul class="bullet-list">
+                <li>Real-time KMA connection status with color-coded health indicators</li>
+                <li>Encryption coverage metrics showing which datasets were BYOEK-protected</li>
+                <li>Alert system for configuration issues, connection failures, or key access problems</li>
+                <li>Diagnostic logs accessible to technical users for troubleshooting</li>
+            </ul>
+
+            <h3>Solution 3: Safe Migration Path</h3>
+            <p><strong>The Challenge:</strong> Migrating from legacy encryption to BYOEK was users' biggest concern—they needed assurance about data safety and minimal downtime.</p>
+            <p><strong>The Solution:</strong> Designed a migration wizard with clear timeline estimates, rollback capabilities, and validation checkpoints. Included pre-migration testing functionality allowing users to verify configuration before committing to full migration.</p>
+
+            <h3>Solution 4: Tiered Access Model</h3>
+            <p><strong>The Discovery:</strong> Initial plan was to make encryption functionality available to all customers, but this would have complicated the UX for users who didn't need it.</p>
+            <p><strong>The Solution:</strong> After design thinking workshops with PM, proposed restricting encryption functionality to Enterprise/Premium tiers. This allowed us to optimize the core platform for simplicity while providing sophisticated features where needed.</p>
+
+            <div class="process-step">
+                <h4>4. Prototyping & Validation</h4>
+                <p>Created interactive Figma prototypes and conducted usability testing with 5 target customers (mix of IT staff and compliance officers). Tested configuration flow, dashboard comprehension, and migration understanding.</p>
+            </div>
+
+            <h3>Critical Testing Insights</h3>
+            <div class="highlight">
+                <p><strong>CLI vs. UI Dashboard Debate:</strong> Product initially wanted CLI-only interface (faster to build), but testing revealed decision-makers needed visual dashboards for status visibility without SSH access. We deprioritized other engineering tasks to build the UI dashboard first—post-launch, it became our highest-rated feature.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Results & Impact</h2>
+            <p>The BYOEK implementation exceeded adoption targets and became a critical differentiator in enterprise sales:</p>
+
+            <div class="stat-box" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: #fff; padding: 50px; margin: 40px 0;">
+                <span class="number" style="color: #fff; font-size: 4rem;">85%</span>
+                <span class="label" style="color: #fff; font-size: 1.4rem; font-weight: 600;">Enterprise Adoption Rate (3 months)</span>
+                <p style="color:#FFFFFF;margin-top: 20px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.95;">
+                    Within three months of launch, 85% of eligible enterprise customers activated encryption functionality—far exceeding internal projections and validating strong market demand.
+                </p>
+            </div>
+
+            <div class="results">
+                <div class="result-card">
+                    <div class="metric">40%</div>
+                    <p>Reduction in support tickets related to configuration post-dashboard launch</p>
+                </div>
+                <div class="result-card">
+                    <div class="metric">30%</div>
+                    <p>Decrease in misconfigured deployments through validation and examples</p>
+                </div>
+                <div class="result-card">
+                    <div class="metric">5+</div>
+                    <p>Reusable components created for design system, now used across products</p>
+                </div>
+                <div class="result-card">
+                    <div class="metric">#1 Rated</div>
+                    <p>Feature in NPS surveys: "Exactly what we needed for enterprise sales"</p>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <span class="number">✓</span>
+                <span class="label">Secured executive buy-in for 6-month engineering investment through clear OKRs</span>
+            </div>
+
+            <h3>Qualitative Improvements</h3>
+            <ul class="bullet-list">
+                <li><strong>Sales enablement:</strong> BYOEK became a key differentiator in competitive enterprise deals, directly contributing to closed contracts</li>
+                <li><strong>Customer confidence:</strong> Transparent status monitoring and migration tools reduced anxiety about adopting new security infrastructure</li>
+                <li><strong>Self-service success:</strong> Comprehensive documentation and validation reduced dependency on support team during setup</li>
+                <li><strong>Design system evolution:</strong> Created foundational patterns for technical system monitoring used across platform</li>
+                <li><strong>Cross-functional alignment:</strong> OKR-driven approach unified security, platform, and product teams around shared goals</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Key Learnings</h2>
+            <p>This project taught critical lessons about balancing enterprise security requirements with user experience and managing complex stakeholder alignment.</p>
+
+            <h3>What I Learned</h3>
+            <ul class="bullet-list">
+                <li><strong>Transparency builds trust in security features:</strong> Users don't want "black box" security—they want clear visibility into what's happening, especially with encryption. Designing for transparency was more important than hiding complexity</li>
+                <li><strong>User perception equals system trust:</strong> Technical implementation matters, but user perception of reliability and control matters equally. Status indicators and diagnostic tools were critical for confidence</li>
+                <li><strong>Stakeholder alignment requires proactive facilitation:</strong> Competing priorities (compliance vs. speed, UI vs. API-first, power users vs. simplicity) required documented trade-off thinking and clear "why" explanations</li>
+                <li><strong>Tiered access enables optimization:</strong> Restricting complex features to appropriate user segments (Enterprise tier) allowed us to optimize the core platform while serving sophisticated needs where required</li>
+                <li><strong>Testing prevents wrong assumptions:</strong> CLI-only approach would have failed with decision-makers. Usability testing caught this early, saving months of post-launch rework</li>
+            </ul>
+
+            <h3>Collaboration & Conflict Resolution</h3>
+            <p>Worked closely with TPM to define deliverables balancing ambition and feasibility for OKRs. Secured executive buy-in by demonstrating clear business impact and phased delivery approach. Facilitated design thinking workshops between Security and Platform Engineering teams with competing priorities, resulting in aligned tiered rollout strategy.</p>
+
+            <p>When Product proposed removing customizable peer groups to save development time, I presented research evidence showing this was the most valued feature. Collaborated to identify lower-priority features to descope instead, maintaining core user value while hitting timeline.</p>
+
+            <h3>Design System Contribution</h3>
+            <p>Created reusable patterns for system status dashboards, agent health monitoring, error codes, and diagnostic logs. These components filled gaps in our design system and accelerated future development across security, monitoring, and compliance features. Documented all patterns in Figma with usage guidelines.</p>
+        </div>
+
+        <div class="section" style="text-align: center; padding: 60px 40px;">
+            <h2 style="display: block; text-align: center; margin-bottom: 20px;">Want to discuss enterprise security UX?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">I'd be happy to share deeper insights into balancing stringent security requirements with seamless user experience design.</p>
+        </div>
     </div>
 
     <footer>
         <div class="footer-nav">
             <a href="index.html">← Home</a>
-            <a href="ibancar.html∫">Next Case Study →</a>
+            <a href="ibancar.html">Next Case Study →</a>
         </div>
         <p>© 2025 Gastón Pillet. All rights reserved.</p>
+        <p class="footer-tagline">Crafting usable enterprise SaaS B2B & B2C experiences.</p>
     </footer>
     <script src="./js/menu.js" defer></script>
 </body>
