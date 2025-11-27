@@ -98,7 +98,7 @@ body {
 
 /* Section Styles */
 .section {
-    background: #fff;
+    background: #ffffff;
     margin: 40px auto;
     padding: 60px 40px;
     border-radius: 12px;
@@ -213,21 +213,23 @@ body {
 
 /* Stat Box */
 .stat-box {
-    background: #f8f9fa;
+    background: #F8F9FA;
     padding: 40px;
     border-radius: 12px;
     margin: 30px 0;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
 }
-
 .stat-box .number {
     font-size: 3rem;
     font-weight: 700;
     color: #007BFF;
     display: block;
 }
+.stat-box .number-success {
+    color: #28A745;
 
+}
 .stat-box .label {
     font-size: 1.1rem;
     color: #5D6C8A;
@@ -244,7 +246,7 @@ body {
 }
 
 .mockup-placeholder {
-    background: #fff;
+    background: #ffffff;
     border: 2px solid #E0E4EB;
     border-radius: 8px;
     padding: 60px 40px;
@@ -405,7 +407,7 @@ footer p {
    PROJECT CARD IMAGE STYLES
    =================================== */
 .main-project-card, .study-project-card {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 8px 20px;
     margin-bottom: 40px;
     border-radius: 12px;
@@ -431,7 +433,7 @@ footer p {
     gap: 30px;
 }
 .grid-project-card {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 15px;
     display: flex;
     flex-direction: column;
@@ -458,19 +460,19 @@ footer p {
 }
 .project-content h3 {
     font-size: 1.8em;
-    color: rgb(46, 58, 82);
+    color: #2E3A52;
     font-weight: 700;
     margin: 0px 0px 10px;
 }
 .project-content p.meta {
-    color: rgb(93, 108, 138);
+    color: #5D6C8A;
     font-size: 0.9em;
     margin: 0px 0px;
     border-bottom: none;
     padding: 10px 0px;
 }
 .project-content p.description {
-    /* color: rgb(93, 108, 138); */
+    /* color: #5D6C8A; */
     margin-bottom: 20px;
 }
 .info-boxes {
@@ -488,7 +490,7 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
-        padding: 40px 20px;
+        padding: 40px 30px;
     }
     .hero h1 {
         font-size: 2rem;
@@ -551,7 +553,7 @@ footer p {
     left: 0;
     right: 0;
     background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #E5E5E5;
     z-index: 1000;
     transition: box-shadow 0.3s ease;
 }
@@ -584,18 +586,18 @@ footer p {
 .logo {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #1A1A1A;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .logo:hover {
-    color: #4a4a4a;
+    color: #4A4A4A;
 }
 
 .header-subtitle {
     font-size: 0.875rem;
-    color: #666;
+    color: #666666;
     font-weight: 400;
 }
 
@@ -610,7 +612,7 @@ footer p {
     position: relative;
     font-size: 1rem;
     font-weight: 500;
-    color: #4a4a4a;
+    color: #4A4A4A;
     text-decoration: none;
     padding: 8px 0;
     transition: color 0.3s ease;
@@ -618,12 +620,12 @@ footer p {
 
 /* Estado hover */
 .nav-link:hover {
-    color: #1a1a1a;
+    color: #1A1A1A;
 }
 
 /* Estado active con underline animado */
 .nav-link.active {
-    color: #1a1a1a;
+    color: #1A1A1A;
     font-weight: 600;
 }
 
@@ -634,7 +636,7 @@ footer p {
     left: 0;
     right: 0;
     height: 2px;
-    background: #1a1a1a;
+    background: #1A1A1A;
     animation: slideIn 0.3s ease;
 }
 
@@ -655,7 +657,7 @@ footer p {
     left: 0;
     right: 0;
     height: 2px;
-    background: #4a4a4a;
+    background: #4A4A4A;
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -684,7 +686,7 @@ footer p {
 .hamburger-line {
     width: 24px;
     height: 2px;
-    background: #1a1a1a;
+    background: #1A1A1A;
     transition: all 0.3s ease;
     border-radius: 2px;
 }
@@ -783,7 +785,7 @@ body.menu-open {
         left: 0;
         right: 280px;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
+        background: #FFFFFF;
         z-index: -1;
         animation: fadeIn 0.3s ease;
     }
