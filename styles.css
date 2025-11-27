@@ -19,12 +19,12 @@ body {
 .hero {
     background-color: #F8F9FB;
     color: #2E3A52;
-    padding: 80px 20px;
+    padding: 40px 20px 0;
     text-align: left;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     /* margin-bottom: 20px; */
     margin: auto;
     max-width: 800px;
@@ -33,18 +33,60 @@ body {
 }
 
 .hero p {
-    font-size: 1.3rem;
-    color: #5D6C8A;
+    /* font-size: 1.2rem; */
+    /* color: #5D6C8A; */
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
 }
 .hero ul li {
-    font-size: 1.3rem;
-    color: #5D6C8A;
+    font-size: 1.2rem;
+    /* color: #5D6C8A; */
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
+}
+/* Hero Highlights List */
+/* Estilos para el contenedor principal */
+.highlights-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: left;
+    /* font-size: 1.2rem; */
+    /* Ajuste para centrar el grupo si el contenedor es estrecho */
+    margin: 0 0 50px; 
+    padding: 0 30px;
+}
+
+/* Estilos para cada tarjeta individual */
+.highlight-card {
+    flex: 1;
+    max-width: 250px;
+}
+
+/* Estilos para el contenedor del icono (para definir tamaño y centrado) */
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0; /* Centrar horizontalmente y añadir espacio inferior */
+    /* El color del SVG se hereda de la fuente (currentColor) */
+    /* color: #5D6C8A; */
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+    font-weight: bold;
+    margin: 0 0 5px;
+    /* Color de texto por defecto */
+    /* color: #5D6C8A; */
+}
+
+/* Estilos para la descripción de la tarjeta */
+.card-description {
+    /* font-size: 0.9em; */
+    /* color: #5D6C8A; */
+    margin: 0; /* Eliminar margen por defecto del párrafo */
 }
 /* Container */
 .container {
@@ -263,7 +305,7 @@ ul.bullet-list strong {
     color: #2E3A52;
 }
 
-/* Results Section */
+/* Results Section -----------------------------------------------------------------*/
 .results {
     display: flex;
     gap: 30px;
@@ -355,6 +397,10 @@ footer p {
 .view-all-work.no-margin-bottom {
     margin-bottom: 0;
 }
+.case-study-tag {
+    font-size: 0.8rem;
+    padding: 12px 0 0;
+}
 /* ===================================
    PROJECT CARD IMAGE STYLES
    =================================== */
@@ -424,7 +470,7 @@ footer p {
     padding: 10px 0px;
 }
 .project-content p.description {
-    color: rgb(93, 108, 138);
+    /* color: rgb(93, 108, 138); */
     margin-bottom: 20px;
 }
 .info-boxes {
@@ -479,6 +525,13 @@ footer p {
         flex-direction: column;
     }
     .main-project-card img, .study-project-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        min-height: 10px;
+        object-fit: cover;
+    }
+    .grid-project-card img {
         width: 100%;
         height: auto;
         display: block;
@@ -757,6 +810,17 @@ body.menu-open {
         font-size: 0.8125rem;
     }
 
+    /* Ajustes para el contenedor de highlights */
+    .highlights-container {
+        flex-direction: column; /* Apilar las tarjetas en pantallas pequeñas */
+        align-items: center;
+        padding: 0 10px;
+    }
+    .highlight-card {
+        margin-bottom: 30px; /* Espacio entre las tarjetas apiladas */
+        max-width: 100%;
+    }
+
     /* 1. Deshacer el Flexbox para forzar el apilamiento (texto arriba, imagen abajo) */
     .intro-layout {
         display: block; /* Vuelve a ser un bloque normal */
@@ -813,6 +877,15 @@ body.menu-open {
 .content-section {
     padding: 20px;
 }
+.dual-edge-grid {
+    margin-bottom: 20px;
+}
+.dual-edge-grid ul {
+padding-left: 20px;
+}
+.edge-card {
+    margin-bottom: 10px;
+}
 
 /* Philosophy Section */
 .philosophy-section {
@@ -825,6 +898,23 @@ body.menu-open {
 /* Expertise Section */
 .expertise-section {
     padding: 20px;
+}
+.expertise-section h2{
+    margin-bottom: 10px;
+}
+.expertise-category {
+    margin-bottom: 40px;
+}
+.expertise-category h3 {
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+.expertise-category h4 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.expertise-category p.skills-grid {
+    margin-bottom: 10px;
 }
 
 /* Career Timeline Section */
