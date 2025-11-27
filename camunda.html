@@ -154,7 +154,7 @@
             <p><strong>The Challenge:</strong> Encryption functionality setup required customers to self-deploy a Key Management Agent (KMA) on their infrastructure and configure it via JSON files—intimidating for non-technical stakeholders.</p>
             <p><strong>The Solution:</strong> Designed a step-by-step wizard with clear validation, examples, and warnings at each stage. Created detailed configuration guides integrated directly into the product documentation platform.</p>
             <div class="study-project-card">
-                <img src="./img/byoek-step2.png" alt="BYOK Configuration Wizard">
+                <img src="./img/byok-flows.png" alt="BYOK Configuration Wizard">
             </div>
             <div class="insight-grid">
                 <div class="insight-card">
@@ -180,7 +180,9 @@
                 <li>Alert system for configuration issues, connection failures, or key access problems</li>
                 <li>Diagnostic logs accessible to technical users for troubleshooting</li>
             </ul>
-
+            <div class="study-project-card">
+                <img src="./img/byoek-specs.png" alt="BYOK Specs">
+            </div>
             <h3>Solution 3: Safe Migration Path</h3>
             <p><strong>The Challenge:</strong> Migrating from legacy encryption to BYOEK was users' biggest concern—they needed assurance about data safety and minimal downtime.</p>
             <p><strong>The Solution:</strong> Designed a migration wizard with clear timeline estimates, rollback capabilities, and validation checkpoints. Included pre-migration testing functionality allowing users to verify configuration before committing to full migration.</p>
@@ -193,7 +195,11 @@
                 <h4>4. Prototyping & Validation</h4>
                 <p>Created interactive Figma prototypes and conducted usability testing with 5 target customers (mix of IT staff and compliance officers). Tested configuration flow, dashboard comprehension, and migration understanding.</p>
             </div>
-
+            <div class="study-project-card">
+                <a href="https://www.figma.com/proto/XNVIiDYDEJbrgUW6kMH8iU/BYOK--2602?page-id=1%3A2&node-id=55-140423&p=f&viewport=6582%2C-348%2C0.3&t=BK4AUU8PgIu7Fuwq-1&scaling=contain&content-scaling=responsive&starting-point-node-id=55%3A140423" style="text-decoration: none; color: inherit;" target="_blank">
+                    <img src="./img/byoek-proto.png" alt="BYOK Figma Prototype Link Screenshot">
+                </a>
+            </div>
             <h3>Critical Testing Insights</h3>
             <div class="highlight">
                 <p><strong>CLI vs. UI Dashboard Debate:</strong> Product initially wanted CLI-only interface (faster to build), but testing revealed decision-makers needed visual dashboards for status visibility without SSH access. We deprioritized other engineering tasks to build the UI dashboard first—post-launch, it became our highest-rated feature.</p>

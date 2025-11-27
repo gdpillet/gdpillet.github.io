@@ -835,8 +835,8 @@ body.menu-open {
     }
     
     .intro-layout .study-project-card {
-        width: 100%; /* La imagen debe ocupar el ancho completo en móvil */
-        margin-bottom: 40px; /* Devuelve el margen inferior original */
+        width: 40%; /* La imagen debe ocupar el ancho completo en móvil */
+        margin: 0 20px 20px; /* Devuelve el margen inferior original */
     }
     
     /* 3. Asegurar la imagen */
