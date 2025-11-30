@@ -7,7 +7,6 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    /* font-family: 'Halyard Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif; */
     line-height: 1.6;
     color: #2E3A52;
     background: #F8F9FB;
@@ -25,7 +24,6 @@ body {
 
 .hero h1 {
     font-size: 2rem;
-    /* margin-bottom: 20px; */
     margin: auto;
     max-width: 800px;
     font-weight: 700;
@@ -33,64 +31,48 @@ body {
 }
 
 .hero p {
-    /* font-size: 1.2rem; */
-    /* color: #5D6C8A; */
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
 }
 .hero ul li {
     font-size: 1.2rem;
-    /* color: #5D6C8A; */
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
 }
-/* Hero Highlights List */
-/* Estilos para el contenedor principal */
+
 .highlights-container {
     display: flex;
     justify-content: space-around;
     gap: 20px;
     text-align: left;
-    /* font-size: 1.2rem; */
-    /* Ajuste para centrar el grupo si el contenedor es estrecho */
     margin: 0 0 50px; 
     padding: 0 30px;
 }
 
-/* Estilos para cada tarjeta individual */
 .highlight-card {
     flex: 1;
     max-width: 250px;
 }
 
-/* Estilos para el contenedor del icono (para definir tamaño y centrado) */
 .icon-wrapper {
     width: 40px;
     height: 40px;
-    margin: 10px 0; /* Centrar horizontalmente y añadir espacio inferior */
-    /* El color del SVG se hereda de la fuente (currentColor) */
-    /* color: #5D6C8A; */
+    margin: 10px 0;
 }
 
-/* Estilos para el título de la tarjeta */
 .card-title {
     font-weight: bold;
     margin: 0 0 5px;
-    /* Color de texto por defecto */
-    /* color: #5D6C8A; */
 }
 
-/* Estilos para la descripción de la tarjeta */
 .card-description {
-    /* font-size: 0.9em; */
-    /* color: #5D6C8A; */
-    margin: 0; /* Eliminar margen por defecto del párrafo */
+    margin: 0;
 }
+
 /* Container */
 .container {
-    /* max-width: 1200px; */
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
@@ -228,7 +210,6 @@ body {
 }
 .stat-box .number-success {
     color: #28A745;
-
 }
 .stat-box .label {
     font-size: 1.1rem;
@@ -406,7 +387,8 @@ footer p {
 /* ===================================
    PROJECT CARD IMAGE STYLES
    =================================== */
-.main-project-card, .study-project-card {
+.main-project-card,
+.study-project-card {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 8px 20px;
     margin-bottom: 40px;
@@ -432,6 +414,7 @@ footer p {
     margin-bottom: 60px;
     gap: 30px;
 }
+
 .grid-project-card {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 15px;
@@ -445,6 +428,7 @@ footer p {
     transform: translateY(-5px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
 }
+
 .grid-project-card img {
     width: 100%;
     height: 200px;
@@ -452,9 +436,11 @@ footer p {
     min-height: 400px;
     object-fit: cover;
 }
+
 .grid-project-card .project-content {
     padding: 25px;
 }
+
 .project-content {
     padding: 30px;
 }
@@ -464,6 +450,7 @@ footer p {
     font-weight: 700;
     margin: 0px 0px 10px;
 }
+
 .project-content p.meta {
     color: #5D6C8A;
     font-size: 0.9em;
@@ -471,10 +458,11 @@ footer p {
     border-bottom: none;
     padding: 10px 0px;
 }
+
 .project-content p.description {
-    /* color: #5D6C8A; */
     margin-bottom: 20px;
 }
+
 .info-boxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -546,7 +534,6 @@ footer p {
    STICKY RESPONSIVE NAVIGATION STYLES
    =================================== */
 
-/* Header sticky */
 .site-header {
     position: sticky;
     top: 0;
@@ -563,7 +550,6 @@ footer p {
 }
 
 .site-header .container {
-    /* max-width: 1200px; */
     max-width: 1520px;
     margin: 0 auto;
     padding: 0 20px;
@@ -712,30 +698,27 @@ body.menu-open {
 /* ===================================
    INTRO LAYOUT - 2 COLUMNAS
    =================================== */
-/* 1. Contenedor principal para 2 columnas */
+
 .intro-layout {
     display: flex;
-    align-items: center; /* Alineación vertical central */
-    gap: 40px; /* Espacio entre el texto y la imagen */
+    align-items: center;
+    gap: 40px;
     padding: 40px 20px;
 }
 
-/* 2. Sección de texto: Ocupa el espacio que queda */
 .intro-layout .page-intro {
-    flex: 1; 
-    padding: 0; /* Eliminar el padding extra del .page-intro para este layout */
+    flex: 1;
+    padding: 0;
 }
 
-/* 3. Contenedor de la imagen: ancho fijo y forzado a la derecha */
 .intro-layout .study-project-card {
-    flex-shrink: 0; /* Evita que se encoja */
-    width: 300px; /* O el ancho que prefieras para la imagen */
-    margin-bottom: 0; /* Elimina el margen inferior innecesario */
+    flex-shrink: 0;
+    width: 300px;
+    margin-bottom: 0;
 }
 
-/* Asegurar que la imagen dentro del contenedor tenga el tamaño correcto */
 .intro-layout .study-project-card img {
-    min-height: auto; 
+    min-height: auto;
     height: auto;
 }
 /* ===================================
@@ -743,12 +726,10 @@ body.menu-open {
    =================================== */
 
 @media (max-width: 768px) {
-    /* Mostrar hamburguesa */
     .hamburger {
         display: flex;
     }
-    
-    /* Navegación móvil */
+
     .main-nav {
         position: fixed;
         top: 0;
@@ -770,15 +751,13 @@ body.menu-open {
     .main-nav.active {
         transform: translateX(0);
     }
-    
-    /* Links en móvil */
+
     .nav-link {
         font-size: 1.25rem;
         width: 100%;
         padding: 12px 0;
     }
-    
-    /* Overlay oscuro detrás del menú */
+
     .main-nav.active::before {
         content: '';
         position: fixed;
@@ -799,8 +778,7 @@ body.menu-open {
             opacity: 1;
         }
     }
-    
-    /* Ajustar padding del header en móvil */
+
     .header-content {
         padding: 16px 0;
     }
@@ -813,61 +791,56 @@ body.menu-open {
         font-size: 0.8125rem;
     }
 
-    /* Ajustes para el contenedor de highlights */
     .highlights-container {
-        flex-direction: column; /* Apilar las tarjetas en pantallas pequeñas */
+        flex-direction: column;
         align-items: center;
         padding: 0 10px;
     }
+
     .highlight-card {
-        margin-bottom: 30px; /* Espacio entre las tarjetas apiladas */
+        margin-bottom: 30px;
         max-width: 100%;
     }
 
-    /* 1. Deshacer el Flexbox para forzar el apilamiento (texto arriba, imagen abajo) */
     .intro-layout {
-        display: block; /* Vuelve a ser un bloque normal */
-        padding: 0; /* Quitar el padding extra de flexbox */
+        display: block;
+        padding: 0;
     }
 
-    /* 2. Devolver los estilos originales a las secciones */
     .intro-layout .page-intro {
-        padding: 40px 20px; /* Vuelve al padding original del page-intro */
+        padding: 40px 20px;
     }
-    
+
     .intro-layout .study-project-card {
-        width: 40%; /* La imagen debe ocupar el ancho completo en móvil */
-        margin: 0 20px 20px; /* Devuelve el margen inferior original */
+        width: 40%;
+        margin: 0 20px 20px;
     }
-    
-    /* 3. Asegurar la imagen */
+
     .intro-layout .study-project-card img {
-        min-height: 10px; /* Vuelve a la regla de móvil para evitar que sea muy alta */
+        min-height: 10px;
     }
 }
 
-/* Para pantallas muy pequeñas */
 @media (max-width: 480px) {
     .site-header .container {
         padding: 0 16px;
     }
-    
+
     .main-nav {
         width: 100%;
         max-width: 100%;
     }
-    
+
     .main-nav.active::before {
         right: 0;
     }
 }
 
-/* Tablet - ajustes intermedios */
 @media (min-width: 769px) and (max-width: 1024px) {
     .main-nav {
         gap: 24px;
     }
-    
+
     .nav-link {
         font-size: 0.9375rem;
     }
@@ -876,59 +849,65 @@ body.menu-open {
 .page-intro {
     padding: 40px 20px;
 }
-/* Content Section */
+
 .content-section {
     padding: 20px;
 }
+
 .dual-edge-grid {
     margin-bottom: 20px;
 }
+
 .dual-edge-grid ul {
-padding-left: 20px;
+    padding-left: 20px;
 }
+
 .edge-card {
     margin-bottom: 10px;
 }
 
-/* Philosophy Section */
 .philosophy-section {
     padding: 20px;
 }
+
 .philosophy-item {
     margin-bottom: 20px;
 }
 
-/* Expertise Section */
 .expertise-section {
     padding: 20px;
 }
-.expertise-section h2{
+
+.expertise-section h2 {
     margin-bottom: 10px;
 }
+
 .expertise-category {
     margin-bottom: 40px;
 }
+
 .expertise-category h3 {
     margin-bottom: 10px;
     color: #007BFF;
 }
+
 .expertise-category h4 {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 .expertise-category p.skills-grid {
     margin-bottom: 10px;
 }
 
-/* Career Timeline Section */
 .career-section {
     padding: 20px;
 }
-/* Beyond design section */
+
 .beyond-design-section {
     padding: 20px;
 }
-/* cta section */
+
 .cta-section {
     padding: 40px;
 }
