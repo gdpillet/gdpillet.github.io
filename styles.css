@@ -887,13 +887,15 @@ body.menu-open {
 }
 
 .expertise-category h3 {
-    margin-bottom: 10px;
+    margin: 10px 0;
     color: #007BFF;
 }
 
 .expertise-category h4 {
     margin-bottom: 10px;
     margin-top: 10px;
+    font-weight: 400;
+    color:#666666;
 }
 
 .expertise-category p.skills-grid {
@@ -964,7 +966,10 @@ body.menu-open {
     line-height: 1.7;
     margin: 0;
 }
-/* Scroll to Top Button */
+/* ===============================
+   SCROLL TO TOP BUTTON STYLES
+   =================================== */
+
 .scroll-to-top {
     display: none; /* Hidden by default */
     position: fixed;
@@ -1007,4 +1012,68 @@ html {
         width: 20px;
         height: 20px;
     }
+}
+
+/* =================================
+ New CSS for Pill Design 
+ ================================== */
+
+/* --- New CSS for Pill Design (Updated) --- */
+
+.skills-focus-area-list,
+.tools-technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Space between pills */
+    margin-bottom: 20px;
+}
+
+.skill-pill,
+.tool-pill {
+    display: inline-flex; 
+    padding: 4px 10.516px 4px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px; /* Rounded corners for the pill look */
+    font-size: 0.9rem;
+    font-weight: 400;
+    white-space: nowrap; /* Prevent pills from breaking */
+    transition: background-color 0.2s;
+}
+
+/* Style for Skill Pills (e.g., light blue background) */
+.skill-pill {
+    background-color: #E8F4FD; /* Light background */
+    color: #1247E6; /* Blue text */
+    /* border: 1px solid #C5E3FB; */
+}
+
+/* Style for Tool Pills (e.g., slightly darker blue background) */
+.tool-pill {
+    background-color: #E0E4EB; /* Slightly different background */
+    color: #2E3A52;
+    /* border: 1px solid #C4C9D3; */
+}
+
+/* Ensure the expertise section looks good on mobile */
+@media (max-width: 768px) {
+    .skills-focus-area-list,
+    .tools-technologies-list {
+        gap: 6px;
+    }
+    .skill-pill,
+    .tool-pill {
+        /* Keep alignment but reduce padding/font for smaller screens */
+        padding: 4px 8px; /* Adjusted padding for better mobile fit */
+        font-size: 0.85rem;
+    }
+        .expertise-content-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+        gap: 20px;
+    }
+}
+.expertise-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 40px; /* Space between the two columns */
 }
