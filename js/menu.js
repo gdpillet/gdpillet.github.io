@@ -28,3 +28,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+/* Scroll to Top Button */
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // 1. Show/Hide button based on scroll position
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            // Show the button when scrolled down
+            scrollToTopBtn.style.display = "flex"; 
+        } else {
+            // Hide the button when at the top
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // 2. Scroll to top function
+    scrollToTopBtn.onclick = function() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
+    
+    // (Existing menu logic goes here if menu.js already has content)
+});
