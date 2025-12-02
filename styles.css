@@ -400,7 +400,7 @@ footer p {
     width: 100%;
     height: auto;
     display: block;
-    min-height: 400px;
+    /* min-height: 400px; */
     object-fit: cover;
 }
 .main-project-card:hover {
@@ -1074,6 +1074,40 @@ html {
 }
 .expertise-content-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 40px; /* Space between the two columns */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* Stat Box - Highlight Variant */
+.stat-box.highlight {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: #ffffff;
+    padding: 50px;
+    margin: 40px 0;
+}
+
+.stat-box.highlight .number {
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+.stat-box.highlight .label {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.stat-box.highlight p {
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+}
+
+/* Utility Classes */
+.margin-top-20 {
+    margin-top: 20px;
 }
