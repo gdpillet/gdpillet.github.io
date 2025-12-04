@@ -6,10 +6,12 @@
     <title>About - Gastón Pillet</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design-tokens.css">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Learn more about Gastón Pillet, a Senior Product Designer specializing in B2B/SaaS platforms with a dual-edge approach combining technical viability and enterprise strategy.">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Header con navegación sticky y responsive -->
     <header class="site-header">
         <div class="container">
@@ -31,6 +33,22 @@
                     <a href="index.html" class="nav-link">Work</a>
                     <a href="about.html" class="nav-link active">About</a>
                     <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -41,7 +59,7 @@
                 <h1>About Gastón Pillet</h1>
                 <p>Product Designer (UX/UI) with 7+ years of experience leading the end-to-end design lifecycle for complex SaaS and B2B/B2C platforms and a background as a web developer. Expertise includes strategic design and AI-driven ideation in global remote environments.</p>
                 <br />
-                <p class="hero-subhead">I have recently focused on integrating AI tools into my UX/UI design workflow. For the last few months, I have been actively exploring and applying tools like <strong>Gemini</strong> to generate placeholder content and synthetic data, <strong>Claude</strong> to assist with functional code snippets, <strong>Lovable</strong> to transform concepts into high-fidelity prototypes, <strong>Figma Make</strong> for rapid visual ideation, and <strong>Dovetail</strong> for AI-assisted qualitative data analysis. This approach allows me to accelerate ideation, enhance decision-making, and ensure more precise, enterprise-level design deliveries.</p>
+                <p class="hero-subhead mt-xl">I have recently focused on integrating AI tools into my UX/UI design workflow. For the last few months, I have been actively exploring and applying tools like <strong>Gemini</strong> to generate placeholder content and synthetic data, <strong>Claude</strong> to assist with functional code snippets, <strong>Lovable</strong> to transform concepts into high-fidelity prototypes, <strong>Figma Make</strong> for rapid visual ideation, and <strong>Dovetail</strong> for AI-assisted qualitative data analysis. This approach allows me to accelerate ideation, enhance decision-making, and ensure more precise, enterprise-level design deliveries.</p>
             </section>
             <div class="study-project-card">
                 <img src="./img/profile2.png" alt="Gastón's Workspace" class="hero-image">
@@ -63,13 +81,13 @@
         <section class="content-section">
             <h2>Design Focused on Business Value</h2>
 
-           <div class="dual-edge-grid">
+            <div class="dual-edge-grid mb-3xl">
                 <h3>Business Impact and Results</h3>
                 <p>My main job is to create design solutions that bring <strong>clear and measurable value</strong> to the business.</p>
                 <p>I don't just design; I drive <strong>quantifiable success</strong> and customer adoption. For example, my work has led to a <strong>25% increase in Customer Satisfaction (CSAT)</strong> and a <strong>3.5x improvement in loan origination</strong> (getting more users to take out loans). My goal is to make sure every design decision helps the company reach its main goals, from strategy to the final product.</p>
             </div>
 
-            <div class="dual-edge-grid">
+            <div class="dual-edge-grid mb-3xl">
                 <h3>Research, Analysis, and Strategy</h3>
                 <p>My design process is rooted in <strong>quantitative data</strong> (numbers for business outcomes) and <strong>qualitative research</strong> (understanding why users do what they do).</p>
                 <p>I analyze usage data using tools like Mixpanel, FullStory, and Hotjar to get clear, actionable insights. This data helps me define the product scope and solve complex problems.</p>
@@ -209,22 +227,18 @@
             <h2>Beyond Design</h2>
             <br />
             <div class="beyond-grid">
-                
                 <div class="beyond-card">
                     <h3><span class="emoji">🥋</span> Judo</h3>
                     <p>Judo practice teaches me discipline, instantaneous strategy, and the value of leverage over brute force. It's a physical reminder of how efficiency outperforms power.</p>
                 </div>
-                <br />
                 <div class="beyond-card">
                     <h3><span class="emoji">🎯</span> Archery</h3>
                     <p>Archery is my exercise in peak concentration. It requires calmness, precise alignment, and focusing on a single point, skills I apply daily to complex design problems.</p>
                 </div>
-                <br />
                 <div class="beyond-card">
                     <h3><span class="emoji">🎸</span> Music</h3>
                     <p>I play guitar, focusing on simple & classic rock. I enjoy songwriting and understanding how simple structures can generate profound emotional impact.</p>
                 </div>
-                
             </div>
         </section>
 
@@ -247,6 +261,7 @@
             </div>
     </footer>
     <script src="./js/menu.js" defer></script>
+    <script src="./js/theme-toggle.js" defer></script>
     <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
     </button>

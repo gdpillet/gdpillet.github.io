@@ -45,9 +45,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 2. Scroll to top function
     scrollToTopBtn.onclick = function() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     };
+
+    // 3. Keyboard accessibility for scroll-to-top
+    scrollToTopBtn.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    });
     
     // (Existing menu logic goes here if menu.js already has content)
 });

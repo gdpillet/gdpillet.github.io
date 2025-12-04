@@ -6,10 +6,12 @@
     <title>Portfolio - Specializing in B2B/SaaS Orchestration</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design-tokens.css">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Learn more about Gastón Pillet, a Senior Product Designer specializing in B2B/SaaS platforms with a dual-edge approach combining technical viability and enterprise strategy.">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- <div class="container"> -->
         <header class="site-header">
             <div class="container">
@@ -29,6 +31,22 @@
                         <a href="#work" class="nav-link active">Work</a>
                         <a href="about.html" class="nav-link">About</a>
                         <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                            <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;" aria-hidden="true">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
                     </nav>
                 </div>
             </div>
@@ -46,45 +64,61 @@
                 I leverage deep data insights and technology to develop systems that drive transformation. <br />I build rich, user-friendly interfaces, robust design systems, and processes that empower product teams to solve the most complex challenges.
             </p>
             <br />
-            
-            <!-- <ul class="hero-highlights" aria-hidden="true">
-                    <li>UX strategy</li>
-                    <li>Data-informed decisions</li>
-                    <li>Design systems</li>
-            </ul> -->
         </section>
         
     <div class="container">
         <div class="highlights-container">
                 <div class="highlight-card">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"><g weight="regular"><path fill="#2E3A52" d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM128,216a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM158.12,97.88a12,12,0,0,0-17,0L135.22,103,103,135.22,97.88,140.73a12,12,0,0,0,1.7,18.42l3.47,1.86a12,12,0,0,0,18.42-1.7l5.51-5.51,32.22-32.22,5.15-5.51A12,12,0,0,0,158.12,97.88ZM138.83,153.28l-3.32-1.78-27-27,1.78-3.32,27,27Z"></path></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="12 7 16 12 12 17 8 12"></polygon>
+                            <polyline points="12 12 12 5"></polyline>
+                        </svg>
                     </div>
                     <p class="card-title">UX Strategy</p>
                     <p class="card-description">I lead strategic planning and align design efforts with high-level business goals to ensure long-term impact.</p>
                 </div>
                 <div class="highlight-card">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"><g weight="regular"><path fill="#2E3A52" d="M224,208a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0V200H216A8,8,0,0,1,224,208ZM164,136V72a8,8,0,0,0-16,0v64a8,8,0,0,0,16,0ZM116,176V112a8,8,0,0,0-16,0v64a8,8,0,0,0,16,0ZM68,152V88a8,8,0,0,0-16,0v64a8,8,0,0,0,16,0Z"></path></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                            <line x1="3" y1="3" x2="3" y2="20"></line>
+                            <line x1="21" y1="20" x2="3" y2="20"></line>
+                            <rect x="6" y="14" width="3" height="6"></rect>
+                            <rect x="13" y="9" width="3" height="11"></rect>
+                            <rect x="20" y="5" width="3" height="15"></rect>
+                        </svg>
                     </div>
                     <p class="card-title">Data-informed Decisions</p>
                     <p class="card-description">I utilize quantitative and qualitative data to generate insights, validate hypotheses, and drive adoption.</p>
                 </div>
                 <div class="highlight-card">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"><g weight="regular"><path fill="#2E3A52" d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM48,48H120v72H48Zm160,160H48V136h72v72h88Zm-16-72H136V48h72Z"></path></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
                     </div>
                     <p class="card-title">Design Systems</p>
                     <p class="card-description">I establish and govern scalable design systems to ensure consistency and efficiency across platforms.</p>
                 </div>
             </div>
-        <section class="featured-work">
-            <a href="camunda.html" style="text-decoration: none; color: inherit;">
+        <section class="featured-work" id="main-content">
+            <a href="camunda.html" class="link-plain">
                 <div class="main-project-card">
                     <img src="./img/byokmac2.png" alt="BYOK Implementation project">
                     <div class="project-content">
                         <h3>Bring your own encryption key project implementation</h3>
-                        <p class="meta">CASE STUDY 01</p>
+                        <div class="meta-pills-row">
+                            <p class="meta">CASE STUDY 01</p>
+                            <div class="category-pills">
+                                <span class="pill">SaaS</span>
+                                <span class="pill">B2B</span>
+                                <span class="pill">Workflow automation</span>
+                            </div>
+                        </div>
                         <p class="description">
                             I crafted a comprehensive end-to-end solution enabling users to seamlessly interact with a UI, securely migrating data into a customer-owned key management system.
                         </p>
@@ -94,11 +128,18 @@
             
             <div class="grid-projects">
                 <div class="grid-project-card">
-                    <a href="ibancar.html" style="text-decoration: none; color: inherit;">
+                    <a href="ibancar.html" class="link-plain">
                         <img src="./img/loan-process.png" alt="North Star UX Strategy">
                         <div class="project-content">
                             <h4>Redesigning the loan application experience</h4>
-                            <p class="meta">CASE STUDY 02</p>
+                            <div class="meta-pills-row">
+                                <p class="meta">CASE STUDY 02</p>
+                                <div class="category-pills">
+                                    <span class="pill">Web Platform</span>
+                                    <span class="pill">B2C</span>
+                                    <span class="pill">Fintech</span>  
+                                </div>
+                            </div>
                             <p class="description">
                                 How I increased conversion rates by simplifying a complex financial onboarding flow for Ibancar's loan application process.
                             </p>
@@ -107,11 +148,18 @@
                 </div>
 
                 <div class="grid-project-card">
-                    <a href="thg.html" style="text-decoration: none; color: inherit;">
+                    <a href="thg.html" class="link-plain">
                         <img src="./img/quantum-leap.png" alt="Benchmarking Data Platform">
                         <div class="project-content">
-                            <h4>Benchmarking Data Platform</h4>
-                            <p class="meta">CASE STUDY 03</p>
+                            <h4>Metrics Benchmarking data platform</h4>
+                            <div class="meta-pills-row">
+                                <p class="meta">CASE STUDY 03</p>
+                                <div class="category-pills">
+                                    <span class="pill">SaaS</span>
+                                    <span class="pill">B2B</span>
+                                    <span class="pill">Data Analytics</span>
+                                </div>
+                            </div>
                             <p class="description">
                                 I enhanced the data benchmarking platform, utilizing data to inform product strategy.
                             </p>
@@ -155,6 +203,7 @@
             </div>
     </footer>
     <script src="./js/menu.js" defer></script>
+    <script src="./js/theme-toggle.js" defer></script>
     <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
     </button>

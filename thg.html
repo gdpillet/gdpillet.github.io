@@ -6,10 +6,12 @@
     <title>The Hackett Group - Benchmarking Data Platform</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design-tokens.css">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Case study on enhancing The Hackett Group's benchmarking data platform, transforming complex financial metrics into actionable insights for enterprise clients.">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <div class="container">
             <div class="header-content">
@@ -28,6 +30,22 @@
                     <a href="index.html" class="nav-link active">Work</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -36,7 +54,7 @@
     <div class="container">
         <section class="case-study-hero">
             <div class="case-study-tag">CASE STUDY 03</div>
-            <h1>Transforming Enterprise Benchmarking Data into Strategic Insights</h1>
+            <h1>Transforming Enterprise Metrics Benchmarking Data into Strategic Insights</h1>
             <p>How I redesigned The Hackett Group's finance dashboard to help senior executives compare 15,000+ metrics efficiently and make data-driven strategic decisions</p>
             <br />
             <div class="study-project-card">
@@ -76,7 +94,7 @@
                 <h3>Business Challenge</h3>
                 <p><strong>Senior finance executives were drowning in data but starving for insights.</strong> Despite having access to comprehensive benchmarking data across 15,000+ metrics, users couldn't efficiently compare performance indicators, switch between metric panels, or identify actionable insights within reasonable timeframes.</p>
                 
-                <p class="margin-top-20"><strong>Key Issues Identified:</strong></p>
+                <p class="mt-xl mb-lg"><strong>Key Issues Identified:</strong></p>
                 <ul class="bullet-list">
                     <li>No efficient way to compare multiple metrics simultaneously</li>
                     <li>Slow navigation between different metric panels disrupted analysis flow</li>
@@ -104,7 +122,7 @@
                 <img src="./img/thg-collaboration.png" alt="The Hackett Group Collaboration">
             </div>
             <h3>Key Insights from Research</h3>
-            <div class="insight-grid">
+            <div class="insight-grid mb-3xl">
                 <div class="insight-card">
                     <h4>Time-Constrained Users</h4>
                     <p>Senior finance team members had limited time to explore interfaces—they needed immediate access to critical insights without extensive navigation.</p>
@@ -136,7 +154,7 @@
                 <p>Created user journeys and user flows mapping core functionalities. Developed user personas for different roles (Data Collectors, Finance Managers, Executives) to understand how each would complete tasks and what information they needed along the way.</p>
             </div>
 
-            <div class="highlight">
+            <div class="highlight mb-3xl">
                 <h3>Core Problem Statement</h3>
                 <p>How might we help <strong>senior finance executives </strong><strong>efficiently navigate, compare, and extract strategic insights </strong>from 15,000+ benchmarking metrics without <strong>overwhelming them with data complexity</strong>?</p>
             </div>
@@ -154,7 +172,7 @@
             <p><strong>The Challenge:</strong> Users needed to compare multiple metrics simultaneously but the existing interface only allowed viewing one metric panel at a time.</p>
             <p><strong>The Solution:</strong> Designed a flexible grid-based dashboard that allowed users to display multiple metric panels side-by-side. Implemented quick-switch functionality enabling users to toggle between different metric views without losing context or position.</p>
 
-            <div class="insight-grid">
+            <div class="insight-grid mb-3xl">
                 <div class="insight-card">
                     <h4>Grid-Based Layout</h4>
                     <p>Flexible panel system allowing 2-4 metrics displayed simultaneously for direct comparison</p>
@@ -172,7 +190,7 @@
             <h3>Solution 2: Visual Data Hierarchy & Excellence Indicators</h3>
             <p><strong>The Challenge:</strong> With 15,000+ metrics, users struggled to identify which data points were most critical for strategic decisions.</p>
             <p><strong>The Solution:</strong> Implemented a clear visual hierarchy using color-coding and excellence indicators. Designed a scoring system that highlighted metrics contributing to the "excellence quadrant"—helping users focus on high-impact performance areas.</p>
-            <ul class="bullet-list">
+            <ul class="bullet-list mb-3xl">
                 <li>Color-coded performance tiers (Excellent, Good, Average, Below Average)</li>
                 <li>Excellence quadrant badges highlighting top-performing metrics</li>
                 <li>Comparative advantage indicators showing where organizations excel vs. peers</li>
@@ -198,7 +216,7 @@
                 <img src="./img/thg-heatmap.png" alt="Microsoft Clarity Heatmap">
             </div>
             <h3>Scope & Constraints Management</h3>
-            <div class="highlight">
+            <div class="highlight mb-3xl">
                 <p><strong>Original Timeline:</strong> 4-6 months for core functionality</p>
                 <p><strong>Extended Timeline:</strong> 7 months after adding presentation functionality (2-week addition that significantly increased value)</p>
                 <p><strong>Key Constraint:</strong> Designing for multiple user roles (Data Collectors, Program Managers, PTE Managers, Stakeholders) each with different needs and technical proficiency levels.</p>
@@ -209,10 +227,10 @@
             <h2>Results & Impact</h2>
             <p>The redesigned benchmarking platform transformed how finance executives accessed and utilized performance data:</p>
 
-            <div class="stat-box" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: #fff; padding: 50px; margin: 40px 0;">
-                <span class="number" style="color: #fff; font-size: 4rem;">60%</span>
-                <span class="label" style="color: #fff; font-size: 1.4rem; font-weight: 600;">Reduction in Time to Insight</span>
-                <p style="color:#FFFFFF;margin-top: 20px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.95;">
+            <div class="stat-box highlight">
+                <span class="number">60%</span>
+                <span class="label">Reduction in Time to Insight</span>
+                <p>
                     Senior executives reduced time spent on metric analysis from hours to minutes, enabling faster strategic decision-making and improved competitive positioning.
                 </p>
             </div>
@@ -244,7 +262,7 @@
                 <img src="./img/thg-dashboard-charts.png" alt="The Hackett Group Dashboard Charts">
             </div>
             <h3>Qualitative Improvements</h3>
-            <ul class="bullet-list">
+            <ul class="bullet-list mb-3xl">
                 <li><strong>Enhanced decision-making speed:</strong> Executives could now identify strategic opportunities in real-time during meetings</li>
                 <li><strong>Improved data democratization:</strong> Multiple user roles could access relevant information without overwhelming complexity</li>
                 <li><strong>Excellence quadrant visibility:</strong> Clear visual indicators helped organizations focus on high-impact performance areas</li>
@@ -281,13 +299,14 @@
 
     <footer>
         <div class="footer-nav">
-            <a href="index.html">← Home</a>
-            <a href="camunda.html">Next Case Study →</a>
+            <a href="index.html" class="secondary-btn">← Home</a>
+            <a href="camunda.html" class="secondary-btn">Next Case Study →</a>
         </div>
         <p class="footer-tagline">Crafting usable enterprise SaaS B2B & B2C experiences.</p>
         <p>© 2025 Gastón Pillet. All rights reserved.</p>
     </footer>
     <script src="./js/menu.js" defer></script>
+    <script src="./js/theme-toggle.js" defer></script>
     <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
     </button>

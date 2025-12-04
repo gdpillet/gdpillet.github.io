@@ -6,10 +6,12 @@
     <title>Ibancar - Conversion Funnel Redesign</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design-tokens.css">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Case study on redesigning the loan application experience for Ibancar, focusing on improving conversion rates through user-centered design and simplification of complex financial processes.">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Header con navegación sticky y responsive -->
     <header class="site-header">
         <div class="container">
@@ -31,6 +33,22 @@
                     <a href="index.html" class="nav-link active">Work</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -78,7 +96,7 @@
                 <h3>Business Challenge</h3>
                 <p><strong>The existing loan application funnel was hemorrhaging potential customers.</strong> Despite healthy traffic numbers, conversion rates from leads to approved loans remained below expectations. The company needed to understand why qualified applicants were abandoning the process.</p>
                 
-                <p style="margin-top: 20px;"><strong>Key Issues Identified:</strong></p>
+                <p class="mt-xl mb-lg"><strong>Key Issues Identified:</strong></p>
                 <ul class="bullet-list">
                     <li>High drop-off rates at specific funnel stages</li>
                     <li>Users couldn't complete applications in one session</li>
@@ -105,7 +123,7 @@
                 <img src="./img/ibancar-heatmap.png" alt="Research screenshot">
             </div> 
             <h3>Key Insights from Research</h3>
-            <div class="insight-grid">
+            <div class="insight-grid mb-3xl">
                 <div class="insight-card">
                     <h4>5-Second Test Failure</h4>
                     <p>The landing page failed the 5-second test—users couldn't understand what we offered within critical first seconds.</p>
@@ -133,7 +151,7 @@
                 <p>Analyzed data through funnel analysis, information synthesis, and clusterization to identify pain points and opportunities.</p>
             </div>
 
-            <div class="highlight">
+            <div class="highlight mb-3xl">
                 <h3>Core Problem Statement</h3>
                 <p>How might we <strong>simplify a complex financial application process</strong> for <strong>mobile-first, less tech-savvy users</strong> while maintaining necessary <strong>security and compliance requirements</strong>?</p>
             </div>
@@ -158,7 +176,7 @@
             <p><strong>The Challenge:</strong> Requesting 11 separate documents was overwhelming users and causing abandonment.</p>
             <p><strong>The Solution:</strong> Used card sorting methodology to reorganize documents into 5 logical groups, combining related items (especially photos) to simplify the upload process.</p>
 
-            <div class="insight-grid">
+            <div class="insight-grid mb-3xl">
                 <div class="insight-card">
                     <h4>From 11 to 5</h4>
                     <p>Reduced cognitive load by 55% by grouping related documents</p>
@@ -176,13 +194,13 @@
             <h3>Solution 3: Error Prevention Through Education</h3>
             <p><strong>The Challenge:</strong> The "technical file" requirement confused users—it's a traffic institution document that's not commonly understood.</p>
             <p><strong>The Solution:</strong> Applied Nielsen's error prevention heuristic by creating detailed, platform-specific guidance:</p>
-            <ul class="bullet-list">
+            <ul class="bullet-list mb-3xl">
                 <li>Step-by-step visual instructions for Android and iPhone</li>
                 <li>Explained how to use native camera functions for high-resolution scanning</li>
                 <li>Placed explanatory images using proximity principle—right next to the document description</li>
             </ul>
             <div class="study-project-card">
-                <a href="https://www.figma.com/proto/AUUnzC1AdaTdSUs8mwhuKg/%E2%9C%85Ibancar-Mobile-ok?page-id=0%3A1&node-id=16-2116&p=f&viewport=898%2C512%2C0.06&t=eaaeWzdoHGWpdf4q-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A2116" style="text-decoration: none; color: inherit;" target="_blank">
+                <a href="https://www.figma.com/proto/AUUnzC1AdaTdSUs8mwhuKg/%E2%9C%85Ibancar-Mobile-ok?page-id=0%3A1&node-id=16-2116&p=f&viewport=898%2C512%2C0.06&t=eaaeWzdoHGWpdf4q-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A2116" class="link-plain" target="_blank">
                     <img src="./img/ibancar-proto.png" alt="Mobile prototype link screenshot">
                 </a>
             </div>
@@ -190,7 +208,7 @@
             <h3>Solution 4: WhatsApp Integration</h3>
             <p><strong>The Insight:</strong> Competitor analysis revealed mobile-first companies were leveraging familiar communication channels.</p>
             <p><strong>The Solution:</strong> Integrated WhatsApp for document uploads and real-time support:</p>
-            <ul class="bullet-list">
+            <ul class="bullet-list mb-3xl">
                 <li>Added CTA button with WhatsApp link for instant call center connection</li>
                 <li>Integrated with CRM for seamless handoff to support team</li>
                 <li>Offered alternative: direct upload or scheduled callback option</li>
@@ -202,7 +220,7 @@
             </div>
 
             <h3>Critical Discovery During Testing</h3>
-            <div class="highlight">
+            <div class="highlight mb-3xl">
                 <p><strong>Edge Case Identified:</strong> The vehicle detection API (license plate recognition) could fail, leaving users stuck.</p>
                 <p><strong>Solution:</strong> Added fallback screen with manual vehicle identification form, ensuring users could always complete the process even when automation failed.</p>
             </div>
@@ -212,10 +230,10 @@
             <h2>Results & Impact</h2>
             <p>The redesigned funnel exceeded growth objectives and significantly improved the user experience:</p>
 
-            <div class="stat-box" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: #fff; padding: 50px; margin: 40px 0;">
-                <span class="number" style="color: #fff; font-size: 4rem;">3.5%</span>
-                <span class="label" style="color: #fff; font-size: 1.4rem; font-weight: 600;">Loan Origination Growth (12 months)</span>
-                <p style="color:#FFFFFF;margin-top: 20px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.95;">
+            <div class="stat-box highlight">
+                <span class="number">3.5%</span>
+                <span class="label">Loan Origination Growth (12 months)</span>
+                <p>
                     Successfully scaled loan origination by 3.5% over the past 12 months while maintaining credit losses at an exceptionally low 2.2% of revenue—achieving profitability 6 months ahead of plan.
                 </p>
             </div>
@@ -247,7 +265,7 @@
                 <img src="./img/ibancar-final.png" alt="Mobile prototype link screenshot">
             </div>
             <h3>Qualitative Improvements</h3>
-            <ul class="bullet-list">
+            <ul class="bullet-list mb-3xl">
                 <li><strong>Mobile-first experience:</strong> Optimized for 75-80% of our actual user base</li>
                 <li><strong>Reduced cognitive load:</strong> Simplified technical language and consolidated documentation</li>
                 <li><strong>Error prevention:</strong> Step-by-step guidance reduced user mistakes</li>
@@ -278,15 +296,17 @@
             <p>I'd love to share more details about the research process, design decisions, and outcomes.</p>
         </div>
     </div>
+
     <footer>
         <div class="footer-nav">
-            <a href="index.html">← Home</a>
-            <a href="thg.html">Next Case Study →</a>
+            <a href="index.html" class="secondary-btn">← Home</a>
+            <a href="thg.html" class="secondary-btn">Next Case Study →</a>
         </div>
         <p class="footer-tagline">Crafting usable enterprise SaaS B2B & B2C experiences.</p>
         <p>© 2025 Gastón Pillet. All rights reserved.</p>
     </footer>
     <script src="./js/menu.js" defer></script>
+    <script src="./js/theme-toggle.js" defer></script>
     <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
     </button>

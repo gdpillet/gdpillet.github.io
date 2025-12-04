@@ -19,8 +19,8 @@
     --color-secondary-blue-dark: #1565c0;
     
     /* Neutral Colors - Text */
-    --color-text-primary: #2E3A52;
-    --color-text-secondary: #5D6C8A;
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #3D4C6A;
     --color-text-light: #666666;
     --color-text-on-dark: #ffffff;
     
@@ -52,7 +52,7 @@
        ======================================== */
     
     /* Font Family */
-    --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-family-system: 'Inter', sans-serif;
     --font-family-display: 'Inter', sans-serif;
     
     /* Font Sizes */
@@ -279,6 +279,141 @@
 .mt-sm { margin-top: var(--spacing-sm); }
 .mt-md { margin-top: var(--spacing-md); }
 .mt-lg { margin-top: var(--spacing-lg); }
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
 .mt-xl { margin-top: var(--spacing-xl); }
 .mt-2xl { margin-top: var(--spacing-2xl); }
 .mt-3xl { margin-top: var(--spacing-3xl); }
+
+/* Link Utilities */
+.link-plain {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-plain:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Text Color Utilities */
+.text-white {
+    color: var(--color-text-on-dark);
+}
+
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+/* =====================================================
+   DARK MODE THEME OVERRIDES
+   ===================================================== */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark Mode Color Tokens */
+        
+        /* Primary Colors - Adjusted for dark mode */
+        --color-primary: #4DA6FF;
+        --color-primary-dark: #66B3FF;
+        --color-primary-light: #1A3A52;
+        
+        /* Secondary Colors - Adjusted for dark mode */
+        --color-secondary-purple: #8B9EFF;
+        --color-secondary-purple-dark: #9DB3FF;
+        --color-secondary-blue: #5BA3FF;
+        --color-secondary-blue-dark: #7BB8FF;
+        
+        /* Neutral Colors - Text */
+        --color-text-primary: #E8ECEF;
+        --color-text-secondary: #D0D8E2;
+        --color-text-light: #A0A8B2;
+        --color-text-on-dark: #ffffff;
+        
+        /* Neutral Colors - Backgrounds */
+        --color-bg-primary: #1A1F2B;
+        --color-bg-secondary: #0F1419;
+        --color-bg-tertiary: #1D2635;
+        --color-bg-disabled: #212A38;
+        
+        /* Accent Colors */
+        --color-success: #4ACD68;
+        --color-warning: #FFD700;
+        --color-error: #FF6B7A;
+        --color-info: #4DBFFF;
+        
+        /* Semantic Colors */
+        --color-border: #2D3748;
+        --color-border-light: #1F2937;
+        --color-overlay: rgba(255, 255, 255, 0.1);
+        --color-overlay-light: rgba(255, 255, 255, 0.04);
+        --color-overlay-dark: rgba(0, 0, 0, 0.3);
+        
+        /* Gradient Colors */
+        --gradient-cta: linear-gradient(135deg, #4DA6FF 0%, #8B9EFF 100%);
+        --gradient-stat-highlight: linear-gradient(135deg, #5BA3FF 0%, #7BB8FF 100%);
+        
+        /* Shadows - Enhanced for dark mode */
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.5);
+        --shadow-xl: 0 12px 28px rgba(0, 0, 0, 0.6);
+        --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Alternative: Support explicit data-theme attribute for manual control */
+[data-theme="dark"] {
+    /* Primary Colors - Adjusted for dark mode */
+    --color-primary: #4DA6FF;
+    --color-primary-dark: #66B3FF;
+    --color-primary-light: #1A3A52;
+    
+    /* Secondary Colors - Adjusted for dark mode */
+    --color-secondary-purple: #8B9EFF;
+    --color-secondary-purple-dark: #9DB3FF;
+    --color-secondary-blue: #5BA3FF;
+    --color-secondary-blue-dark: #7BB8FF;
+    
+    /* Neutral Colors - Text */
+    --color-text-primary: #E8ECEF;
+    --color-text-secondary: #B4BCC7;
+    --color-text-light: #A0A8B2;
+    --color-text-on-dark: #ffffff;
+    
+    /* Neutral Colors - Backgrounds */
+    --color-bg-primary: #1A1F2B;
+    --color-bg-secondary: #0F1419;
+    --color-bg-tertiary: #1D2635;
+    --color-bg-disabled: #212A38;
+    
+    /* Accent Colors */
+    --color-success: #4ACD68;
+    --color-warning: #FFD700;
+    --color-error: #FF6B7A;
+    --color-info: #4DBFFF;
+    
+    /* Semantic Colors */
+    --color-border: #2D3748;
+    --color-border-light: #1F2937;
+    --color-overlay: rgba(255, 255, 255, 0.1);
+    --color-overlay-light: rgba(255, 255, 255, 0.04);
+    --color-overlay-dark: rgba(0, 0, 0, 0.3);
+    
+    /* Gradient Colors */
+    --gradient-cta: linear-gradient(135deg, #4DA6FF 0%, #8B9EFF 100%);
+    --gradient-stat-highlight: linear-gradient(135deg, #5BA3FF 0%, #7BB8FF 100%);
+    
+    /* Shadows - Enhanced for dark mode */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 12px 28px rgba(0, 0, 0, 0.6);
+    --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
