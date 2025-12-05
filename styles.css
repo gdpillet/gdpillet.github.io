@@ -10,12 +10,16 @@
     outline-offset: 2px;
 }
 
+.site-header:focus-visible {
+    outline: none;
+}
+
 /* Skip Navigation Link */
 .skip-link {
     position: absolute;
     top: -40px;
-    left: 0;
-    background: var(--color-primary);
+    left: -40px;
+    background: transparent;
     color: var(--color-text-on-dark);
     padding: var(--spacing-sm);
     text-decoration: none;
@@ -26,6 +30,7 @@
 .skip-link:focus,
 .skip-link:focus-visible {
     top: 0;
+    left: 0;
 }
 
 body {
@@ -391,6 +396,13 @@ footer {
     margin-top: var(--spacing-5xl);
 }
 
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+}
+
 footer p {
     font-size: var(--font-size-sm);
     margin: 0;
@@ -414,6 +426,26 @@ footer p {
 }
 .view-all-work a:hover {
     background-color: #CCECFF;
+}
+
+/* Secondary Button Style */
+.secondary-btn {
+    display: inline-block;
+    margin: var(--spacing-sm);
+    background-color: var(--color-bg-disabled);
+    color: var(--color-text-secondary);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-md);
+    transition: background-color var(--transition-normal), color var(--transition-normal);
+    border: 1px solid var(--color-border);
+}
+
+.secondary-btn:hover {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
 }
 .view-all-work.no-margin-bottom {
     margin-bottom: 0;
@@ -669,6 +701,10 @@ footer p {
     color: var(--color-text-primary);
     text-decoration: none;
     transition: color var(--transition-normal);
+}
+
+.logo:focus-visible {
+    outline: none;
 }
 
 .logo:hover {

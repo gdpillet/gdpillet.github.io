@@ -21,14 +21,14 @@
     /* Neutral Colors - Text */
     --color-text-primary: #1A1A1A;
     --color-text-secondary: #3D4C6A;
-    --color-text-light: #666666;
+    --color-text-light: #4A5568;
     --color-text-on-dark: #ffffff;
     
     /* Neutral Colors - Backgrounds */
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #F8F9FB;
     --color-bg-tertiary: #F5F8FF;
-    --color-bg-disabled: #F8F9FA;
+    --color-bg-disabled: #EFEFEF;
     
     /* Accent Colors */
     --color-success: #28A745;
