@@ -312,11 +312,64 @@
 }
 
 /* =====================================================
-   DARK MODE THEME OVERRIDES
+   LIGHT MODE THEME EXPLICIT SELECTOR
+   ===================================================== */
+
+[data-theme="light"] {
+    /* Primary Colors */
+    --color-primary: #007BFF;
+    --color-primary-dark: #0056b3;
+    --color-primary-light: #E8F4FD;
+    
+    /* Secondary Colors */
+    --color-secondary-purple: #667EEA;
+    --color-secondary-purple-dark: #764BA2;
+    --color-secondary-blue: #1e88e5;
+    --color-secondary-blue-dark: #1565c0;
+    
+    /* Neutral Colors - Text */
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #3D4C6A;
+    --color-text-light: #4A5568;
+    --color-text-on-dark: #ffffff;
+    
+    /* Neutral Colors - Backgrounds */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #F8F9FB;
+    --color-bg-tertiary: #F5F8FF;
+    --color-bg-disabled: #EFEFEF;
+    
+    /* Accent Colors */
+    --color-success: #28A745;
+    --color-warning: #FFC107;
+    --color-error: #DC3545;
+    --color-info: #17A2B8;
+    
+    /* Semantic Colors */
+    --color-border: #E0E0E0;
+    --color-border-light: #F0F0F0;
+    --color-overlay: rgba(0, 0, 0, 0.1);
+    --color-overlay-light: rgba(0, 0, 0, 0.05);
+    --color-overlay-dark: rgba(0, 0, 0, 0.2);
+    
+    /* Gradient Colors */
+    --gradient-cta: linear-gradient(135deg, #007BFF 0%, #667EEA 100%);
+    --gradient-stat-highlight: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    
+    /* Shadows - Lighter for light mode */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 12px 28px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+   DARK MODE THEME OVERRIDES - System Preference
    ===================================================== */
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         /* Dark Mode Color Tokens */
         
         /* Primary Colors - Adjusted for dark mode */

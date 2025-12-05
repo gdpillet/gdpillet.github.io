@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sunIcon.style.display = 'none';
             moonIcon.style.display = 'block';
         } else {
-            html.removeAttribute('data-theme');
+            html.setAttribute('data-theme', LIGHT_THEME);
             sunIcon.style.display = 'block';
             moonIcon.style.display = 'none';
         }

@@ -118,18 +118,18 @@ body {
 
 /* Section Styles */
 .section {
-    background: var(--color-bg-primary);
+    /* background: var(--color-bg-primary); */
     margin: var(--spacing-3xl) auto;
-    padding: var(--spacing-5xl) var(--spacing-3xl);
+    padding: var(--spacing-xl) var(--spacing-3xl);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    /* box-shadow: var(--shadow-md); */
 }
 
 .section h2 {
     font-size: var(--font-size-5xl);
     margin-bottom: var(--spacing-2xl);
     color: var(--color-text-primary);
-    border-bottom: 3px solid var(--color-primary);
+    /* border-bottom: 3px solid var(--color-primary); */
     padding-bottom: var(--spacing-md);
     display: inline-block;
     font-weight: var(--font-weight-bold);
@@ -188,19 +188,19 @@ body {
 
 /* Problem Box */
 .problem-box {
-    background: var(--color-primary-light);
-    border-left: 4px solid var(--color-primary);
-    padding: var(--spacing-2xl);
+    /* background: var(--color-primary-light);
+    border-left: 4px solid var(--color-primary); */
+    /* padding: var(--spacing-2xl); */
     margin: var(--spacing-2xl) 0;
     border-radius: var(--radius-md);
 }
 
 .problem-box h3 {
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
 }
 
 .problem-box p {
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
 }
 
 /* Insight Grid */
@@ -275,7 +275,7 @@ body {
     border-radius: var(--radius-md);
     padding: var(--spacing-5xl) var(--spacing-3xl);
     margin: var(--spacing-lg) 0;
-    color: #7B8CA9;
+    color: var(--color-text-secondary);
     font-size: var(--font-size-md);
 }
 
@@ -316,11 +316,11 @@ ul.bullet-list strong {
 
 /* Highlight Box */
 .highlight {
-    background: var(--color-bg-primary);
+    /* background: var(--color-bg-primary); */
     padding: var(--spacing-xl);
     border-radius: var(--radius-md);
     margin: var(--spacing-lg) 0;
-    border-left: 4px solid var(--color-warning);
+    /* border-left: 4px solid var(--color-warning); */
 }
 
 .highlight h3 {
@@ -425,7 +425,7 @@ footer p {
     transition: background-color var(--transition-normal);
 }
 .view-all-work a:hover {
-    background-color: #CCECFF;
+    background-color: var(--color-primary-light);
 }
 
 /* Secondary Button Style */
@@ -616,7 +616,7 @@ footer p {
         font-size: var(--font-size-md);
     }
     .section {
-        padding: var(--spacing-3xl) var(--spacing-lg);
+        padding: var(--spacing-xl) var(--spacing-lg);
     }
     ul.hero-highlights {
         padding: 0 0 0 var(--spacing-lg);
@@ -630,6 +630,7 @@ footer p {
     .meta {
         flex-direction: column;
         gap: var(--spacing-lg);
+        padding: 16px;
     }
     
     .meta-item {
@@ -773,7 +774,7 @@ footer p {
     left: 0;
     right: 0;
     height: 2px;
-    background: #4A4A4A;
+    background: var(--color-text-secondary);
     transform: scaleX(0);
     transition: transform var(--transition-normal);
 }
@@ -1024,7 +1025,7 @@ body.menu-open {
     margin-bottom: var(--spacing-md);
     margin-top: var(--spacing-md);
     font-weight: var(--font-weight-regular);
-    color: #666666;
+    color: var(--color-text-light);
 }
 
 .expertise-category p.skills-grid {
@@ -1210,7 +1211,7 @@ html {
 /* Style for Skill Pills (e.g., light blue background) */
 .skill-pill {
     background-color: var(--color-primary-light);
-    color: #1247E6;
+    color: var(--color-primary);
 }
 
 /* Style for Tool Pills (e.g., slightly darker blue background) */
@@ -1278,3 +1279,26 @@ html {
 .margin-top-20 {
     margin-top: var(--spacing-xl);
 }
+
+/* Image Caption Styling */
+.image-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--spacing-lg) 0;
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    margin-top: 0;
+    max-width: 100%;
+}
+
+/* Case Study specific image margins */
+.section .image-with-caption {
+    margin-bottom: 0;
+}
+
