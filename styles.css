@@ -51,7 +51,7 @@ body {
 }
 
 .hero h1 {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-6xl);
     margin: auto;
     max-width: 800px;
     font-weight: var(--font-weight-bold);
@@ -72,18 +72,18 @@ body {
 
 .highlights-container {
     display: flex;
-    justify-content: space-around;
-    gap: var(--spacing-lg);
+    justify-content: space-between;
+    gap: var(--spacing-md);
     text-align: left;
     margin: 0 0 var(--spacing-4xl); 
-    padding: 0 var(--spacing-2xl);
-    flex-wrap: wrap;
+    padding: 0 var(--spacing-lg);
+    flex-wrap: nowrap;
     align-items: flex-start;
 }
 
 .highlight-card {
-    flex: 0 1 calc(33.333% - var(--spacing-lg));
-    max-width: 280px;
+    flex: 1 1 25%;
+    min-width: 0;
 }
 
 .icon-wrapper {
@@ -691,6 +691,18 @@ footer p {
 
 /* Header left - Logo y subtitle */
 .header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.header-text {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
@@ -1300,5 +1312,11 @@ html {
 /* Case Study specific image margins */
 .section .image-with-caption {
     margin-bottom: 0;
+}
+
+/* About page specific: ensure secondary color for intro and beyond sections */
+.page-intro p,
+.beyond-grid p {
+  color: var(--color-text-secondary);
 }
 
