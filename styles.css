@@ -42,6 +42,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+p {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+}
+
+ul li {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+}
+
 /* Hero Section */
 .hero {
     background-color: var(--color-bg-secondary);
@@ -64,6 +74,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     text-align: left;
+    font-size: var(--font-size-lg);
 }
 .hero ul li {
     font-size: var(--font-size-lg);
@@ -146,7 +157,7 @@ body {
 
 .section p {
     margin-bottom: var(--spacing-xl);
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-lg);
     line-height: var(--line-height-relaxed);
     color: var(--color-text-secondary);
 }
@@ -307,7 +318,7 @@ ul.bullet-list {
 
 ul.bullet-list li {
     margin: var(--spacing-md) 0;
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-lg);
     line-height: var(--line-height-relaxed);
     color: var(--color-text-secondary);
 }
@@ -481,6 +492,7 @@ footer p {
     max-width: 1200px;
     margin: 0 auto var(--spacing-2xl);
     text-align: left;
+    font-size: var(--font-size-lg);
 }
 
 /* ===================================
