@@ -93,6 +93,7 @@
     --spacing-3xl: 40px;
     --spacing-4xl: 50px;
     --spacing-5xl: 60px;
+    --spacing-6xl: 150px;
     
     /* ========================================
        BORDER RADIUS TOKENS
@@ -127,7 +128,7 @@
        CONTAINER TOKENS
        ======================================== */
     
-    --container-max-width: 900px;
+    --container-max-width: 1200px;
     --container-max-width-lg: 1520px;
     --container-padding: 20px;
     
