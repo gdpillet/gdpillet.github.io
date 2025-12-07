@@ -179,7 +179,7 @@ ul li {
 }
 
 .meta-item:last-child {
-    flex: 0 1 auto;
+    /* flex: 0 1 auto; */
     max-width: 35%;
 }
 
@@ -924,9 +924,19 @@ body.menu-open {
         left: 0;
         right: 280px;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.8);
         z-index: -1;
         animation: fadeIn var(--transition-normal);
+    }
+    
+    [data-theme="dark"] .main-nav.active::before {
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) .main-nav.active::before {
+            background: rgba(0, 0, 0, 0.7);
+        }
     }
     
     @keyframes fadeIn {
