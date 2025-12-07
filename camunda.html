@@ -93,7 +93,6 @@
         <div class="section">
             <h2>The Problem</h2>
             <div class="problem-box">
-                <h3>Business Challenge</h3>
                 <p><strong>Enterprise security requirements were hindering significant sales opportunities</strong>. Potential customers needed customer-managed encryption keys (BYOEK) to close deals, but our platform lacked a native solution.</p>
                 
                 <p class="mt-xl mb-lg"><strong>Key Issues Identified:</strong></p>
@@ -107,22 +106,16 @@
 
         <div class="section">
             <h2>Research & Discovery</h2>
-            <p>I led a comprehensive discovery process to understand enterprise security requirements, competitive landscape, and technical constraints before defining the solution approach.</p>
-            <div class="process-step">
-                <h4>Competitive Analysis & Benchmarking</h4>
-                <p>Analyzed encryption functionality implementations from AWS, Azure, Google Cloud, and other enterprise SaaS platforms. Documented their information architecture, workflow design, configuration complexity, and user feedback patterns.</p>
-            </div>
+            <p><strong>I led a comprehensive discovery process</strong> to understand enterprise security requirements, competitive landscape, and technical constraints before defining the solution approach.</p>
+            <p><strong>Analyzed encryption functionality</strong> implementations from AWS, Azure, Google Cloud, and other enterprise SaaS platforms. Documented their information architecture, workflow design, configuration complexity, and user feedback patterns.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/byok-competitive-analysis.png" alt="Competitive Analysis of BYOK Implementations">
                 </div>
                 <p class="image-caption">Competitive analysis of encryption implementations across leading cloud platforms.</p>
             </div>
-
-            <div class="process-step">
-                <h4>User Interviews & Workflow Mapping</h4>
-                <p>I conducted 6 interviews with target customers already in sales conversations who required BYOEK. Focused on understanding: their current key management workflows, technical setup capabilities, migration concerns, and monitoring expectations.</p>
-            </div>
+            <br />
+            <p><strong>I conducted 6 interviews</strong> with target customers already in sales conversations who required BYOEK. Focused on understanding: their current key management workflows, technical setup capabilities, migration concerns, and monitoring expectations.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/byok-flows.png" alt="Gastón conducting user interviews">
@@ -131,17 +124,13 @@
             </div>
             <h3>Key Insights from Research</h3>
             <div class="insight-grid mb-3xl">
-                <p>The project had several challenges. First, users needed to trust the system and see the status of their encryption, key management, and data moving process. Second, setting up the encryption was too technical for people like compliance officers because it needed specific configuration (like JSON and KMS deployment). Third, different people needed different information: IT teams needed technical details, executives needed a simple status update, and security teams needed audit logs. Also, users were very worried about losing data when moving from the old encryption system to the new BYOEK system. Finally, the encryption needed constant checking and monitoring, not just a one-time setup, and enterprise customers wanted good support for setup but self-service tools for daily monitoring. I learned that a successful BYOEK solution needs more than just technical features. The most important things were to make the system easy to trust by showing users the status of their encryption, and to make the setup simple because non-technical people need to use it.</p>
+                <p><strong>The project presented complex challenges regarding trust and usability</strong>. First, <strong>users required clear visibility into their encryption status and key management</strong>. However, the configuration was too technical for non-experts, such as compliance officers. We also needed to address the strong fear of data loss during the migration to the new BYOEK system. Finally, the solution had to support continuous monitoring and provide different information for IT teams, executives, and auditors.</p>
             </div>
         </div>
 
         <div class="section">
             <h2>The Design Process</h2>
-
-            <div class="process-step">
-                <h4>Information Architecture & System Design</h4>
-                <p>Defined how encryption functionality would integrate into existing product ecosystem. Made critical architectural decisions about entry points, agent registration flows, data migration paths, and system monitoring placement.</p>
-            </div>
+            <p>I defined how encryption functionality would integrate into existing product ecosystem. <strong>I made critical architectural decisions</strong> about entry points, agent registration flows, data migration paths, and system monitoring placement.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/byok-bullets.png" alt="BYOK improvements bullets">
@@ -149,10 +138,7 @@
                 <p class="image-caption">Key architectural improvements and system design considerations for BYOEK integration.</p>
             </div>
             <br />
-            <h3>Guided Configuration Wizard</h3>
-            <p>Encryption functionality setup required customers to configure it via JSON files, intimidating for non-technical users.</p>
-            <p>I designed a step-by-step wizard with clear validation, examples, and warnings at each stage. Created detailed configuration guides integrated directly into the product documentation platform.</p>
-
+            <p>To help non-technical users who found the JSON configuration intimidating, <strong>I designed a two-step wizard</strong> with clear validation and integrated guides to simplify the process.</p>
             <div class="insight-grid mb-3xl">
                 <div class="insight-card">
                     <h4>Progressive Disclosure</h4>
@@ -168,9 +154,8 @@
                 </div>
             </div>
             <br />
-            <h3>Transparent Status</h3>
             <p>Users needed continuous visibility into KMA health, encryption status and potential issues, but our design system lacked patterns for technical system monitoring.</p>
-            <p>I created reusable UI patterns: alert banners, connection state indicators, and diagnostic log screen. Built these as exportable components for future use across products.</p>
+            <p><strong>I created reusable UI patterns</strong>: alert banners, connection state indicators, and diagnostic log screen. Built these as exportable components for future use across products.</p>
             <ul class="bullet-list mb-3xl">
                 <li>Encryption coverage metrics showing which datasets were BYOEK-protected</li>
                 <li>Alert system for configuration issues, connection failures, or key access problems</li>
@@ -182,11 +167,8 @@
                 </div>
                 <p class="image-caption">Design specifications for BYOEK monitoring and status indicators.</p>
             </div>
-
-            <div class="process-step">
-                <h4>Prototyping & Validation</h4>
-                <p>I created interactive Figma prototypes and conducted usability testing with 5 target customers. Tested configuration flow and dashboard comprehension</p>
-            </div>
+            <br />
+            <p><strong>I created interactive Figma prototypes</strong> and </strong>conducted usability testing</strong>with 5 target customers. Tested configuration flow and dashboard comprehension.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/byoek-proto-lines.png" alt="BYOK Prototype Lines">
@@ -197,7 +179,7 @@
         <div class="section">
             <h2>Final design</h2>
             <p>The final design included a comprehensive BYOEK setup wizard, a transparent status dashboard, and reusable design system components for technical monitoring.</p>
-            <p>Initial plan was to make encryption functionality available to all customers, but this would have complicated the UX for users who didn't need it. I proposed restricting encryption functionality to Enterprise/Premium tiers. This allowed us to optimize the core platform for simplicity while providing sophisticated features where needed.</p>
+            <p>Initial plan was to make encryption functionality available to all customers, but this would have complicated the UX for users who didn't need it. <strong>I proposed restricting encryption functionality to Enterprise/Premium tiers</strong>. This allowed us to optimize the core platform for simplicity while providing sophisticated features where needed.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <a href="https://www.figma.com/proto/XNVIiDYDEJbrgUW6kMH8iU/BYOK--2602?page-id=1%3A2&node-id=55-140423&p=f&viewport=6582%2C-348%2C0.3&t=BK4AUU8PgIu7Fuwq-1&scaling=contain&content-scaling=responsive&starting-point-node-id=55%3A140423" class="link-plain" target="_blank">
@@ -233,8 +215,7 @@
 
         <div class="section">
             <h2>Reflection</h2>
-            <p>This project taught critical lessons about balancing enterprise security requirements with user experience and managing complex stakeholder alignment.</p>
-            <p>I realized that for security features, transparency is key to building customer trust, which is vital for closing big Enterprise deals. We understood that users must feel confident and in control; giving them clear status indicators was as important as the technology itself. This confidence helps reduce support needs. Furthermore, we learned the value of making strategic trade-offs; by limiting complex features only to the Enterprise tier, we ensured the core platform remained simple and fast for most users while still meeting the needs of our most valuable customers. Finally, testing the product early with decision-makers was a great business choice, as it helped us avoid months of costly rework after the launch.</p>
+            <p>This project taught me that <strong>transparency is the key to user trust</strong>. I realized that giving users clear visibility into their security status was <strong>just as vital as the encryption technology itself</strong>. We also learned the value of <strong>strategic trade-offs</strong>: by limiting complex configurations to the Enterprise tier, we <strong>kept the core platform fast and simple</strong> for most users. Finally, <strong>validating early with decision-makers</strong> proved to be a critical business choice, <strong>saving the company months of potential rework</strong>.</p>
         </div>
 
         <div class="cta-section">

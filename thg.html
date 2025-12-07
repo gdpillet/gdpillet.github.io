@@ -93,7 +93,6 @@
         <div class="section">
             <h2>The Problem</h2>
             <div class="problem-box">
-                <h3>Business Challenge</h3>
                 <p><strong>Senior finance executives were drowning in data but starving for insights.</strong> Despite having access to comprehensive benchmarking data across 15,000+ metrics, users couldn't efficiently compare performance indicators, switch between metric panels, or identify actionable insights within reasonable timeframes.</p>
                 
                 <p class="mt-xl mb-lg"><strong>Key Issues Identified:</strong></p>
@@ -110,12 +109,8 @@
 
         <div class="section">
             <h2>Research & Discovery</h2>
-            <p>Working within an agile environment for The Hackett Group client, I conducted comprehensive user research to understand the complex needs of finance executives and data collectors.</p>
-
-            <div class="process-step">
-                <h4>Empathize Phase</h4>
-                <p>Conducted stakeholder interviews with CTO and CEO, followed by extensive user interviews with finance team members and data collectors to understand their workflows, pain points, and time constraints.</p>
-            </div>
+            <p>Working within an agile environment for The Hackett Group client, <strong>I conducted comprehensive user research</strong> to understand the complex needs of finance executives and data collectors.</p>
+            <p><strong>I conducted stakeholder interviews with the CTO and CEO</strong>, followed by extensive user interviews with finance team members and data collectors to understand their workflows, pain points, and time constraints.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/thg-collaboration.png" alt="The Hackett Group Collaboration">
@@ -123,30 +118,22 @@
                 <p class="image-caption">Collaborative research and stakeholder interviews with The Hackett Group finance teams.</p>
             </div>
             <h3>Key Insights from Research</h3>
-            <p>The platform needed to solve several important challenges. First, Time-Constrained Users like senior finance team members needed fast access to important information without complicated navigation. Second, there was a Comparative Analysis Need because users had to compare many metrics at the same time to make strategic decisions. Also, the system had Complex User Roles (like Program Managers and Data Collectors), which required different levels of access and functionality. Finally, the platform needed to fix the Missing Context of raw metrics and help users focus on the Excellence Quadrant metrics.</p>
+            <p>The redesign addressed four main challenges. First, <strong>Time-Constrained Users</strong> (like senior executives) needed <strong>fast answers</strong> without getting lost in menus. Second, users required better <strong>Comparative Analysis</strong> tools to view metrics <strong>side-by-side</strong> for decision-making. The system also had to handle <strong>Complex User Roles</strong>, giving specific access to different teams. Finally, we needed to add context to the data, helping users focus on the critical <strong>Excellence Quadrant metrics</strong>.</p>
             <br />
         </div>
 
         <div class="section">
             <h2>The Design Process</h2>
-            <div class="process-step">
-                <h4>Define Phase</h4>
-                <p>Created user journeys and user flows mapping core functionalities. Developed user personas for different roles (Data Collectors, Finance Managers, Executives) to understand how each would complete tasks and what information they needed along the way.</p>
-            </div>
+            <p><strong>I created user journeys and user flows mapping</strong> core functionalities and developed user personas for different roles (Data Collectors, Finance Managers, Executives) <strong>to understand</strong> how each would complete tasks and <strong>what information they needed</strong> along the way.</p>
+            <p><strong>I facilitated collaborative sessions with the 10-member team</strong> using Whimsical boards <strong>to create flowcharts and user stories</strong>. Rapidly iterated on concepts through sketching, wireframing, and functional mockups in Figma.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/thg-lifecycle1.png" alt="The Hackett Group User Journey">
                 </div>
                 <p class="image-caption">User journey mapping core functionalities and roles within The Hackett Group platform.</p>
             </div>
-            <div class="process-step">
-                <h4>Ideate & Prototype</h4>
-                <p>Facilitated collaborative sessions with the 10-member team using Whimsical boards to create flowcharts and user stories. Rapidly iterated on concepts through sketching, wireframing, and functional mockups in Figma.</p>
-            </div>
-
-            <h3>Multi-Panel Comparison Dashboard</h3>
-            <p>Users needed to compare multiple metrics simultaneously but the existing interface only allowed viewing one metric panel at a time.</p>
-            <p>Designed a flexible grid-based dashboard that allowed users to display multiple metric panels side-by-side. Implemented quick-switch functionality enabling users to toggle between different metric views without losing context or position.</p>
+            <br />  
+            <p>Because users struggled to compare data in the old interface, I designed a <strong>flexible grid dashboard</strong> that displays multiple metric panels <strong>side-by-side</strong>. I also added a <strong>quick-switch feature</strong>, allowing users to toggle between different views instantly <strong>without losing their context</strong>.</p>
 
             <div class="insight-grid mb-3xl">
                 <div class="insight-card">
@@ -162,35 +149,20 @@
                     <p>Users could save and recall preferred metric combinations for recurring analysis</p>
                 </div>
             </div>
-
-            <h3>Visual Data Hierarchy & Excellence Indicators</h3>
-            <p>With 15,000+ metrics, users struggled to identify which data points were most critical for strategic decisions.</p>
-            <p>Implemented a clear visual hierarchy using color-coding and excellence indicators. Designed a scoring system that highlighted metrics contributing to the "excellence quadrant"—helping users focus on high-impact performance areas.</p>
-            <ul class="bullet-list mb-3xl">
-                <li>Color-coded performance tiers (Excellent, Good, Average, Below Average)</li>
-                <li>Excellence quadrant badges highlighting top-performing metrics</li>
-                <li>Comparative advantage indicators showing where organizations excel vs. peers</li>
-                <li>Trend arrows and sparklines for quick pattern recognition</li>
-            </ul>
+            <br />
+            <p>With 15,000+ metrics, users struggled to find the data that mattered most. I established a clear <strong>visual hierarchy</strong> using <strong>color-coded tiers</strong> and <strong>trend arrows</strong> for quick scanning. I also designed specific indicators for the <strong>Excellence Quadrant</strong>, helping users instantly focus on <strong>high-impact areas</strong> where they outperform their peers.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/thg-style-guide.png" alt="The Hackett Group Design System">
                 </div>
                 <p class="image-caption">Design system and visual hierarchy for The Hackett Group benchmarking dashboard.</p>
             </div>
+            <br />
+            <p>Raw numbers lack meaning without context, so I integrated <strong>industry benchmarks</strong> directly into each panel. This shows users exactly how they rank against <strong>peers</strong> and <strong>best-in-class performers</strong>.During development, we realized new users needed help. I designed an <strong>onboarding tour</strong> to guide them. I also proposed and built a <strong>Presentation Mode</strong>, allowing executives to turn dashboard data into <strong>slide-based reports</strong> instantly.</p>
+            <br />
 
-            <h3>Contextual Benchmarking Display</h3>
-            <p>Raw metrics without peer comparison context provided limited actionable insight.</p>
-            <p>Integrated industry benchmarking directly into each metric panel, showing where the organization stood relative to peers, industry averages, and best-in-class performers.</p>
+            <p>I conducted <strong>A/B testing</strong> and used <strong>Microsoft Clarity heatmaps</strong> to see exactly how users interacted with the dashboard. I also brought <strong>dynamic mockups</strong> to client meetings to test and refine our decisions in real-time. This process ensured the final design met the client's needs within the <strong>proposed timeframe</strong>.</p>
 
-            <h3>Guided Onboarding & Presentation Mode</h3>
-            <p>During development, we realized new users needed guidance to understand the platform's extensive capabilities.</p>
-            <p>Designed a comprehensive onboarding tour and added a presentation mode feature (my suggestion, approved after team discussion). This allowed users to create slide-based reports directly from dashboard data for executive presentations.</p>
-<br />
-            <div class="process-step">
-                <h4>Test & Iterate</h4>
-                <p>Conducted A/B testing and usability studies throughout development. Used dynamic mockups in consecutive client meetings to explain, discuss, test, and rethink design decisions. Ensured deliverables matched client needs within the proposed timeframe.</p>
-            </div>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/thg-heatmap.png" alt="Microsoft Clarity Heatmap">
@@ -198,7 +170,16 @@
                 <p class="image-caption">Heatmap analysis from Microsoft Clarity showing user interaction patterns on the dashboard.</p>
             </div>
         </div>
-
+        <div class="section">
+            <h2>Final Design</h2>
+            <p>The redesign transformed how executives work by allowing them to identify strategic opportunities in <strong>real-time</strong>. Clear indicators for the <strong>Excellence Quadrant</strong> help teams focus on high-impact areas, while improved <strong>data democratization</strong> ensures users only see the information relevant to their specific role. I also added built-in <strong>presentation capabilities</strong> to save hours of manual reporting, all built on a <strong>scalable design system</strong> that allows the platform to grow easily.</p>
+            <div class="image-with-caption">
+                <div class="study-project-card">
+                    <img src="./img/thg-dashboard-charts.png" alt="The Hackett Group Dashboard Charts">
+                </div>
+                <p class="image-caption">Final benchmarking dashboard featuring multi-panel comparison and excellence indicators.</p>
+            </div>
+        
         <div class="section">
             <h2>Results & Impact</h2>
             <p>The redesigned benchmarking platform transformed how finance executives accessed and utilized performance data:</p>
@@ -221,26 +202,11 @@
                     <p>Metric switching and comparison workflow compared to legacy system</p>
                 </div>
             </div>
-
-            <h3>Qualitative Improvements</h3>
-            <ul class="bullet-list mb-3xl">
-                <li><strong>Enhanced decision-making speed:</strong> Executives could now identify strategic opportunities in real-time during meetings</li>
-                <li><strong>Improved data democratization:</strong> Multiple user roles could access relevant information without overwhelming complexity</li>
-                <li><strong>Excellence quadrant visibility:</strong> Clear visual indicators helped organizations focus on high-impact performance areas</li>
-                <li><strong>Presentation capabilities:</strong> Built-in slide generation eliminated manual report creation, saving hours per analysis</li>
-                <li><strong>Scalable design system:</strong> Flexible component architecture allowed easy addition of new metric types</li>
-            </ul>
-            <div class="image-with-caption">
-                <div class="study-project-card">
-                    <img src="./img/thg-dashboard-charts.png" alt="The Hackett Group Dashboard Charts">
-                </div>
-                <p class="image-caption">Final benchmarking dashboard featuring multi-panel comparison and excellence indicators.</p>
-            </div>
         </div>
 
         <div class="section">
             <h2>Reflection</h2>
-            <p>Reflecting on this project, I see it offered unique challenges in designing a large, data-intensive platform with many different user needs. My main lesson was that Context is king in data visualization; raw numbers are not helpful unless you can compare them with benchmarks. Also, because of the diverse user roles from Data Collectors to Executives, we needed a very flexible architecture to give everyone the right information. Working with the team in Figma allowed for quick and collaborative iteration, which greatly helped us to reduce mistakes. Finally, the Agile methodology was key, allowing us to adapt the timeline when we discovered high-value features were needed.</p>
+            <p>Designing this <strong>data-intensive platform</strong> taught me that <strong>context is king</strong>; numbers are only useful when compared to benchmarks. We created a <strong>flexible architecture</strong> to support everyone from Data Collectors to Executives. Using <strong>Figma</strong> allowed us to catch mistakes early, while the <strong>Agile methodology</strong> gave us the freedom to adapt the timeline to include high-value features.</p>
         </div>
 
         <div class="cta-section">
