@@ -4,26 +4,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Función para abrir/cerrar menú
+    // Function to open/close menu
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         nav.classList.toggle('active');
-        body.classList.toggle('menu-open'); // Prevenir scroll de fondo
+        body.classList.toggle('menu-open'); // Prevent background scroll
         
-        // Accesibilidad: Actualizar el estado de aria-expanded
+        // Accessibility: Update aria-expanded state
         const isExpanded = hamburger.classList.contains('active');
         hamburger.setAttribute('aria-expanded', isExpanded);
     });
 
-    // Cerrar menú al hacer clic en un enlace
+    // Close menu when clicking a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            // Asegúrate de que todos los elementos pierdan la clase 'active' y 'menu-open'
+            // Ensure all elements lose the 'active' and 'menu-open' classes
             hamburger.classList.remove('active');
             nav.classList.remove('active');
             body.classList.remove('menu-open');
             
-            // Accesibilidad: Asegurar que aria-expanded sea false
+            // Accessibility: Ensure aria-expanded is false
             hamburger.setAttribute('aria-expanded', 'false');
         });
     });
