@@ -22,12 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return stored;
         }
         
-        // Check system preference
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return DARK_THEME;
-        }
-        
-        return LIGHT_THEME;
+        // Default to dark mode
+        return DARK_THEME;
     };
     
     /**
