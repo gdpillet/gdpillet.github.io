@@ -88,7 +88,7 @@ ul li {
     justify-content: space-between;
     gap: var(--spacing-md);
     text-align: left;
-    margin: var(--spacing-2xl) 0 var(--spacing-4xl);
+    margin: var(--spacing-5xl) 0 var(--spacing-4xl);
     flex-wrap: nowrap;
     align-items: flex-start;
 }
@@ -601,7 +601,8 @@ footer p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-2xl);
-    padding-bottom: var(--spacing-5xl);
+    padding-bottom: var(--spacing-xl);
+    padding-top: var(--spacing-5xl);
 }
 .info-box {
     background-color: var(--color-bg-primary);
@@ -1348,7 +1349,7 @@ html {
 .testimonials {
     background-color: var(--color-bg-secondary);
     padding: var(--spacing-5xl) var(--spacing-lg);
-    margin: var(--spacing-5xl) 0 0;
+    margin: 0;
     position: relative;
     overflow: hidden;
 }
