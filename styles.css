@@ -506,6 +506,33 @@ footer p {
     /* min-height: 400px; */
     object-fit: cover;
 }
+
+/* Image wrapper for zoom containment */
+.project-image-wrapper {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.project-image-wrapper img {
+    transition: transform var(--transition-slow);
+    will-change: transform;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (min-width: 769px) {
+    .main-project-card:not(.project-carousel):hover .project-image-wrapper img {
+        transform: scale(1.2);
+    }
+}
+
+.main-project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
 .main-project-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
@@ -1654,4 +1681,38 @@ html {
     }
 }
 
+/* ===================================
+   SCROLL REVEAL ANIMATION
+   =================================== */
 
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger effect for multiple elements */
+[data-reveal][data-reveal-delay="1"] {
+    transition-delay: 0.1s;
+}
+
+[data-reveal][data-reveal-delay="2"] {
+    transition-delay: 0.2s;
+}
+
+[data-reveal][data-reveal-delay="3"] {
+    transition-delay: 0.3s;
+}
+
+[data-reveal][data-reveal-delay="4"] {
+    transition-delay: 0.4s;
+}
+
+[data-reveal][data-reveal-delay="5"] {
+    transition-delay: 0.5s;
+}
