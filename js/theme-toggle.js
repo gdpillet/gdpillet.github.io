@@ -50,6 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         applyTheme(newTheme);
         localStorage.setItem(THEME_KEY, newTheme);
+        
+        // Close mobile menu overlay if open
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.main-nav');
+        const body = document.body;
+        if (hamburger && mainNav) {
+            const isMenuOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            if (isMenuOpen) {
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.classList.remove('active');
+                mainNav.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        }
     };
     
     /**

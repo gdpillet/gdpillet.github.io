@@ -68,7 +68,8 @@
     --font-size-5xl: 2rem;        /* 32px */
     --font-size-6xl: 3rem;        /* 48px */
     --font-size-7xl: 4rem;        /* 64px */
-    
+    --font-size-8xl: 5rem;        /* 80px */
+
     /* Font Weight */
     --font-weight-regular: 400;
     --font-weight-medium: 500;
