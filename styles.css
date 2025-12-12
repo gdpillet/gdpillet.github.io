@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
 *:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
@@ -71,6 +77,9 @@ body {
     background: var(--color-bg-secondary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 p {
@@ -119,7 +128,7 @@ ul li {
     justify-content: space-between;
     gap: var(--spacing-md);
     text-align: left;
-    margin: var(--spacing-5xl) 0 var(--spacing-4xl);
+    margin: var(--spacing-3xl) 0 var(--spacing-2xl);
     flex-wrap: nowrap;
     align-items: flex-start;
 }
@@ -161,9 +170,12 @@ ul li {
 
 /* Section Styles */
 .section {
-    margin: var(--spacing-3xl) auto;
-    padding: var(--spacing-xl) var(--spacing-xl);
+    margin: 0 auto var(--spacing-2xl) auto;
+    padding: 0 var(--spacing-xl);
     border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .section h2 {
@@ -177,7 +189,7 @@ ul li {
 
 .section h3 {
     font-size: var(--font-size-3xl);
-    margin: var(--spacing-3xl) 0 var(--spacing-md);
+    margin: var(--spacing-md) 0 var(--spacing-md);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-semibold);
 }
@@ -251,7 +263,7 @@ ul li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
-    margin: var(--spacing-3xl) 0;
+    margin: var(--spacing-md) 0;
 }
 
 .insight-card {
@@ -376,7 +388,7 @@ ul.bullet-list strong {
 .results {
     display: flex;
     gap: var(--spacing-2xl);
-    margin: var(--spacing-3xl) 0;
+    margin: var(--spacing-xl) 0;
     flex-wrap: wrap;
 }
 
@@ -408,7 +420,7 @@ ul.bullet-list strong {
     padding: var(--spacing-5xl) var(--spacing-3xl);
     text-align: center;
     color: var(--color-text-on-dark);
-    margin: var(--spacing-3xl) auto;
+    margin: var(--spacing-md) auto;
 }
 
 .cta-section h2 {
@@ -423,7 +435,7 @@ ul.bullet-list strong {
 
 .cta-section p {
     font-size: var(--font-size-lg);
-    margin: 0 0 var(--spacing-2xl);
+    margin: 0;
     opacity: 0.95;
     color: var(--color-text-on-dark);
 }
@@ -434,7 +446,7 @@ footer {
     padding: var(--spacing-3xl) var(--spacing-lg);
     text-align: center;
     color: var(--color-text-secondary);
-    margin-top: var(--spacing-5xl);
+    margin-top: var(--spacing-3xl);
 }
 
 .footer-nav {
@@ -450,8 +462,8 @@ footer p {
 }
 .view-all-work {
     text-align: center;
-    margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-5xl);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-3xl);
 }
 .view-all-work a {
     display: inline-block;
@@ -534,6 +546,8 @@ footer p {
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 100%;
+    width: 100%;
 }
 .main-project-card img, .study-project-card img {
     width: 100%;
@@ -577,7 +591,7 @@ footer p {
  .grid-projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: var(--spacing-5xl);
+    margin-bottom: var(--spacing-3xl);
     gap: var(--spacing-2xl);
 }
 
@@ -689,7 +703,7 @@ footer p {
         font-size: var(--font-size-md);
     }
     .section {
-        padding: var(--spacing-xl) var(--spacing-lg);
+        padding: 0 var(--spacing-lg);
     }
     ul.hero-highlights {
         padding: 0 0 0 var(--spacing-lg);
@@ -1343,8 +1357,8 @@ html {
 .stat-box.highlight {
     background: var(--gradient-stat-highlight);
     color: var(--color-text-on-dark);
-    padding: var(--spacing-4xl);
-    margin: var(--spacing-3xl) 0;
+    padding: var(--spacing-xl);
+    margin: var(--spacing-md) 0;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     text-align: center;
@@ -1407,7 +1421,9 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: var(--spacing-lg) 0;
+    margin: var(--spacing-2xl) 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .image-caption {
@@ -1421,7 +1437,8 @@ html {
 
 /* Case Study specific image margins */
 .section .image-with-caption {
-    margin-bottom: 0;
+    margin-bottom: var(--spacing-xl);
+    max-width: 100%;
 }
 
 /* About page specific: ensure secondary color for intro and beyond sections */
@@ -1432,13 +1449,13 @@ html {
 
 /* Main content section spacing */
 #main-content {
-    margin-top: var(--spacing-6xl);
+    margin-top: var(--spacing-2xl);
 }
 
 /* Testimonials Section */
 .testimonials {
     background-color: var(--color-bg-secondary);
-    padding: var(--spacing-5xl) var(--spacing-lg);
+    padding: var(--spacing-3xl) var(--spacing-lg);
     margin: 0;
     position: relative;
     overflow: hidden;
@@ -1481,7 +1498,7 @@ html {
 
 .testimonials h2 {
     text-align: center;
-    margin-bottom: var(--spacing-5xl);
+    margin-bottom: var(--spacing-3xl);
     font-size: var(--font-size-5xl);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
@@ -1495,7 +1512,7 @@ html {
 
 .testimonial-card {
     background-color: var(--color-bg-primary);
-    padding: var(--spacing-3xl);
+    padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     display: flex;
