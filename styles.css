@@ -925,6 +925,7 @@ body.menu-open {
         box-shadow: -4px 0 20px var(--color-overlay);
         transform: translateX(100%);
         transition: transform var(--transition-cubic);
+        z-index: 999;
     }
     
     .main-nav.active {
@@ -935,36 +936,36 @@ body.menu-open {
         font-size: var(--font-size-2xl);
         width: 100%;
         padding: var(--spacing-md) 0;
+        position: relative;
+        z-index: 1000;
     }
 
-    .main-nav.active::before {
-        content: '';
+    /* Menu overlay backdrop */
+    .menu-overlay {
         position: fixed;
         top: 0;
         left: 0;
-        right: 280px;
+        right: 0;
         bottom: 0;
         background: rgba(255, 255, 255, 0.8);
-        z-index: -1;
-        animation: fadeIn var(--transition-normal);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity var(--transition-normal), visibility var(--transition-normal);
+    }
+
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
     }
     
-    [data-theme="dark"] .main-nav.active::before {
+    [data-theme="dark"] .menu-overlay {
         background: rgba(0, 0, 0, 0.7);
     }
     
     @media (prefers-color-scheme: dark) {
-        :root:not([data-theme="light"]) .main-nav.active::before {
+        :root:not([data-theme="light"]) .menu-overlay {
             background: rgba(0, 0, 0, 0.7);
-        }
-    }
-    
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
         }
     }
 

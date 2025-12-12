@@ -4,10 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    body.appendChild(overlay);
+
     // Function to open/close menu
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         nav.classList.toggle('active');
+        overlay.classList.toggle('active');
         body.classList.toggle('menu-open'); // Prevent background scroll
         
         // Accessibility: Update aria-expanded state
@@ -21,11 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
             // Ensure all elements lose the 'active' and 'menu-open' classes
             hamburger.classList.remove('active');
             nav.classList.remove('active');
+            overlay.classList.remove('active');
             body.classList.remove('menu-open');
             
             // Accessibility: Ensure aria-expanded is false
             hamburger.setAttribute('aria-expanded', 'false');
         });
+    });
+
+    // Close menu when clicking on overlay
+    overlay.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+        body.classList.remove('menu-open');
+        hamburger.setAttribute('aria-expanded', 'false');
     });
 });
 /* Scroll to Top Button */

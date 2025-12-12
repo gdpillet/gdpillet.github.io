@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const hamburger = document.querySelector('.hamburger');
         const mainNav = document.querySelector('.main-nav');
         const body = document.body;
+        const overlay = document.querySelector('.menu-overlay');
+        
         if (hamburger && mainNav) {
             const isMenuOpen = hamburger.getAttribute('aria-expanded') === 'true';
             if (isMenuOpen) {
@@ -62,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.classList.remove('active');
                 mainNav.classList.remove('active');
                 body.classList.remove('menu-open');
+                if (overlay) {
+                    overlay.classList.remove('active');
+                }
             }
         }
     };
