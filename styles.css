@@ -14,6 +14,32 @@
     outline: none;
 }
 
+/* Heading Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--font-size-8xl);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: var(--font-size-6xl);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+}
+
+h4 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+}
+
 /* Skip Navigation Link */
 .skip-link {
     position: absolute;

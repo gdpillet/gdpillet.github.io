@@ -53,7 +53,9 @@
     
     /* Font Family */
     --font-family-system: 'Inter', sans-serif;
-    --font-family-display: 'Inter', sans-serif;
+    --font-family-display: 'Poppins', sans-serif;
+    --font-family-body: 'Inter', sans-serif;
+    --font-family-heading: 'Poppins', sans-serif;
     
     /* Font Sizes */
     --font-size-xs: 0.75rem;      /* 12px */
