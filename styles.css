@@ -18,26 +18,31 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-heading);
     font-weight: 700;
+    line-height: 1.2;
 }
 
 h1 {
     font-size: var(--font-size-8xl);
     font-weight: 800;
+    line-height: 1.1;
 }
 
 h2 {
     font-size: var(--font-size-6xl);
     font-weight: 700;
+    line-height: 1.15;
 }
 
 h3 {
     font-size: var(--font-size-4xl);
     font-weight: 700;
+    line-height: 1.2;
 }
 
 h4 {
     font-size: var(--font-size-2xl);
     font-weight: 600;
+    line-height: 1.25;
 }
 
 /* Skip Navigation Link */
@@ -157,22 +162,22 @@ ul li {
 /* Section Styles */
 .section {
     margin: var(--spacing-3xl) auto;
-    padding: var(--spacing-xl) var(--spacing-3xl);
+    padding: var(--spacing-xl) var(--spacing-xl);
     border-radius: var(--radius-lg);
 }
 
 .section h2 {
     font-size: var(--font-size-5xl);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-md);
     color: var(--color-text-primary);
-    padding-bottom: var(--spacing-md);
+    padding-bottom: 0;
     display: inline-block;
     font-weight: var(--font-weight-bold);
 }
 
 .section h3 {
     font-size: var(--font-size-3xl);
-    margin: var(--spacing-2xl) 0 var(--spacing-xl);
+    margin: var(--spacing-3xl) 0 var(--spacing-md);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-semibold);
 }
@@ -190,7 +195,7 @@ ul li {
     gap: var(--spacing-3xl);
     margin: 0 0 var(--spacing-3xl);
     flex-wrap: wrap;
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-lg) 0;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -224,16 +229,21 @@ ul li {
 /* Problem Box */
 .problem-box {
     color: var(--color-text-secondary);
-    margin: var(--spacing-2xl) 0;
+    margin: var(--spacing-md) 0 0 0;
     border-radius: var(--radius-md);
-}
-
-.problem-box h3 {
-    color: var(--color-text-secondary);
 }
 
 .problem-box p {
     color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-relaxed);
+    font-size: var(--font-size-lg);
+}
+
+.problem-box h3 {
+    color: var(--color-text-secondary);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
 }
 
 /* Insight Grid */
@@ -241,7 +251,7 @@ ul li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
-    margin: var(--spacing-2xl) 0;
+    margin: var(--spacing-3xl) 0;
 }
 
 .insight-card {
@@ -274,7 +284,7 @@ ul li {
     background: var(--color-bg-disabled);
     padding: var(--spacing-3xl);
     border-radius: var(--radius-lg);
-    margin: var(--spacing-2xl) 0;
+    margin: var(--spacing-3xl) 0;
     text-align: center;
     box-shadow: var(--shadow-md);
 }
@@ -332,12 +342,12 @@ ul li {
 
 /* Bullet Lists */
 ul.bullet-list {
-    margin: var(--spacing-lg) 0;
-    padding-left: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
 }
 
 ul.bullet-list li {
-    margin: var(--spacing-md) 0;
+    margin: var(--spacing-xs) 0;
     font-size: var(--font-size-lg);
     line-height: var(--line-height-relaxed);
     color: var(--color-text-secondary);
@@ -520,7 +530,7 @@ footer p {
 .study-project-card {
     background-color: var(--color-bg-primary);
     box-shadow: var(--shadow-md);
-    margin-bottom: 40px;
+    margin-bottom: var(--spacing-2xl);
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -598,7 +608,7 @@ footer p {
 }
 
 .project-content {
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-xl);
 }
 
 .category-pills {
@@ -635,7 +645,7 @@ footer p {
     font-size: var(--font-size-4xl);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
-    margin: 0px 0px var(--spacing-md);
+    margin: 0px 0px var(--spacing-xs);
 }
 
 .project-content p.meta {
@@ -643,7 +653,7 @@ footer p {
     font-size: var(--font-size-sm);
     margin: 0px 0px;
     border-bottom: none;
-    padding: var(--spacing-md) 0px;
+    padding: 0px 0px var(--spacing-md) 0px;
 }
 
 .project-content p.description {
@@ -768,12 +778,13 @@ footer p {
 .header-text {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: 0px;
 }
 
 .logo {
     font-size: 1.25rem;
     font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-heading);
     color: var(--color-text-primary);
     text-decoration: none;
     transition: color var(--transition-normal);
@@ -1364,6 +1375,31 @@ html {
 /* Utility Classes */
 .margin-top-20 {
     margin-top: var(--spacing-xl);
+}
+
+/* Margin Utility Classes */
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+    margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+    margin-top: var(--spacing-xl);
+}
+
+.mb-md {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+    margin-bottom: var(--spacing-lg);
+}
+
+.mb-xl {
+    margin-bottom: var(--spacing-xl);
 }
 
 /* Image Caption Styling */

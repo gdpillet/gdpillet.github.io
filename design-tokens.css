@@ -57,20 +57,20 @@
     --font-family-body: 'Inter', sans-serif;
     --font-family-heading: 'Poppins', sans-serif;
     
-    /* Font Sizes */
+    /* Font Sizes - Golden Ratio (1.618) applied from 16px base */
     --font-size-xs: 0.75rem;      /* 12px */
     --font-size-sm: 0.875rem;     /* 14px */
     --font-size-base: 1rem;       /* 16px */
     --font-size-md: 1.1rem;       /* 17.6px */
     --font-size-lg: 1.2rem;       /* 19.2px */
     --font-size-xl: 1.3rem;       /* 20.8px */
-    --font-size-2xl: 1.4rem;      /* 22.4px */
-    --font-size-3xl: 1.5rem;      /* 24px */
-    --font-size-4xl: 1.8rem;      /* 28.8px */
-    --font-size-5xl: 2rem;        /* 32px */
-    --font-size-6xl: 3rem;        /* 48px */
+    --font-size-2xl: 1.625rem;    /* 26px - 16 × 1.618 */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.1rem;      /* 33.6px */
+    --font-size-5xl: 2.6rem;      /* 42px - 26 × 1.618 */
+    --font-size-6xl: 3.25rem;     /* 52px */
     --font-size-7xl: 4rem;        /* 64px */
-    --font-size-8xl: 5rem;        /* 80px */
+    --font-size-8xl: 4.25rem;     /* 68px - 42 × 1.618 */
 
     /* Font Weight */
     --font-weight-regular: 400;
@@ -87,16 +87,17 @@
        SPACING TOKENS
        ======================================== */
     
+    /* Spacing Tokens - Golden Ratio (1.618) progression from 12px base */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
-    --spacing-md: 12px;
-    --spacing-lg: 16px;
-    --spacing-xl: 20px;
-    --spacing-2xl: 30px;
-    --spacing-3xl: 40px;
-    --spacing-4xl: 50px;
-    --spacing-5xl: 60px;
-    --spacing-6xl: 150px;
+    --spacing-md: 12px;        /* 12px base */
+    --spacing-lg: 19px;        /* 12 × 1.618 ≈ 19px */
+    --spacing-xl: 31px;        /* 19 × 1.618 ≈ 31px */
+    --spacing-2xl: 50px;       /* 31 × 1.618 ≈ 50px */
+    --spacing-3xl: 81px;       /* 50 × 1.618 ≈ 81px */
+    --spacing-4xl: 130px;      /* 81 × 1.618 ≈ 130px */
+    --spacing-5xl: 210px;      /* 130 × 1.618 ≈ 210px */
+    --spacing-6xl: 150px;      /* Keep for backwards compatibility */
     
     /* ========================================
        BORDER RADIUS TOKENS
