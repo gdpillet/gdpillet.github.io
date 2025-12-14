@@ -10,6 +10,14 @@ class ScrollReveal {
         };
 
         this.revealElements = document.querySelectorAll('[data-reveal]');
+        
+        // Check if IntersectionObserver is supported
+        if (!('IntersectionObserver' in window)) {
+            console.warn('IntersectionObserver not supported, revealing all elements');
+            this.revealElements.forEach(el => el.classList.add('revealed'));
+            return;
+        }
+        
         this.init();
     }
 

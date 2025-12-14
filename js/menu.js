@@ -4,62 +4,69 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Guard clause - exit if required elements don't exist
+    if (!hamburger || !nav) {
+        console.warn('Menu elements not found');
+        return;
+    }
+
     // Create overlay element
     const overlay = document.createElement('div');
     overlay.className = 'menu-overlay';
     body.appendChild(overlay);
 
+    // Centralized menu state management
+    const setMenuState = (isOpen) => {
+        hamburger.classList.toggle('active', isOpen);
+        nav.classList.toggle('active', isOpen);
+        overlay.classList.toggle('active', isOpen);
+        body.classList.toggle('menu-open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+    };
+
     // Function to open/close menu
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        nav.classList.toggle('active');
-        overlay.classList.toggle('active');
-        body.classList.toggle('menu-open'); // Prevent background scroll
-        
-        // Accessibility: Update aria-expanded state
         const isExpanded = hamburger.classList.contains('active');
-        hamburger.setAttribute('aria-expanded', isExpanded);
+        setMenuState(!isExpanded);
     });
 
     // Close menu when clicking a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            // Ensure all elements lose the 'active' and 'menu-open' classes
-            hamburger.classList.remove('active');
-            nav.classList.remove('active');
-            overlay.classList.remove('active');
-            body.classList.remove('menu-open');
-            
-            // Accessibility: Ensure aria-expanded is false
-            hamburger.setAttribute('aria-expanded', 'false');
+            setMenuState(false);
         });
     });
 
     // Close menu when clicking on overlay
     overlay.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        nav.classList.remove('active');
-        overlay.classList.remove('active');
-        body.classList.remove('menu-open');
-        hamburger.setAttribute('aria-expanded', 'false');
+        setMenuState(false);
     });
 });
 /* Scroll to Top Button */
 document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    if (!scrollToTopBtn) {
+        console.warn('Scroll to top button not found');
+        return;
+    }
 
-    // 1. Show/Hide button based on scroll position
-    window.onscroll = function() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            // Show the button when scrolled down
-            scrollToTopBtn.style.display = "flex"; 
-        } else {
-            // Hide the button when at the top
-            scrollToTopBtn.style.display = "none";
-        }
+    let scrollTimeout;
+    const handleScroll = () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollToTopBtn.style.display = "flex"; 
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }, 100);
     };
 
-    // 2. Scroll to top function
+    // Use addEventListener instead of onscroll
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Scroll to top function
     scrollToTopBtn.onclick = function() {
         window.scrollTo({
             top: 0,
@@ -67,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // 3. Keyboard accessibility for scroll-to-top
+    // Keyboard accessibility for scroll-to-top
     scrollToTopBtn.addEventListener('keydown', function(event) {
         if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
@@ -77,6 +84,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-    
-    // (Existing menu logic goes here if menu.js already has content)
 });

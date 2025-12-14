@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastón Pillet portfolio - Crafting usable enterprise SaaS B2B & B2C experiences.</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design-tokens.css">
     <link rel="stylesheet" href="styles.css">
@@ -33,7 +35,7 @@
                     <a href="about.html" class="nav-link">About</a>
                     <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                             <circle cx="12" cy="12" r="5"></circle>
                             <line x1="12" y1="1" x2="12" y2="3"></line>
                             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -53,18 +55,19 @@
         </div>
     </header>
 
+    <main>
     <section class="hero">
         <div class="hero-inner">
             <h1 class="hero-title">I Design Customer Centric and AI-First Digital Products</h1>
-            <br />
             <p class="hero-subhead">
-                <p>15 years in technology, specializing in <strong>Product Design (7+ years)</strong>. I apply Web Development expertise to guide <strong>strategic</strong>, <strong>AI-powered</strong> design that consistently delivers significant, <strong>measurable results</strong>.<p>
-            <br />
+                15 years in technology, specializing in <strong>Product Design (7+ years)</strong>. I apply Web Development expertise to guide <strong>strategic</strong>, <strong>AI-powered</strong> design that consistently delivers significant, <strong>measurable results</strong>.
+            </p>
         </div>
     </section>
     
     <div class="container">
         <section class="featured-work" id="main-content">
+            <h2 class="visually-hidden">Featured Case Studies</h2>
             <a href="ibancar.html" class="link-plain">
                 <div class="main-project-card" data-reveal data-reveal-delay="1">
                     <div class="project-image-wrapper">
@@ -131,7 +134,7 @@
             <div class="main-project-card project-carousel" id="clearstar-carousel" data-reveal data-reveal-delay="4">
                 <div class="carousel-wrapper-project">
                     <div class="carousel-container-project">
-                        <button class="carousel-nav-project carousel-nav-prev-project" aria-label="Previous image">
+                        <button class="carousel-nav-project carousel-nav-prev-project" aria-label="View previous Clearstar project image">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
                         </button>
 
@@ -160,7 +163,6 @@
                 <div class="project-content">
                     <h3>I simplified enterprise screening: designing high-fidelity UI for complex B2B/B2C background & medical workflows</h3>
                     <div class="meta-pills-row">
-                        <p class="meta"></p>
                         <div class="category-pills">
                             <span class="pill">SaaS</span>
                             <span class="pill">B2B</span>
@@ -175,7 +177,7 @@
             <div class="main-project-card project-carousel" id="nick-carousel" data-reveal data-reveal-delay="5">
                 <div class="carousel-wrapper-project">
                     <div class="carousel-container-project">
-                        <button class="carousel-nav-project carousel-nav-prev-project" aria-label="Previous image">
+                        <button class="carousel-nav-project carousel-nav-prev-project" aria-label="View previous Nickelodeon project image">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
                         </button>
 
@@ -207,7 +209,6 @@
                 <div class="project-content">
                     <h3>I built engaging interfaces for Nickelodeon's high-traffic websites</h3>
                     <div class="meta-pills-row">
-                        <p class="meta"></p>
                         <div class="category-pills">
                             <span class="pill">Websites</span>
                             <span class="pill">B2C</span>
@@ -222,7 +223,7 @@
             <div class="highlights-container">
                 <div class="highlight-card" data-reveal data-reveal-delay="1">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg" aria-hidden="true">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polygon points="12 7 16 12 12 17 8 12"></polygon>
                             <polyline points="12 12 12 5"></polyline>
@@ -233,7 +234,7 @@
                 </div>
                 <div class="highlight-card" data-reveal data-reveal-delay="2">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg" aria-hidden="true">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
@@ -243,7 +244,7 @@
                 </div>
                 <div class="highlight-card" data-reveal data-reveal-delay="3">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg" aria-hidden="true">
                             <rect x="3" y="3" width="7" height="7"></rect>
                             <rect x="14" y="3" width="7" height="7"></rect>
                             <rect x="14" y="14" width="7" height="7"></rect>
@@ -255,7 +256,7 @@
                 </div>
                 <div class="highlight-card" data-reveal data-reveal-delay="4">
                     <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-svg" aria-hidden="true">
                             <rect x="4" y="2" width="16" height="16" rx="2"></rect>
                             <rect x="8" y="8" width="2" height="2"></rect>
                             <rect x="14" y="8" width="2" height="2"></rect>
@@ -314,10 +315,11 @@
             </div>
         </div>
     </section>
+    </main>
     <footer>
         <div class="footer-nav">
-            <a href="https://drive.google.com/file/d/1xs9k2elZxUuXkDK4EWtMeE7PNAenf8YX/view?usp=sharing" class="secondary-btn" target="_blank">View my CV</a>
-            <a href="https://www.linkedin.com/in/gastonpillet/" class="secondary-btn" target="_blank">Connect with LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1xs9k2elZxUuXkDK4EWtMeE7PNAenf8YX/view?usp=sharing" class="secondary-btn" target="_blank" rel="noopener noreferrer">View my CV</a>
+            <a href="https://www.linkedin.com/in/gastonpillet/" class="secondary-btn" target="_blank" rel="noopener noreferrer">Connect with LinkedIn</a>
         </div>
         <p class="footer-tagline">Crafting usable enterprise SaaS B2B & B2C experiences.</p>
         <p>© 2025 Gastón Pillet. All rights reserved.</p>

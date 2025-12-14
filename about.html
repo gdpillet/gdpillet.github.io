@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Gastón Pillet</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design-tokens.css">
     <link rel="stylesheet" href="styles.css">
@@ -37,7 +39,7 @@
                     <a href="about.html" class="nav-link active">About</a>
                     <a href="mailto:gdpillet@gmail.com" class="nav-link">Contact</a>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                             <circle cx="12" cy="12" r="5"></circle>
                             <line x1="12" y1="1" x2="12" y2="3"></line>
                             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -56,13 +58,13 @@
             </div>
         </div>
     </header>
+    <main>
     <div class="container">
         <div class="intro-layout" data-reveal>
             <section class="page-intro">
                 <h1>About Gastón Pillet</h1>
                 <p>Product Designer (UX/UI) with 7+ years of experience leading the end-to-end design lifecycle for complex SaaS and B2B/B2C platforms and a background as a web developer. Expertise includes strategic design and AI-driven ideation in global remote environments.</p>
-                <br />
-                <p class="hero-subhead mt-xl">I have recently focused on integrating AI tools into my UX/UI design workflow. For the last few months, I have been actively exploring and applying tools like <strong>Gemini</strong> to generate placeholder content and synthetic data, <strong>Claude</strong> to assist with functional code snippets, <strong>Lovable</strong> to transform concepts into high-fidelity prototypes, <strong>Figma Make</strong> for rapid visual ideation, and <strong>Dovetail</strong> for AI-assisted qualitative data analysis. This approach allows me to accelerate ideation, enhance decision-making, and ensure more precise, enterprise-level design deliveries.</p>
+                <p class="hero-subhead mt-xl">My design process starts with the discovery phase, where I leverage AI to quickly analyze user research and data. I then use Lovable to quickly turn initial concepts into professional prototypes. I work closely with Claude Code and Copilot to ensure the design can be quickly turned into functional code. This full-cycle approach helps me make decisions better and guarantees precise, enterprise-level design outputs.</p>
             </section>
             <div class="study-project-card">
                 <img src="./img/profile2.png" alt="Gastón's Workspace" class="hero-image">
@@ -70,7 +72,6 @@
         </div>
         <section class="career-section" data-reveal>
             <h2>Career Journey</h2>
-            <br />
             <div class="career-timeline">
                 <div class="career-item">
                     <span class="year">2019 - Present</span>
@@ -201,10 +202,11 @@
             </div>
         </section>
     </div>
+    </main>
     <footer>
         <div class="footer-nav">
-            <a href="https://drive.google.com/file/d/1xs9k2elZxUuXkDK4EWtMeE7PNAenf8YX/view?usp=sharing" class="secondary-btn" target="_blank">View my CV</a>
-            <a href="https://www.linkedin.com/in/gastonpillet/" class="secondary-btn" target="_blank">Connect with LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1xs9k2elZxUuXkDK4EWtMeE7PNAenf8YX/view?usp=sharing" class="secondary-btn" target="_blank" rel="noopener noreferrer">View my CV</a>
+            <a href="https://www.linkedin.com/in/gastonpillet/" class="secondary-btn" target="_blank" rel="noopener noreferrer">Connect with LinkedIn</a>
         </div>
         <p class="footer-tagline">Crafting usable enterprise SaaS B2B & B2C experiences.</p>
         <p>© 2025 Gastón Pillet. All rights reserved.</p>

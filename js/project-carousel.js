@@ -2,7 +2,10 @@
 class ProjectCarousel {
     constructor(elementId, suffixOverride = null) {
         this.element = document.getElementById(elementId);
-        if (!this.element) return;
+        if (!this.element) {
+            console.warn(`Carousel element '${elementId}' not found`);
+            return;
+        }
 
         this.elementId = elementId;
         this.suffix = suffixOverride || (elementId === 'nick-carousel' ? '-project' : `-${elementId}`);
@@ -18,14 +21,21 @@ class ProjectCarousel {
 
         this.currentIndex = 0;
         this.itemWidth = 0;
+        this.keyboardHandler = null;
 
         this.init();
     }
 
     init() {
-        if (this.items.length === 0) return;
+        if (this.items.length === 0) {
+            console.warn(`No carousel items found for '${this.elementId}'`);
+            return;
+        }
 
-        this.totalIndicator.textContent = this.items.length;
+        if (this.totalIndicator) {
+            this.totalIndicator.textContent = this.items.length;
+        }
+        
         this.updateItemWidth();
         this.attachEventListeners();
         window.addEventListener('resize', () => this.updateItemWidth());
@@ -33,7 +43,9 @@ class ProjectCarousel {
 
     updateItemWidth() {
         const container = this.element.querySelector('.carousel-container-project');
-        this.itemWidth = container.offsetWidth;
+        if (container) {
+            this.itemWidth = container.offsetWidth;
+        }
     }
 
     attachEventListeners() {
@@ -44,11 +56,14 @@ class ProjectCarousel {
             this.nextBtn.addEventListener('click', () => this.next());
         }
 
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
+        // Scoped keyboard navigation (only when carousel is in focus)
+        this.keyboardHandler = (e) => {
             if (e.key === 'ArrowLeft') this.prev();
             if (e.key === 'ArrowRight') this.next();
-        });
+        };
+        
+        // Add keyboard listener to carousel element instead of document
+        this.element.addEventListener('keydown', this.keyboardHandler);
     }
 
     next() {
@@ -62,9 +77,18 @@ class ProjectCarousel {
     }
 
     updateCarousel() {
-        const offset = -this.currentIndex * this.itemWidth;
-        this.inner.style.transform = `translateX(${offset}px)`;
-        this.currentIndicator.textContent = this.currentIndex + 1;
+        if (this.inner && this.currentIndicator) {
+            const offset = -this.currentIndex * this.itemWidth;
+            this.inner.style.transform = `translateX(${offset}px)`;
+            this.currentIndicator.textContent = this.currentIndex + 1;
+        }
+    }
+
+    // Cleanup method (optional, for SPA scenarios)
+    destroy() {
+        if (this.element && this.keyboardHandler) {
+            this.element.removeEventListener('keydown', this.keyboardHandler);
+        }
     }
 }
 
