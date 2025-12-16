@@ -1336,10 +1336,6 @@ body.menu-open {
     padding-top: var(--spacing-3xl);
 }
 
-.expertise-section h2 {
-    margin-bottom: var(--spacing-2xl);
-}
-
 .expertise-category {
     margin-bottom: var(--spacing-2xl);
 }
