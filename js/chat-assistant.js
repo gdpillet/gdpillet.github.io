@@ -368,11 +368,23 @@ class ChatAssistant {
             return `Gastón specializes in mobile-first design. At Ibancar, he transformed a desktop-centric loan application into a mobile-optimized flow (serving 75-80% mobile traffic), resulting in dramatic conversion improvements. He ensures all designs are fully responsive and accessible.`;
         }
 
-        if (message.includes('clearstar') || message.includes('nickelodeon') || message.includes('viacom')) {
-            return `Earlier in his career, Gastón worked as a UI Designer at ClearStar (2014-2017) designing background and medical checking workflows, and as a Web Developer at Nickelodeon/MTV Network (2012-2014) building engaging interfaces for high-traffic kids entertainment sites.`;
+        if (message.includes('clearstar') || message.includes('background check') || message.includes('medical check')) {
+            return `At ClearStar (2014-2017), Gastón designed UI applications for background and medical checking workflows. He collaborated with product teams on core projects like ScreenMeNow and ClearID, improving interfaces by increasing usability for both mobile and desktop applications. His work focused on simplifying complex compliance processes.`;
         }
 
-        if (message.includes('spongebob') || message.includes('nick') || message.includes('nickelodeon')) {
+        if (message.includes('nickelodeon') || message.includes('nick') || message.includes('mtv network') || message.includes('spongebob') || message.includes('viacom')) {
+            return `At Nickelodeon/MTV Network (2012-2014), Gastón developed crisp, clean interfaces for high-traffic kids entertainment sites like nick.com. He maximized user engagement by implementing best UX practices, focusing on delivering optimal experiences for shows aimed at children while meeting both user and business needs.`;
+        }
+
+        if (message.includes('velocity partners') || message.includes('icontact')) {
+            return `At Velocity Partners (2010-2012), Gastón handled frontend development and maintenance for iContact.com, working in an Agile environment. He focused on creating responsive web applications while collaborating with cross-functional teams in Buenos Aires, Argentina.`;
+        }
+
+        if (message.includes('hrsmart') || message.includes('deltek') || (message.includes('hr') && message.includes('tool'))) {
+            return `At HRsmart (2009-2010, now Deltek), Gastón developed frontend applications for HR management tools in Austin, Texas. He worked with HTML, CSS, and Smarty PHP templates, and conducted presentations about emerging Web 2.0 design trends, demonstrating early leadership in design thinking.`;
+        }
+
+        if (message.includes('spongebob') || message.includes('nick') && message.includes('show')) {
             return `At Nickelodeon, Gastón built engaging interfaces for high-traffic websites focused on B2C entertainment. As a Web Developer, he developed crisp interfaces for Nickelodeon's high-traffic media sites, implementing best UX practices to maximize user engagement for shows aimed at kids. His work ensured frontend maintenance and successfully delivered the best experience that met both user and business needs.`;
         }
 
