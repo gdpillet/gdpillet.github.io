@@ -1156,8 +1156,24 @@ body.menu-open {
     width: 300px;
     margin-bottom: 0;
     background: white;
-    padding: 16px 16px 16px 16px;
+    padding: 16px;
     box-shadow: var(--shadow-lg);
+}
+
+#profile-photo {
+    min-height: auto !important;
+    max-width: 350px;
+    width: auto;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .intro-layout .study-project-card img {
@@ -1271,7 +1287,13 @@ body.menu-open {
         width: calc(100% - var(--spacing-2xl));
         max-width: 400px;
         margin: 0 auto var(--spacing-3xl);
-        padding: 16px 16px 16px 16px;
+        padding: 16px;
+    }
+
+    #profile-photo {
+        max-width: 350px;
+        width: 100%;
+        aspect-ratio: 3/4;
     }
 
     .intro-layout .study-project-card img {
