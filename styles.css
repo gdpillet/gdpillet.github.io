@@ -647,17 +647,35 @@ footer p {
 .view-all-work a {
     display: inline-block;
     margin: var(--spacing-sm);
-    background-color: var(--color-primary-light);
-    color: var(--color-primary);
-    padding: var(--spacing-md) var(--spacing-xl);
-    border-radius: var(--radius-md);
+    padding: 14px 32px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-md);
-    transition: background-color var(--transition-normal);
+    font-size: var(--font-size-base);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    box-shadow: var(--shadow-md);
 }
+
+.view-all-work a.primary {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg-primary);
+}
+
+.view-all-work a.secondary {
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-border-light);
+    padding: 12px 30px;
+}
+
 .view-all-work a:hover {
-    background-color: var(--color-primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.view-all-work a.secondary:hover {
+    background-color: var(--color-bg-tertiary);
+    border-color: var(--color-text-primary);
 }
 
 /* Secondary Button Style */
