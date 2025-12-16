@@ -21,7 +21,6 @@
                     <img src="./img/logo.png" alt="Gastón Pillet Logo" class="header-logo">
                     <div class="header-text">
                         <a href="index.html" class="logo">Gastón Pillet</a>
-                        <div class="header-subtitle">Product Designer</div>
                     </div>
                 </div>
                 <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -57,16 +56,29 @@
 
     <main>
     <section class="hero">
+        <canvas id="starfield" class="hero-starfield"></canvas>
         <div class="hero-inner">
-            <h1 class="hero-title">I Design Customer Centric and AI-First Digital Products</h1>
+            <h1 class="hero-title">Hey, I'm Gastón<br>Product Designer<br>Living in Spain</h1>
             <p class="hero-subhead">
-                15 years in technology, specializing in <strong>Product Design (7+ years)</strong>. I apply Web Development expertise to guide <strong>strategic</strong>, <strong>AI-powered</strong> design that consistently delivers significant, <strong>measurable results</strong>.
+                With 15 years in technology and 7+ years in Product Design, I focus on designing high-impact solutions, utilizing AI-powered design to consistently deliver significant, measurable results that drive business success.
             </p>
+            <div class="hero-buttons">
+                <a href="mailto:gdpillet@gmail.com" class="cta-button">Contact me</a>
+                <a href="#main-content" class="cta-button cta-button-secondary">See my projects</a>
+            </div>
         </div>
     </section>
+
+    <div class="animated-divider">
+        <div class="divider-line">
+            <div class="divider-progress"></div>
+        </div>
+    </div>
     
     <div class="container">
         <section class="featured-work" id="main-content">
+            <p data-reveal data-reveal-delay="0">My projects</p>
+            <br />
             <h2 class="visually-hidden">Featured Case Studies</h2>
             <a href="ibancar.html" class="link-plain">
                 <div class="main-project-card" data-reveal data-reveal-delay="1">
@@ -161,7 +173,7 @@
                 </div>
 
                 <div class="project-content">
-                    <h3>I simplified enterprise screening: designing high-fidelity UI for complex B2B/B2C background & medical workflows</h3>
+                    <h3>I simplified enterprise screening designing high-fidelity UI for complex B2B/B2C background & medical workflows</h3>
                     <div class="meta-pills-row">
                         <div class="category-pills">
                             <span class="pill">SaaS</span>
@@ -381,6 +393,7 @@
     <script src="./js/theme-toggle.js" defer></script>
     <script src="./js/project-carousel.js" defer></script>
     <script src="./js/scroll-reveal.js" defer></script>
+    <script src="./js/starfield.js" defer></script>
     <script src="./js/chat-assistant.js?v=3" defer></script>
 </body>
 </html>
