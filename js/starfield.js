@@ -59,7 +59,12 @@ class Starfield {
         star.y = this.centerY + Math.sin(star.angle) * star.distance;
         
         const maxDistance = Math.max(this.canvas.width, this.canvas.height) * 0.7;
-        if (star.distance > maxDistance) {
+        
+        // Reset star if it goes beyond boundaries or max distance
+        const isOutOfBounds = star.x < -10 || star.x > this.canvas.width + 10 || 
+                              star.y < -10 || star.y > this.canvas.height + 10;
+        
+        if (star.distance > maxDistance || isOutOfBounds) {
             const angle = Math.random() * Math.PI * 2;
             star.angle = angle;
             star.distance = Math.random() * 20;
@@ -86,8 +91,8 @@ class Starfield {
     }
 
     animate() {
-        // Adjust background fade based on theme
-        const bgOpacity = this.isDarkMode ? 0.1 : 0.15;
+        // Adjust background fade based on theme - increased opacity to prevent glow buildup
+        const bgOpacity = this.isDarkMode ? 0.2 : 0.25;
         const bgColor = this.isDarkMode ? '0, 0, 0' : '241, 245, 249';
         this.ctx.fillStyle = `rgba(${bgColor}, ${bgOpacity})`;
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);

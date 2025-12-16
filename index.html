@@ -7,7 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design-tokens.css">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Gastón Pillet is a Product Designer with 7+ years of experience leading end-to-end design lifecycle for complex SaaS and B2B platforms. He bridges the gap between design and engineering in global remote environments, blending business strategy with data-driven insights to simplify complexity for scalable enterprise solutions.">
@@ -58,7 +58,7 @@
     <section class="hero">
         <canvas id="starfield" class="hero-starfield"></canvas>
         <div class="hero-inner">
-            <h1 class="hero-title">Hey, I'm Gastón<br>Product Designer<br>Living in Spain</h1>
+            <h1 class="hero-title">Hey, I'm Gastón<br><span class="rotating-text"><span class="text-item active">Product Designer</span><span class="text-item">UX UI Designer</span><span class="text-item">Web Developer</span></span><br>Living in Spain</h1>
             <p class="hero-subhead">
                 With 15 years in technology and 7+ years in Product Design, I focus on designing high-impact solutions, utilizing AI-powered design to consistently deliver significant, measurable results that drive business success.
             </p>
@@ -68,17 +68,18 @@
             </div>
         </div>
     </section>
-
-    <div class="animated-divider">
-        <div class="divider-line">
-            <div class="divider-progress"></div>
-        </div>
-    </div>
     
     <div class="container">
+        <div class="animated-divider">
+            <h2 data-reveal data-reveal-delay="0">My projects</h2>
+            <div class="divider-line">
+                <div class="divider-progress"></div>
+            </div>
+        </div>
+        <p class="section-subtitle">My design philosophy centers on creating intuitive, accessible, and impactful digital experiences that not only look great but also drive business goals. I believe that good design is about solving real user problems efficiently.</p>
+        <p class="section-subtitle">Thanks to my background as a Web Developer, I bring a unique, comprehensive perspective to every project.</p>
+
         <section class="featured-work" id="main-content">
-            <p data-reveal data-reveal-delay="0">My projects</p>
-            <br />
             <h2 class="visually-hidden">Featured Case Studies</h2>
             <a href="ibancar.html" class="link-plain">
                 <div class="main-project-card" data-reveal data-reveal-delay="1">
@@ -232,6 +233,9 @@
                     </p>
                 </div>
             </div>
+            <div class="section-cta-container">
+                <a href="mailto:gdpillet@gmail.com" class="cta-button">Contact me</a>
+            </div>
             <div class="highlights-container">
                 <div class="highlight-card" data-reveal data-reveal-delay="1">
                     <div class="icon-wrapper">
@@ -287,7 +291,12 @@
 
     <section class="testimonials">
         <div class="container">
-            <h2>Testimonials</h2>
+            <div class="animated-divider">
+                <h2>Testimonials</h2>
+                <div class="divider-line">
+                    <div class="divider-progress"></div>
+                </div>
+            </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card" data-reveal data-reveal-delay="1">
                     <div class="testimonial-quote">“</div>
@@ -333,8 +342,8 @@
             <a href="https://drive.google.com/file/d/1xs9k2elZxUuXkDK4EWtMeE7PNAenf8YX/view?usp=sharing" class="secondary-btn" target="_blank" rel="noopener noreferrer">View my CV</a>
             <a href="https://www.linkedin.com/in/gastonpillet/" class="secondary-btn" target="_blank" rel="noopener noreferrer">Connect with LinkedIn</a>
         </div>
-        <p class="footer-tagline">Crafting usable enterprise SaaS B2B & B2C experiences.</p>
-        <p>© 2025 Gastón Pillet. All rights reserved.</p>
+        <p class="footer-tagline">Design-driven solutions for enterprise SaaS B2B & B2C experiences.</p>
+        <p>Crafted entirely with <strong>Vibe Coding</strong> energy. © 2025 Gastón Pillet.</p>
     </footer>
     <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
@@ -354,7 +363,7 @@
         </svg>
     </button>
 
-    <div id="chatWindow" class="chat-window" aria-hidden="true" role="dialog" aria-labelledby="chatTitle">
+    <div id="chatWindow" class="chat-window" aria-hidden="true" inert role="dialog" aria-labelledby="chatTitle">
         <div class="chat-header">
             <div class="chat-header-content">
                 <div class="chat-avatar-header">
@@ -394,6 +403,7 @@
     <script src="./js/project-carousel.js" defer></script>
     <script src="./js/scroll-reveal.js" defer></script>
     <script src="./js/starfield.js" defer></script>
+    <script src="./js/text-rotation.js" defer></script>
     <script src="./js/chat-assistant.js?v=3" defer></script>
 </body>
 </html>

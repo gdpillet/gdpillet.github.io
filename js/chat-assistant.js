@@ -73,6 +73,7 @@ class ChatAssistant {
         this.chatBubble.style.display = 'none';
         this.chatWindow.classList.add('open');
         this.chatWindow.setAttribute('aria-hidden', 'false');
+        this.chatWindow.removeAttribute('inert');
         this.inputField?.focus();
         
         // Stop bounce animation permanently and save to sessionStorage
@@ -88,7 +89,9 @@ class ChatAssistant {
         this.isOpen = false;
         this.chatWindow.classList.remove('open');
         this.chatWindow.setAttribute('aria-hidden', 'true');
+        this.chatWindow.setAttribute('inert', '');
         this.chatBubble.style.display = 'flex';
+        this.chatBubble.focus();
     }
 
     addInitialGreeting() {
@@ -263,7 +266,7 @@ class ChatAssistant {
             message.includes('e-mail') ||
             message.includes('correo')) {
             console.log('✓ Email query detected');
-            return `📧 ${context.contact.email}`;
+            return `📧 <a href="mailto:${context.contact.email}">${context.contact.email}</a>`;
         }
 
         // Check for specific phone queries
@@ -271,13 +274,13 @@ class ChatAssistant {
             (message.includes('number') && (message.includes('phone') || message.includes('contact') || message.includes('his') || message.includes('call'))) ||
             (message.includes('call') && (message.includes('how') || message.includes('number')))) {
             console.log('✓ Phone query detected');
-            return `📱 ${context.contact.phone}`;
+            return `📱 <a href="tel:+34615435576">${context.contact.phone}</a>`;
         }
 
         // Check for LinkedIn
         if (message.includes('linkedin') || message.includes('linked in')) {
             console.log('✓ LinkedIn query detected');
-            return `💼 linkedin.com/in/gastonpillet`;
+            return `💼 <a href="https://www.linkedin.com/in/gastonpillet" target="_blank" rel="noopener noreferrer">linkedin.com/in/gastonpillet</a>`;
         }
 
         // General contact request - all info
@@ -286,7 +289,7 @@ class ChatAssistant {
             message.includes('get in touch') ||
             message.includes('connect with')) {
             console.log('✓ General contact query detected');
-            return `You can contact Gastón:\n\n📧 Email: ${context.contact.email}\n📱 Phone: ${context.contact.phone}\n💼 LinkedIn: ${context.contact.linkedin}\n📍 ${context.contact.location}`;
+            return `You can contact Gastón:\n\n📧 Email: <a href="mailto:${context.contact.email}">${context.contact.email}</a>\n📱 Phone: <a href="tel:+34615435576">${context.contact.phone}</a>\n💼 LinkedIn: <a href="https://www.linkedin.com/in/gastonpillet" target="_blank" rel="noopener noreferrer">${context.contact.linkedin}</a>\n📍 ${context.contact.location}`;
         }
 
         // PRIORITY 2: Greeting responses

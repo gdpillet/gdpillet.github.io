@@ -7,7 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design-tokens.css">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Case study on implementing Bring Your Own Encryption Key (BYOEK) encryption functionality for enterprise SaaS platform, balancing security requirements with seamless user experience.">
@@ -54,6 +54,8 @@
             </div>
         </div>
     </header>
+
+    <canvas id="starfield" class="hero-starfield"></canvas>
 
     <main>
     <div class="container">
@@ -112,7 +114,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" data-reveal>
             <h2>Research & Discovery</h2>
             <p><strong>I led a comprehensive discovery process</strong> to understand enterprise security requirements, competitive landscape, and technical constraints before defining the solution approach.</p>
             <p><strong>Analysed encryption functionality</strong> implementations from AWS, Azure, Google Cloud, and other enterprise SaaS platforms. Documented their information architecture, workflow design, configuration complexity, and user feedback patterns.</p>
@@ -135,7 +137,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" data-reveal>
             <h2>The Design Process</h2>
             <p>I defined how encryption functionality would integrate into the existing product ecosystem. <strong>I made critical architectural decisions</strong> about entry points, agent registration flows, data migration paths, and system monitoring placement.</p>
             <div class="image-with-caption">
@@ -180,7 +182,7 @@
                 <p class="image-caption">Interactive prototype framework for BYOEK configuration and validation flows.</p>
             </div>
         </div>
-        <div class="section">
+        <div class="section" data-reveal>
             <h2>Final design</h2>
             <p>The final design included a comprehensive BYOEK setup wizard, a transparent status dashboard, and reusable design system components for technical monitoring.</p>
             <p>The initial plan was to make encryption functionality available to all customers, but this would have complicated the UX for users who didn't need it. <strong>I proposed restricting encryption functionality to Enterprise/Premium tiers</strong>. This allowed us to optimize the core platform for simplicity while providing sophisticated features where needed.</p>
@@ -193,7 +195,7 @@
                 <p class="image-caption">Final BYOEK prototype featuring comprehensive setup wizard and status dashboard.</p>
             </div>
         </div>
-        <div class="section">
+        <div class="section" data-reveal>
             <h2>Results & Impact</h2>
             <p>The BYOEK implementation exceeded adoption targets and became a critical differentiator in enterprise sales:</p>
 
@@ -217,7 +219,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" data-reveal>
             <h2>Reflection</h2>
             <p>This project taught me that <strong>transparency is the key to user trust</strong>. I realized that giving users clear visibility into their security status was <strong>just as vital as the encryption technology itself</strong>. We also learned the value of <strong>strategic trade-offs</strong>: by limiting complex configurations to the Enterprise tier, we <strong>kept the core platform fast and simple</strong> for most users. Finally, <strong>validating early with decision-makers</strong> proved to be a critical business choice, <strong>saving the company months of potential rework</strong>.</p>
         </div>
@@ -233,8 +235,8 @@
             <a href="index.html" class="secondary-btn">← Home</a>
             <a href="ibancar.html" class="secondary-btn">Next Case Study →</a>
         </div>
-        <p class="footer-tagline">Crafting usable enterprise SaaS B2B & B2C experiences.</p>
-        <p>© 2025 Gastón Pillet. All rights reserved.</p>
+        <p class="footer-tagline">Design-driven solutions for enterprise SaaS B2B & B2C experiences.</p>
+        <p>Crafted entirely with <strong>Vibe Coding</strong> energy. © 2025 Gastón Pillet.</p>
     </footer>
     <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>

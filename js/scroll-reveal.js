@@ -48,8 +48,11 @@ class ScrollReveal {
 
 // Initialize on DOM content loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Use more forgiving settings for mobile devices
+    const isMobile = window.innerWidth <= 768;
+    
     new ScrollReveal({
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: isMobile ? 0.05 : 0.1,
+        rootMargin: isMobile ? '0px 0px -30px 0px' : '0px 0px -50px 0px'
     });
 });
