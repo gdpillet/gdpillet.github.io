@@ -620,10 +620,6 @@ ul.bullet-list strong {
     color: var(--color-text-on-dark);
 }
 
-.cta-section .cta-button {
-    /* margin-top: var(--spacing-xl); */
-}
-
 /* Footer */
 footer {
     /* background-color: var(--color-primary-light); */
