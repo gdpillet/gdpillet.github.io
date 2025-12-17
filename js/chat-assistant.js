@@ -256,6 +256,24 @@ class ChatAssistant {
                 phone: "+34 615 435 576",
                 linkedin: "linkedin.com/in/gastonpillet",
                 location: "Málaga, Spain"
+            },
+
+            personal: {
+                pet: "Toto, a Dachshund with an irrational hatred for Amazon drivers and mailmen",
+                music: "Plays bass, guitar, and drums. Into jazz (Herbie Hancock's 'Cantaloupe Island'), Miles Davis, The Doors, Queen, Dire Straits, Red Hot Chili Peppers",
+                drink: "Switched from coffee to green tea after a trip to Japan",
+                tools: "Figma for design, VS Code and Cursor for coding, GitHub for version control, Claude, Lovable, and V0 for AI-assisted workflows",
+                routine: "Green tea → family breakfast → school drop-off → work mode",
+                timezone: "Málaga, Spain - European timezone, fully remote-ready",
+                interests: "Fascinated by AI and how it's shaping human evolution, work, and creativity",
+                sports: "Brown belt in Judo (trained at the Kodokan in Tokyo), practices archery with his wife",
+                food: "Diverse and quality-focused, sushi, pasta, paella, pizza, burgers, BBQ across all cuisines"
+            },
+
+            practical: {
+                availability: "2 weeks notice period",
+                interviewHours: "Available 9 AM to 5 PM",
+                languages: "Spanish (native), English (fluent)"
             }
         };
 
@@ -398,8 +416,70 @@ class ChatAssistant {
             return randomTestimonial;
         }
 
+        // PRIORITY 6: Personal interests and hobbies
+        if (message.includes('dog') || message.includes('pet') || message.includes('toto')) {
+            return `Gastón's dog is Toto, a Dachshund with an irrational hatred for Amazon drivers and mailmen. He doesn't ask questions, he just accepts him. 🐕`;
+        }
+
+        if (message.includes('judo') || message.includes('martial art') || message.includes('sport') || message.includes('training') || message.includes('kodokan')) {
+            return `He's a brown belt in Judo and got to train at the Kodokan in Tokyo, the historic home of Judo itself. It was a full-circle moment during his Japan trip. 🥋`;
+        }
+
+        if (message.includes('archery') || message.includes('bow') || message.includes('arrow')) {
+            return `He practices archery with his wife. For him, it's about focus, literally and metaphorically. Aiming at targets helps sharpen goal-setting skills. 🏹`;
+        }
+
+        if (message.includes('music') || message.includes('instrument') || message.includes('bass') || message.includes('guitar') || message.includes('drums') || message.includes('jazz') || (message.includes('play') && !message.includes('display'))) {
+            return `Gastón plays bass, guitar, and drums. He's into jazz, Herbie Hancock's 'Cantaloupe Island' is a favorite, but his taste ranges from Miles Davis and The Doors to Queen, Dire Straits, and Red Hot Chili Peppers. Pretty much anything good. 🎸`;
+        }
+
+        if (message.includes('food') || message.includes('cuisine') || message.includes('eat') || message.includes('restaurant')) {
+            return `His taste in food mirrors his design approach, diverse and quality-focused. Sushi, pasta, paella, pizza, burgers, BBQ... he appreciates good food across all cuisines. 🍕`;
+        }
+
+        if ((message.includes('outside') && message.includes('work')) || (message.includes('fun') && (message.includes('do') || message.includes('for'))) || (message.includes('hobbies') || message.includes('interests'))) {
+            return `Outside of design, Gastón practices Judo (he's a brown belt and trained at the Kodokan in Tokyo during his Japan trip) and archery with his wife, both help him stay focused and disciplined. He plays bass, guitar, and drums, loves jazz (Herbie Hancock, Miles Davis) but listens to everything from Queen to Red Hot Chili Peppers. And there's Toto, his Dachshund, who has strong feelings about delivery drivers. 🥋🏹🎸`;
+        }
+
+        if (message.includes('coffee') || message.includes('tea') || message.includes('drink') || message.includes('beverage') || (message.includes('fuel') && !message.includes('web'))) {
+            return `Gastón recently made the switch from coffee to green tea after a trip to Japan, a place that left a real mark on him. Now it's green tea every morning. ☕→🍵`;
+        }
+
+        if ((message.includes('tools') || message.includes('software') || message.includes('use')) && (message.includes('design') || message.includes('code') || message.includes('ai'))) {
+            return `His toolkit: Figma for design, VS Code and Cursor for coding, GitHub for version control, and Claude, Lovable, and V0 for AI-assisted workflows. He's deep into the AI-enhanced design space. 🛠️`;
+        }
+
+        // PRIORITY 7: Practical/hiring details
+        if ((message.includes('start') && (message.includes('when') || message.includes('could') || message.includes('can'))) || message.includes('notice') || message.includes('availability')) {
+            return `${context.practical.availability}. Available for interviews ${context.practical.interviewHours}. 📋`;
+        }
+
+        if (message.includes('language') || message.includes('speak') || (message.includes('spanish') && message.includes('english'))) {
+            return `Languages: ${context.practical.languages}. 🌐`;
+        }
+
+        if (message.includes('interview') && !message.includes('availability')) {
+            return `Available for interviews from 9 AM to 5 PM (European timezone). He can start with a 2-week notice period. 📅`;
+        }
+
+        if ((message.includes('excited') && message.includes('about')) || message.includes('currently') || message.includes('interested in') || (message.includes('what') && message.includes('fascinated'))) {
+            return `Right now, he's fascinated by AI, not just the tools, but how it's fundamentally shaping human evolution and the way we work, create, and think. 🚀`;
+        }
+
+        if ((message.includes('japan') || message.includes('travel') || message.includes('trip')) && !message.includes('business trip')) {
+            return `Gastón recently visited Japan, and it left a real mark on him, so much so that he switched from coffee to green tea. The culture, design sensibility, and attention to detail resonated deeply. 🇯🇵`;
+        }
+
+        if ((message.includes('morning') && message.includes('routine')) || message.includes('daily routine') || (message.includes('start') && message.includes('day'))) {
+            return `Morning routine: green tea → family breakfast → school drop-off → work mode. 🌅`;
+        }
+
+        if (message.includes('timezone') || message.includes('time zone') || (message.includes('what time') && message.includes('zone'))) {
+            return `Based in Málaga, Spain. Sunny weather, European timezone (CET/CEST), and fully set up for remote collaboration. 🌍`;
+        }
+
         // Default response for unrecognized queries
-        return "I can help you with information about:\n• Contact details (email, phone, location)\n• Work experience & current role\n• Case studies (Ibancar, Camunda, The Hackett Group)\n• Skills, tools & design process\n\nWhat would you like to know?";
+        return "I can help you with information about:\n• Contact details (email, phone, location)\n• Work experience & current role\n• Case studies (Ibancar, Camunda, The Hackett Group)\n• Skills, tools & design process\n• Personal interests (music, hobbies, routine)\n• Practical details (availability, languages)\n\nWhat would you like to know?";
     }
 }
 
