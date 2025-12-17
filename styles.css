@@ -335,8 +335,8 @@ ul li {
 
 /* Section Styles */
 .section {
-    margin: 0 auto var(--spacing-2xl) auto;
-    padding: 0 var(--spacing-xl);
+    margin: 0 auto var(--spacing-section-gap) auto;
+    padding: var(--spacing-3xl) var(--spacing-xl) 0;
     border-radius: var(--radius-lg);
     width: 100%;
     max-width: 100%;
@@ -345,7 +345,7 @@ ul li {
 
 .section h2 {
     font-size: var(--font-size-5xl);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-title-content);
     color: var(--color-text-primary);
     padding-bottom: 0;
     display: inline-block;
@@ -354,7 +354,7 @@ ul li {
 
 .section h3 {
     font-size: var(--font-size-3xl);
-    margin: var(--spacing-md) 0 var(--spacing-md);
+    margin: var(--spacing-3xl) 0 var(--spacing-xl);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-semibold);
 }
@@ -366,25 +366,33 @@ ul li {
     color: var(--color-text-secondary);
 }
 
+.section .impact-quote,
+p.impact-quote {
+    font-family: 'Dancing Script', cursive !important;
+    font-size: var(--font-size-6xl) !important;
+    font-weight: 600;
+    color: var(--color-primary) !important;
+    text-align: center;
+    margin: var(--spacing-3xl) 0;
+    line-height: 1.2;
+}
+
 /* Metadata */
 .meta {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-3xl);
-    margin: 0 0 var(--spacing-3xl);
-    flex-wrap: wrap;
-    padding: var(--spacing-lg) 0;
+    margin: var(--spacing-3xl) 0 var(--spacing-section-gap);
+    padding: var(--spacing-3xl) 0;
     border-bottom: 1px solid var(--color-border);
 }
 
 .meta-item {
-    flex: 1;
-    min-width: 200px;
     text-align: left;
 }
 
 .meta-item:last-child {
-    flex: 0 1 auto;
-    max-width: 35%;
+    max-width: none;
 }
 
 .meta-item strong {
@@ -411,13 +419,13 @@ ul li {
 /* Problem Box */
 .problem-box {
     color: var(--color-text-secondary);
-    margin: var(--spacing-md) 0 0 0;
+    margin: var(--spacing-xl) 0 0 0;
     border-radius: var(--radius-md);
 }
 
 .problem-box p {
     color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
     line-height: var(--line-height-relaxed);
     font-size: var(--font-size-lg);
 }
@@ -425,7 +433,7 @@ ul li {
 .problem-box h3 {
     color: var(--color-text-secondary);
     line-height: 1.2;
-    margin-bottom: var(--spacing-md);
+    margin: var(--spacing-3xl) 0 var(--spacing-lg) 0;
 }
 
 /* Insight Grid */
@@ -524,12 +532,12 @@ ul li {
 
 /* Bullet Lists */
 ul.bullet-list {
-    margin: var(--spacing-md) 0;
+    margin: var(--spacing-lg) 0 var(--spacing-2xl);
     padding-left: var(--spacing-xl);
 }
 
 ul.bullet-list li {
-    margin: var(--spacing-xs) 0;
+    margin: var(--spacing-sm) 0;
     font-size: var(--font-size-lg);
     line-height: var(--line-height-relaxed);
     color: var(--color-text-secondary);
@@ -558,7 +566,7 @@ ul.bullet-list strong {
 .results {
     display: flex;
     gap: var(--spacing-2xl);
-    margin: var(--spacing-xl) 0;
+    margin: var(--spacing-3xl) 0 var(--spacing-5xl);
     flex-wrap: wrap;
 }
 
@@ -566,17 +574,19 @@ ul.bullet-list strong {
     flex: 1;
     min-width: 250px;
     background: var(--color-primary-light);
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-card-padding);
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: var(--shadow-sm);
 }
 
 .result-card .metric {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-6xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    display: block;
+    line-height: 1.1;
 }
 
 .result-card p {
@@ -590,13 +600,13 @@ ul.bullet-list strong {
     padding: var(--spacing-5xl) var(--spacing-3xl);
     text-align: center;
     color: var(--color-text-on-dark);
-    margin: var(--spacing-md) auto;
+    margin: var(--spacing-section-gap) auto var(--spacing-3xl);
 }
 
 .cta-section h2 {
     font-size: var(--font-size-5xl);
     font-weight: var(--font-weight-bold);
-    margin: 0 0 var(--spacing-2xl);
+    margin: 0 0 var(--spacing-title-content);
     color: var(--color-text-on-dark);
     display: block;
     border: none;
@@ -605,9 +615,13 @@ ul.bullet-list strong {
 
 .cta-section p {
     font-size: var(--font-size-lg);
-    margin: 0;
+    margin: 0 0 var(--spacing-3xl);
     opacity: 0.95;
     color: var(--color-text-on-dark);
+}
+
+.cta-section .cta-button {
+    /* margin-top: var(--spacing-xl); */
 }
 
 /* Footer */
@@ -708,9 +722,9 @@ footer p {
 .case-study-hero {
     background-color: var(--color-bg-secondary);
     color: var(--color-text-primary);
-    padding: var(--spacing-3xl) var(--spacing-lg) 0;
+    padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-4xl);
     text-align: left;
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: 0;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -721,11 +735,10 @@ footer p {
 
 .case-study-hero h1 {
     font-size: var(--font-size-5xl);
-    margin: auto;
+    margin: var(--spacing-2xl) 0 var(--spacing-3xl) 0;
     max-width: 1200px;
     font-weight: var(--font-weight-bold);
     color: var(--color-text-primary);
-    margin-bottom: var(--spacing-2xl);
 }
 
 .case-study-hero p {
@@ -1611,8 +1624,8 @@ html {
 .stat-box.highlight {
     background: var(--gradient-stat-highlight);
     color: var(--color-text-on-dark);
-    padding: var(--spacing-xl);
-    margin: var(--spacing-md) 0;
+    padding: var(--spacing-card-padding) var(--spacing-3xl);
+    margin: var(--spacing-content-visual) 0;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     text-align: center;
@@ -1622,18 +1635,21 @@ html {
 .stat-box.highlight .number {
     color: var(--color-text-on-dark);
     font-size: var(--font-size-7xl);
+    margin-bottom: var(--spacing-md);
 }
 
 .stat-box.highlight .label {
     color: var(--color-text-on-dark);
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-xl);
+    display: block;
 }
 
 .stat-box.highlight p {
     color: var(--color-text-on-dark);
-    margin-top: var(--spacing-lg);
-    font-size: var(--font-size-md);
+    margin-top: var(--spacing-xl);
+    font-size: var(--font-size-lg);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -1675,7 +1691,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: var(--spacing-2xl) 0;
+    margin: var(--spacing-content-visual) 0;
     max-width: 100%;
     overflow: hidden;
 }
@@ -1685,13 +1701,13 @@ html {
     font-style: italic;
     color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
-    margin-top: 0;
+    margin-top: var(--spacing-lg);
     max-width: 100%;
 }
 
 /* Case Study specific image margins */
 .section .image-with-caption {
-    margin-bottom: var(--spacing-xl);
+    margin: var(--spacing-content-visual) 0;
     max-width: 100%;
 }
 

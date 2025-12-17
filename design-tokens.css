@@ -99,6 +99,12 @@
     --spacing-5xl: 210px;      /* 130 × 1.618 ≈ 210px */
     --spacing-6xl: 150px;      /* Keep for backwards compatibility */
     
+    /* Visual Hierarchy Spacing Tokens */
+    --spacing-section-gap: 140px;        /* 120-160px: Entre secciones principales */
+    --spacing-title-content: 28px;       /* 24-32px: Entre título y párrafo */
+    --spacing-content-visual: 56px;      /* 48-64px: Entre párrafo e imagen */
+    --spacing-card-padding: 50px;        /* 40-60px: Padding interno de cards */
+    
     /* ========================================
        BORDER RADIUS TOKENS
        ======================================== */

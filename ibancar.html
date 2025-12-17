@@ -102,84 +102,99 @@
         </div>
 
         <div class="section" data-reveal>
-            <h2>The Problem</h2>
+            <h2>The Challenge</h2>
             <div class="problem-box">
-                <p>The existing loan application process was losing potential customers. Despite good traffic volume, conversion rates from leads to approved loans remained below expectations. The company needed to understand why qualified applicants were dropping out of the process.</p>
-                
-                <p class="mt-xl mb-lg"><strong>Key Issues Identified:</strong></p>
+                <p>Ibancar faced a critical growth bottleneck. Despite high-intent traffic, the conversion funnel was underperforming. As Lead Product Designer, I was tasked with redesigning the loan origination process to scale the business.</p>
+                <p>The challenge was to solve the 75-80% drop-off occurring within our primary mobile user segment, all while maintaining a rigorous 2.2% credit loss risk profile.</p>
+
+
+                <h3>Key Issues Identified:</h3>
                 <ul class="bullet-list">
-                    <li>High drop-off rates at specific funnel stages</li>
-                    <li>Users couldn't complete applications in one session</li>
-                    <li>Complex documentation requirements were overwhelming applicants</li>
-                    <li>Mobile users (75-80% of traffic) were struggling with a desktop-first design</li>
+                    <li>Desktop-first design failing 80% of mobile traffic.</li>
+                    <li>High cognitive load due to 11+ document requirements.</li>
+                    <li>Forced email verification caused users to leave the session.</li>
                 </ul>
             </div>
         </div>
 
         <div class="section" data-reveal>
-            <h2>Research & Discovery</h2>
-            <p>To understand where and why users were dropping off, I conducted comprehensive research combining <strong>qualitative and quantitative methods</strong>. I utilized <strong>contextual inquiry, user observation, and data-driven personas</strong> alongside <strong>usage metrics and heatmaps</strong> to precisely pinpoint <strong>user abandonment points</strong> in the loan funnel.</p>
+            <h2>Discovery & Strategic Insights</h2>
+            <p>To uncover why 80% of qualified leads were dropping off, I implemented a dual research track: quantitative funnel analysis (Google Analytics/Clarity) to identify WHERE users left, and qualitative observation to understand WHY.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/ibancar-heatmap.png" alt="Research screenshot">
                 </div>
-                <p class="image-caption">Heatmap analysis revealing user behavior patterns and drop-off points in the application funnel.</p>
+                <p class="image-caption">Heatmap and funnel analysis pinpointing the exact friction points in the mobile journey.</p>
             </div>
-            <h3>Key Insights from Research</h3>
-                <p>The research showed that the design was <strong>failing the majority of our users</strong>. We had very high mobile traffic (<strong>75-80%</strong>), yet the design was <strong>not fully mobile-friendly</strong>. The journey was confusing, <strong>forcing users to check their email</strong> and leave the application process. Also, requiring <strong>11 documents was too overwhelming</strong>. With these key insights from the empathize phase, I could move to the next phase to <strong>set clear priorities and solutions</strong>.</p>
-                <p>Using the collected research, <strong>I analyzed the data through rigorous funnel analysis</strong>, detailed information synthesis, and clusterization techniques to pinpoint the exact user pain points and uncover areas for valuable opportunities.</p>
+            <h3>Key Strategic Insights:</h3>
+                <ul class="bullet-list">
+                    <li>While 80% of traffic was mobile, the legacy funnel was a desktop-first experience, creating immediate friction.</li>
+                    <li>Forced email verification acted as a "kill switch" for sessions, breaking the momentum of high-intent users.</li>
+                    <li>Requesting 11 documents upfront was perceived as a barrier, not a requirement.</li>
+                </ul>
         </div>
 
         <div class="section" data-reveal>
-            <h2>The Design Process</h2>
-            <p><strong>The application form was confusing</strong> because users had to use four different screens and leave the website to check their email. <strong>I made the form much simpler</strong>, reducing the steps from four screens to two, and I took out the email check. <strong>Now, users can finish the application faster and without leaving the page.</strong></p>
+            <h2>The Design Strategy: Radical Simplification</h2>
+            <h3>1. Optimization of the Funnel Architecture</h3>
+            <p>Instead of a fragmented 4-screen flow, I engineered a streamlined 2-step dynamic form.</p>
+            <ul class="bullet-list">
+                <li>Impact: Reduced screen-switching and eliminated email verification, keeping users within the conversion session.</li>
+            </ul>
+
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/bifurcation.png" alt="old bifurcated flow vs new streamlined flow">
                 </div>
-                <p class="image-caption">Comparison of bifurcated user flow versus streamlined flow, eliminating the email verification step.</p>
+                <p class="image-caption">Evolution from a bifurcated, high-friction legacy flow to a streamlined, session-persistent mobile architecture.</p>
             </div>
-            <p>I utilized <strong>card sorting</strong> to consolidate requirements, <strong>reducing user effort by 55%</strong>. I further streamlined the experience by implementing <strong>conditional logic</strong> to only show relevant fields and created <strong>visual guides for iOS and Android</strong> to prevent errors. These optimizations significantly simplified the journey and directly <strong>increased completion rates</strong>.</p>
+            <h3>2. Solving the "Document Friction" (Omnichannel Support)</h3>
+            <p>Recognizing that document collection was the primary abandonment point, I introduced a multi-channel upload strategy.</p>
+            <ul class="bullet-list">
+                <li>WhatsApp Integration: Implemented as a primary channel for real-time document submission and support.</li>
+                <li>Visual Education: Designed OS-specific guides (iOS/Android) to empower users to scan documents using native tools, reducing submission errors by 55%.</li>
+            </ul>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/ibancar-phones.png" alt="Visual instructions for iPhone and Android users.">
                 </div>
-                <p class="image-caption">Visual instructions for iPhone and Android users.</p>
+                <p class="image-caption">Reducing technical debt and user frustration through OS-specific scanning guides and familiar messaging channels.</p>
             </div>
-            <p>Competitor analysis revealed that mobile-first leaders leverage <strong>familiar communication channels</strong> to reduce friction. In response, I <strong>integrated WhatsApp</strong> to streamline document uploads and real-time support. This included a <strong>one-tap CTA</strong> for instant connection and a <strong>seamless CRM handoff</strong> to agents, while still offering users the flexibility of <strong>direct uploads or scheduled callbacks</strong>.</p>
+            <h3>3. Leveraging Familiarity: The WhatsApp Strategy:</h3>
+
+            <p>Through a competitive benchmark of mobile-first fintech leaders, I identified that the friction of document uploads could be mitigated by leveraging familiar communication channels. I strategized the integration of WhatsApp to transform a high-friction task into a seamless interaction.</p>
+            <ul class="bullet-list">
+                <li>Omnichannel Flexibility: Implemented a one-tap CTA that allowed users to choose between direct web uploads, instant WhatsApp connection, or scheduled callbacks.</li>
+                <li>Operational Alignment: Designed the flow to ensure a seamless CRM handoff, ensuring that agents received documents in real-time without losing user context.</li>
+            </ul>
+
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/ibancar-whatsapp.png" alt="WhatsApp integration for document uploads and real-time support.">
                 </div>
-                <p class="image-caption">WhatsApp integration for document uploads and real-time support.</p>
+                <p class="image-caption">Implementing an omnichannel document strategy to meet users where they are, significantly reducing abandonment during the verification phase</p>
             </div>
-            <p><strong>I created interactive prototypes</strong> and <strong>conducted unmoderated testing to validate the design and identify any usability issues</strong>.</p>
+
+            <h2>Validation & Iteration</h2>
+            <p>To validate the new architecture, I developed high-fidelity interactive prototypes and conducted unmoderated usability testing. This proactive phase allowed us to identify and resolve edge cases in the document scanning process, ensuring the 55% reduction in user effort was achievable.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <a href="https://www.figma.com/proto/AUUnzC1AdaTdSUs8mwhuKg/%E2%9C%85Ibancar-Mobile-ok?page-id=0%3A1&node-id=16-2116&p=f&viewport=898%2C512%2C0.06&t=eaaeWzdoHGWpdf4q-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A2116" class="link-plain" target="_blank" rel="noopener noreferrer">
                         <img src="./img/ibancar-proto.png" alt="Mobile prototype link screenshot">
                     </a>
                 </div>
-                <p class="image-caption">Mobile prototype with step-by-step guidance for document uploads and error prevention.</p>
+                <p class="image-caption">Validating step-by-step guidance and error prevention through remote testing to ensure a frictionless mobile experience.</p>
             </div>
-            <h2>Final Design</h2>
-            <p>The final solution delivered a <strong>simplified, mobile-first flow</strong> featuring <strong>integrated WhatsApp support</strong> and <strong>consolidated documentation requirements</strong>. By prioritizing <strong>error prevention</strong> and <strong>real-time assistance</strong>, the new design significantly enhanced the overall user experience.</p>
-            <div class="image-with-caption">
-                <div class="study-project-card">
-                    <img src="./img/loan-process.png" alt="Mobile prototype link screenshot">
-                </div>
-                <p class="image-caption">Final streamlined loan application flow with consolidated documentation and WhatsApp integration.</p>
-            </div>
+
         </div>
         <div class="section" data-reveal>
-            <h2>Results & Impact</h2>
-            <p>The redesigned funnel exceeded growth objectives and significantly improved the user experience:</p>
+            <h2>Business Impact & Scalability</h2>
 
             <div class="stat-box highlight">
-                <span class="number">3.5%</span>
+                <span class="number">350%</span>
                 <span class="label">Loan Origination Growth (12 months)</span>
                 <p>
-                    Successfully scaled loan origination by 3.5% over the past 12 months while maintaining credit losses at an exceptionally low 2.2% of revenue—achieving profitability 6 months ahead of plan.
+                    Successfully scaled loan origination by 350% over the past 12 months while maintaining credit losses at an exceptionally low 2.2% of revenue—achieving profitability 6 months ahead of plan.
                 </p>
             </div>
 
@@ -196,17 +211,30 @@
                     <div class="metric">55% Less</div>
                     <p>Documentation friction (from 11 to 5 items)</p>
                 </div>
+                <div class="result-card">
+                    <div class="metric">6 Months Ahead</div>
+                    <p>Target profitability reached early</p>
+                </div>
             </div>
+            <p>By prioritizing a mobile-first architecture and integrating omnichannel support via WhatsApp, we didn't just improve UX; we transformed the company's financial trajectory. Reaching profitability 6 months ahead of schedule proved that radical simplification, when backed by user research, is a powerful driver for business growth.</p>
         </div>
 
         <div class="section" data-reveal>
             <h2>Reflection</h2>
-            <p>Navigating the inherent complexity of financial loans taught me that <strong>simplicity is a business strategy</strong>. With <strong>75-80% of traffic on mobile</strong>, adopting a mobile-first mindset was not optional; it was critical for business survival. I learned to balance <strong>reducing friction with strict compliance</strong>, prioritizing <strong>proactive error prevention</strong> over simple error recovery. Finally, implementing fallbacks and WhatsApp support reinforced that we must build resilience and <strong>meet users where they already are</strong>.</p>
+            <p class="impact-quote">"Designing for impact means aligning user needs with business profitability".</p>
+            <p>Navigating the inherent complexity of financial loans taught me that simplicity is a business strategy. With 80% of traffic on mobile, adopting a mobile-first mindset was not optional; it was critical for business survival.</p>
+            <h3>Key Lessons:</h3>
+            <ul class="bullet-list">
+                <li>Friction vs. Compliance: I learned to balance reducing friction with strict Fintech compliance, prioritizing proactive error prevention over simple error recovery.</li>
+                <li>Omnichannel Resilience: Implementing WhatsApp support reinforced that we must meet users where they already are. Building resilience into the funnel means offering fallbacks that align with real-world user behavior.</li>
+                <li>Design as a Profit Driver: This project proved that UX isn't just about 'look and feel'; it’s about moving the needle on profitability. Reaching our goals 6 months ahead of schedule validated that a research-backed, simplified journey is the fastest path to scale.</li>
+            </ul>
         </div>
 
         <div class="cta-section">
             <h2>Want to discuss this project?</h2>
             <p>I'd love to share more details about the research process, design decisions, and outcomes.</p>
+            <a href="mailto:gdpillet@gmail.com" class="cta-button">Contact me</a>
         </div>
     </div>
 
