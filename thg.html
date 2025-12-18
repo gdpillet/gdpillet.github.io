@@ -60,7 +60,7 @@
     <main>
     <div class="container">
         <section class="case-study-hero" data-reveal>
-            <div class="case-study-tag">CASE STUDY 03</div>
+            <div class="case-study-tag">CASE STUDY 02</div>
             <h1>How I redesigned The Hackett Group's finance dashboard to help senior executives compare 15,000+ metrics efficiently and make data-driven strategic decisions</h1>
             <div class="meta-pills-row">
                 <div class="category-pills">
@@ -85,7 +85,7 @@
             </div>
             <div class="meta-item">
                 <h4>Impact</h4>
-                <ul><li>60% Reduction in Time to Insight</li><li>15,000+ Metrics made accessible</li><li>4x Faster Metric switching and comparison workflow</li></ul>
+                <ul><li>60% Faster Time-to-Insight</li><li>4x Workflow Efficiency</li><li>Enterprise Scale (15k+ Metrics)</li></ul>
             </div>
             <div class="meta-item">
                 <h4>Tools</h4>
@@ -99,74 +99,89 @@
         </div>
 
         <div class="section" data-reveal>
-            <h2>The Problem</h2>
+            <h2>The Challenge</h2>
             <div class="problem-box">
-                <p><strong>Senior finance executives were drowning in data but starving for insights.</strong> Despite having access to comprehensive benchmarking data across 15,000+ metrics, users couldn't efficiently compare performance indicators, switch between metric panels, or identify actionable insights within reasonable timeframes.</p>
-                
-                <p class="mt-xl mb-lg"><strong>Key Issues Identified:</strong></p>
-                <ul class="bullet-list">
-                    <li>No efficient way to compare multiple metrics simultaneously</li>
-                    <li>Slow navigation between different metric panels disrupted the analysis flow</li>
-                    <li>Senior team members lacked time to explore complex interfaces</li>
-                    <li>Data overload prevented users from identifying strategic opportunities</li>
-                    <li>No clear visual hierarchy to prioritize critical performance indicators</li>
-                </ul>
+                <p>The Hackett Group, a leader in enterprise benchmarking, faced a data accessibility paradox: despite possessing a rich repository of 15,000+ financial metrics, their legacy platform made extracting value nearly impossible.
+
+                As Lead Designer, I was tasked with transforming a dense data warehouse into an actionable SaaS intelligence tool. The challenge was to reduce severe cognitive overload for C-suite executives who needed to compare complex performance indicators against industry peers in real-time.</p>
             </div>
 
         </div>
 
         <div class="section" data-reveal>
-            <h2>Research & Discovery</h2>
-            <p>Working within an agile environment for The Hackett Group client, <strong>I conducted comprehensive user research</strong> to understand the complex needs of finance executives and data collectors.</p>
-            <p><strong>I conducted stakeholder interviews with the CTO and CEO</strong>, followed by extensive user interviews with finance team members and data collectors to understand their workflows, pain points, and time constraints.</p>
+            <h2>Discovery & Strategic Insights</h2>
+            <p>I facilitated high-level stakeholder interviews with the CTO and CEO, alongside deep-dive sessions with data collectors, to understand the friction in the "Data-to-Decision" lifecycle.</p>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/thg-collaboration.png" alt="The Hackett Group Collaboration">
                 </div>
                 <p class="image-caption">Collaborative research and stakeholder interviews with The Hackett Group finance teams.</p>
             </div>
-            <h3>Key Insights from Research</h3>
-            <p>The redesign addressed four main challenges. First, <strong>Time-Constrained Users</strong> (like senior executives) needed <strong>fast answers</strong> without getting lost in menus. Second, users required better <strong>Comparative Analysis</strong> tools to view metrics <strong>side-by-side</strong> for decision-making. The system also had to handle <strong>Complex User Roles</strong>, giving specific access to different teams. Finally, we needed to add context to the data, helping users focus on the critical <strong>Excellence Quadrant metrics</strong>.</p>
+            <h3>Key Strategic Insights:</h3>
+            <ul class="bullet-list">
+                <li>Users could not process 15,000 metrics linearly. The system lacked a mechanism to filter noise and highlight strategic opportunities.</li>
+                <li>Raw numbers were meaningless without immediate comparison. Executives needed to see data side-by-side with industry benchmarks to understand their standing.</li>
+                <li>The platform needed to serve two distinct personas: Data Collectors (who need granularity) and Executives (who need high-level synthesis).</li>
+            </ul>
         </div>
 
         <div class="section" data-reveal>
-            <h2>The Design Process</h2>
-            <p><strong>I created user journeys and user flows mapping core functionalities</strong>, and developed user personas for different roles (Data Collectors, Finance Managers, Executives) <strong>to understand</strong> how each would complete tasks and <strong>what information they needed</strong> along the way.</p>
-            <p><strong>I facilitated collaborative sessions with the 10-member team</strong> using Whimsical boards <strong>to create flowcharts and user stories</strong>. Rapidly iterated on concepts through sketching, wireframing, and functional mockups in Figma.</p>
-            <div class="image-with-caption">
-                <div class="study-project-card">
-                    <img src="./img/thg-lifecycle1.png" alt="The Hackett Group User Journey">
-                </div>
-                <p class="image-caption">User journey mapping core functionalities and roles within The Hackett Group platform.</p>
-            </div>
-            <p>Because users struggled to compare data in the old interface, I designed a <strong>flexible grid dashboard</strong> that displays multiple metric panels <strong>side-by-side</strong>. I also added a <strong>quick-switch feature</strong>, allowing users to toggle between different views instantly <strong>without losing their context</strong>.</p>
+            <h2>Design Strategy & Implementation</h2>
+            <p>To solve this, I moved away from static reporting to a <strong>Dynamic Comparative Architecture</strong>:</p>
+            
+            <div data-reveal>
+                <h3>1. The Flexible Grid System</h3>
+                <p>I architected a multi-panel dashboard that allows users to evaluate metric panels side-by-side.</p>
+                <ul class="bullet-list">
+                    <li><strong>Strategic Value:</strong> This enabled simultaneous comparison of up to 4 distinct KPIs, replacing the need to open multiple browser tabs and fragment focus.</li>
+                </ul>
+                
 
-            <div class="insight-grid mb-3xl">
-                <div class="insight-card">
-                    <h4>Grid-Based Layout</h4>
-                    <p>Flexible panel system allowing 2-4 metrics displayed simultaneously for direct comparison</p>
-                </div>
-                <div class="insight-card">
-                    <h4>Quick-Switch Navigation</h4>
-                    <p>One-click metric switching without page reloads or lost context</p>
-                </div>
-                <div class="insight-card">
-                    <h4>Customizable Views</h4>
-                    <p>Users could save and recall preferred metric combinations for recurring analysis</p>
+                <div class="image-with-caption">
+                    <div class="study-project-card">
+                        <img src="./img/thg-finance.png" alt="The Hackett Group Quantum Leap Dashboards">
+                    </div>
+                    <p class="image-caption">Final benchmarking dashboard featuring multi-panel comparison and excellence indicators.</p>
                 </div>
             </div>
-            <p>With 15,000+ metrics, users struggled to find the data that mattered most. I established a clear <strong>visual hierarchy</strong> using <strong>color-coded tiers</strong> and <strong>trend arrows</strong> for quick scanning. I also designed specific indicators for the <strong>Excellence Quadrant</strong>, helping users instantly focus on <strong>high-impact areas</strong> where they outperform their peers.</p>
-            <div class="image-with-caption">
-                <div class="study-project-card">
-                    <img src="./img/thg-style-guide.png" alt="The Hackett Group Design System">
+            <div data-reveal>
+                <h3>2. Context-Preserving Navigation</h3>
+                <p>Designed a "Quick-Switch" navigation pattern that allows users to toggle between different metric views instantly without reloading the page.</p>
+                <ul class="bullet-list">
+                    <li><strong>Outcome:</strong> Eliminated friction in the analysis flow, keeping the user in a state of "flow" while exploring complex datasets.</li>
+                </ul>
+                <div class="image-with-caption">
+                    <div class="study-project-card">
+                        <img src="./img/thg-lifecycle1.png" alt="The Hackett Group User Journey">
+                    </div>
+                    <p class="image-caption">User journey mapping core functionalities and roles within The Hackett Group platform.</p>
                 </div>
-                <p class="image-caption">Design system and visual hierarchy for The Hackett Group benchmarking dashboard.</p>
             </div>
-            <p>Raw numbers lack meaning without context, so I integrated <strong>industry benchmarks</strong> directly into each panel. This shows users exactly how they rank against <strong>peers</strong> and <strong>best-in-class performers</strong>. During development, we realized new users needed help. I designed an <strong>onboarding tour</strong> to guide them. I also proposed and built a <strong>Presentation Mode</strong>, allowing executives to turn dashboard data into <strong>slide-based reports</strong> instantly.</p>
-            <br />
+            <div data-reveal>
+                <h3>3. Visual Hierarchy for "Excellence"</h3>
+                <p>Implemented a strict data visualization framework using color-coded tiers to highlight the "Excellence Quadrant."</p>
+                <ul class="bullet-list">
+                    <li><strong>Outcome:</strong> Executives can now scan thousands of data points and instantly identify high-impact areas where they outperform peers.</li>
+                </ul>
+                <div class="image-with-caption">
+                    <div class="study-project-card">
+                        <img src="./img/thg-style-guide.png" alt="The Hackett Group Design System">
+                    </div>
+                    <p class="image-caption">Design system and visual hierarchy for The Hackett Group benchmarking dashboard.</p>
+                </div>
+            </div>
+            <div data-reveal>
+                <h3>4. Bridging SaaS to Boardroom</h3>
+                <p>Recognizing that executives often screenshot dashboards for slides, I designed a native Presentation Mode. This feature auto-formats live dashboard data into slide-ready reports, bridging the gap between the SaaS tool and executive meetings.</p>
+            </div>  
+        </div>
 
-            <p>I conducted <strong>A/B testing</strong> and used <strong>Microsoft Clarity heatmaps</strong> to see exactly how users interacted with the dashboard. I also brought <strong>dynamic mockups</strong> to client meetings to test and refine our decisions in real-time. This process ensured the final design met the client's needs within the <strong>proposed timeframe</strong>.</p>
-
+        <div class="section" data-reveal>
+            <h2>Validation & Iteration</h2>
+            <p>We utilized Microsoft Clarity heatmaps and A/B testing to validate navigation paths.</p>
+            <ul class="bullet-list">
+                <li><strong>Outcome:</strong> Heatmaps revealed that users were ignoring deep-level menus. We iterated to surface critical "Excellence" metrics to the top-level hierarchy, validating the need for speed over depth for the Executive persona.</li>
+            </ul>
             <div class="image-with-caption">
                 <div class="study-project-card">
                     <img src="./img/thg-heatmap.png" alt="Microsoft Clarity Heatmap">
@@ -176,43 +191,36 @@
         </div>
 
         <div class="section" data-reveal>
-            <h2>Final Design</h2>
-            <p>The redesign transformed how executives work by allowing them to identify strategic opportunities in <strong>real-time</strong>. Clear indicators for the <strong>Excellence Quadrant</strong> help teams focus on high-impact areas, while improved <strong>data democratization</strong> ensures users only see the information relevant to their specific role. I also added built-in <strong>presentation capabilities</strong> to save hours of manual reporting, all built on a <strong>scalable design system</strong> that allows the platform to grow easily.</p>
-            <div class="image-with-caption">
-                <div class="study-project-card">
-                    <img src="./img/thg-finance.png" alt="The Hackett Group Quantum Leap Dashboards">
-                </div>
-                <p class="image-caption">Final benchmarking dashboard featuring multi-panel comparison and excellence indicators.</p>
-            </div>
-        </div>
-        
-        <div class="section" data-reveal>
-            <h2>Results & Impact</h2>
-            <p>The redesigned benchmarking platform transformed how finance executives accessed and utilized performance data:</p>
+            <h2>Business Impact & Scale</h2>
+            <p>The redesign successfully transformed a data repository into a decision engine:</p>
 
             <div class="stat-box highlight">
-                <span class="number">60%</span>
-                <span class="label">Reduction in Time to Insight</span>
+                <span class="number">60% Reduction in Time-to-Insight</span>
                 <p>
-                    Senior executives reduced time spent on metric analysis from hours to minutes, enabling faster strategic decision-making and improved competitive positioning.
+                   Senior executives reduced analysis time from hours to minutes, enabling faster competitive positioning.
                 </p>
             </div>
 
             <div class="results">
                 <div class="result-card">
-                    <div class="metric">15,000+</div>
-                    <p>Metrics made accessible through intuitive navigation and comparison tools</p>
+                    <div class="metric">15,000+ Metrics Accessible</div>
+                    <p>Successfully organized a massive dataset into an intuitive navigation structure without overwhelming the user.</p>
                 </div>
                 <div class="result-card">
-                    <div class="metric">4x Faster</div>
-                    <p>Metric switching and comparison workflow compared to the legacy system</p>
+                    <div class="metric">4x Faster Workflow</div>
+                    <p>Metric switching and comparison tasks are now performed 400% faster compared to the legacy system.</p>
                 </div>
             </div>
         </div>
 
         <div class="section" data-reveal>
             <h2>Reflection</h2>
-            <p>Designing this <strong>data-intensive platform</strong> taught me that <strong>context is king</strong>; numbers are only useful when compared to benchmarks. We created a <strong>flexible architecture</strong> to support everyone from Data Collectors to Executives. Using <strong>Figma</strong> allowed us to catch mistakes early, while the <strong>Agile methodology</strong> gave us the freedom to adapt the timeline to include high-value features.</p>
+            <p></p>
+            <ul class="bullet-list">
+                <li><strong>Scalability First:</strong> Designing for 15 metrics is easy; designing for 15,000 requires a robust, scalable system architecture, not just UI components.</li>
+                <li><strong>The "So What?" Factor:</strong> In B2B analytics, displaying data is not enough. The interface must answer "So what?" by visually emphasizing benchmarks and Excellence Quadrants.</li>
+                <li><strong>Operational Empathy:</strong> Building the Presentation Mode taught me that we must design for the user's entire workflow, even the parts that happen outside our software (like board meetings).</li>
+            </ul>
         </div>
 
         <div class="cta-section">
