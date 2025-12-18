@@ -959,6 +959,9 @@ footer p {
         min-height: 10px;
         object-fit: cover;
     }
+    .result-card .metric-md {
+        font-size: var(--font-size-5xl);
+    }
 }
 
 /* ===================================
@@ -2443,6 +2446,9 @@ html {
 
     .chat-message-text {
         max-width: 80%;
+    }
+    .stat-box.highlight {
+        padding: var(--spacing-card-padding) var(--spacing-md);
     }
 }
 
