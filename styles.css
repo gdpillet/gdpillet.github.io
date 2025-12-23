@@ -2192,9 +2192,9 @@ html {
 }
 
 /* Reveal from bottom animation - disabled for pixelate effect */
-[data-reveal][data-reveal-from="left"] {
-    /* Animation handled by pixelate-reveal.js */
-}
+/* [data-reveal][data-reveal-from="left"] {
+    Animation handled by pixelate-reveal.js
+} */
 
 [data-reveal][data-reveal-from="left"].revealed {
     opacity: 1;
