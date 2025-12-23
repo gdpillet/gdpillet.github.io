@@ -1012,7 +1012,7 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
-        padding: var(--spacing-3xl) var(--spacing-2xl);
+        padding: var(--spacing-3xl) var(--spacing-lg);
     }
     .hero h1 {
         font-size: var(--font-size-5xl);
@@ -1722,6 +1722,13 @@ html {
     color: var(--color-text-primary);
 }
 
+/* Expertise grid - Desktop (2 columns) */
+.expertise-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-3xl);
+}
+
 /* Ensure the expertise section looks good on mobile */
 @media (max-width: 768px) {
     .skills-focus-area-list,
@@ -1737,11 +1744,6 @@ html {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
     }
-}
-.expertise-content-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-3xl);
 }
 
 /* Stat Box - Highlight Variant */
