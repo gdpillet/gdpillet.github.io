@@ -305,6 +305,20 @@ body:has(.hero) .logo.animate-in {
                 transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     transition-delay: 0.6s;
 }
+
+/* Theme toggle button animation */
+.theme-toggle {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.theme-toggle.animate-in {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-delay: 0.4s;
+}
 /* ===== End Hero Load Animations ===== */
 
 .section-cta-container {
@@ -1142,6 +1156,30 @@ footer p {
     color: var(--color-text-primary);
     text-decoration: none;
     padding: var(--spacing-sm) 0;
+    /* Estado inicial de animación */
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Animated state */
+.nav-link.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Stagger delay para cada nav-link */
+.nav-link:nth-child(1).animate-in {
+    transition-delay: 0.1s;
+}
+
+.nav-link:nth-child(2).animate-in {
+    transition-delay: 0.2s;
+}
+
+.nav-link:nth-child(3).animate-in {
+    transition-delay: 0.3s;
 }
 
 /* Estado hover */
@@ -2151,6 +2189,16 @@ html {
 
 [data-reveal][data-reveal-delay="5"] {
     transition-delay: 0.5s;
+}
+
+/* Reveal from bottom animation - disabled for pixelate effect */
+[data-reveal][data-reveal-from="left"] {
+    /* Animation handled by pixelate-reveal.js */
+}
+
+[data-reveal][data-reveal-from="left"].revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ==========================================

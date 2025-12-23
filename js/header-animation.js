@@ -1,6 +1,6 @@
 /**
  * Header Load Animations
- * Anima el logo y header-logo en todas las páginas
+ * Anima el logo, header-logo y elementos del menú en todas las páginas
  */
 
 (function() {
@@ -20,6 +20,13 @@
             
             if (headerLogo) headerLogo.classList.add('animate-in');
             if (logo) logo.classList.add('animate-in');
+            
+            // Animar elementos del menú
+            const navLinks = document.querySelectorAll('.nav-link');
+            const themeToggle = document.querySelector('.theme-toggle');
+            
+            navLinks.forEach(link => link.classList.add('animate-in'));
+            if (themeToggle) themeToggle.classList.add('animate-in');
         }, 100);
     }
 })();

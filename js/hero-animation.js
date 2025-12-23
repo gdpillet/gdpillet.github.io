@@ -37,6 +37,13 @@
             const chatBubble = document.querySelector('.chat-bubble');
             
             if (chatBubble) chatBubble.classList.add('animate-in');
+            
+            // Animar elementos del menú
+            const navLinks = document.querySelectorAll('.nav-link');
+            const themeToggle = document.querySelector('.theme-toggle');
+            
+            navLinks.forEach(link => link.classList.add('animate-in'));
+            if (themeToggle) themeToggle.classList.add('animate-in');
         }, 100);
     }
 })();
