@@ -1011,11 +1011,14 @@ footer p {
 }
 /* Responsive Design */
 @media (max-width: 768px) {
+    h2 {
+        font-size: var(--font-size-4xl);
+    }
     .hero {
         padding: var(--spacing-3xl) var(--spacing-lg);
     }
     .hero h1 {
-        font-size: var(--font-size-5xl);
+        font-size: var(--font-size-4xl);
     }
     .hero p {
         font-size: var(--font-size-md);
@@ -1032,6 +1035,9 @@ footer p {
     ul.hero-highlights {
         padding: 0 0 0 var(--spacing-lg);
     }
+    .project-content h3 {
+        font-size: var(--font-size-3xl);
+    }    
     .grid-projects {
         grid-template-columns: 1fr;
     }
@@ -1072,6 +1078,9 @@ footer p {
         display: block;
         min-height: 10px;
         object-fit: cover;
+    }
+    .case-study-hero h1 {
+        font-size: var(--font-size-4xl);
     }
     .result-card .metric-md {
         font-size: var(--font-size-5xl);
@@ -1518,7 +1527,8 @@ body.menu-open {
 }
 
 .expertise-category h3 {
-    margin: 0 0 var(--spacing-xl);
+    font-size: var(--font-size-3xl);
+    margin: 0 0 var(--spacing-xs);
     color: var(--color-primary);
 }
 
@@ -1681,6 +1691,24 @@ html {
         width: 20px;
         height: 20px;
     }
+    .expertise-category h3 {
+        font-size: var(--font-size-2xl);
+    }
+    .expertise-category h4 {
+        font-size: var(--font-size-xl);
+    }
+    .page-intro h1 {
+        font-size: var(--font-size-4xl);
+    }
+    .cta-section {
+        padding: var(--spacing-xl);
+    }
+    .section h2 {
+        font-size: var(--font-size-4xl);
+    }
+    .section h3 {
+        font-size: var(--font-size-2xl);
+    }
 }
 
 /* =================================
@@ -1781,7 +1809,17 @@ html {
     margin-right: auto;
     opacity: 0.95;
 }
-
+@media (max-width: 768px) {
+    .stat-box.highlight .number {
+        font-size: var(--font-size-4xl);
+    }
+    .result-card {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    .result-card .metric {
+        font-size: var(--font-size-4xl);
+    }
+}
 /* Utility Classes */
 .margin-top-20 {
     margin-top: var(--spacing-xl);
