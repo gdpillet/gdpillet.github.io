@@ -222,7 +222,7 @@ class ChatAssistant {
 
         // Portfolio Data Context
         const context = {
-            experience: "7+ years in Product Design, 15 years in technology",
+            experience: "8+ years in Product Design, 15 years in technology",
             currentRole: "Senior Product Designer at Camunda since October 2022",
             location: "Málaga, Spain - Remote work",
             specialization: "SaaS, B2B platforms, AI-driven design, workflow automation",
@@ -266,7 +266,7 @@ class ChatAssistant {
                 routine: "Green tea → family breakfast → school drop-off → work mode",
                 timezone: "Málaga, Spain - European timezone, fully remote-ready",
                 interests: "Fascinated by AI and how it's shaping human evolution, work, and creativity",
-                sports: "Brown belt in Judo (trained at the Kodokan in Tokyo), practices archery with his wife",
+                sports: "Black belt in Judo (trained at the Kodokan in Tokyo), practices archery with his wife",
                 food: "Diverse and quality-focused, sushi, pasta, paella, pizza, burgers, BBQ across all cuisines"
             },
 
@@ -422,7 +422,7 @@ class ChatAssistant {
         }
 
         if (message.includes('judo') || message.includes('martial art') || message.includes('sport') || message.includes('training') || message.includes('kodokan')) {
-            return `He's a brown belt in Judo and got to train at the Kodokan in Tokyo, the historic home of Judo itself. It was a full-circle moment during his Japan trip. 🥋`;
+            return `He's a black belt in Judo and got to train at the Kodokan in Tokyo, the historic home of Judo itself. It was a full-circle moment during his Japan trip. 🥋`;
         }
 
         if (message.includes('archery') || message.includes('bow') || message.includes('arrow')) {
@@ -438,7 +438,7 @@ class ChatAssistant {
         }
 
         if ((message.includes('outside') && message.includes('work')) || (message.includes('fun') && (message.includes('do') || message.includes('for'))) || (message.includes('hobbies') || message.includes('interests'))) {
-            return `Outside of design, Gastón practices Judo (he's a brown belt and trained at the Kodokan in Tokyo during his Japan trip) and archery with his wife, both help him stay focused and disciplined. He plays bass, guitar, and drums, loves jazz (Herbie Hancock, Miles Davis) but listens to everything from Queen to Red Hot Chili Peppers. And there's Toto, his Dachshund, who has strong feelings about delivery drivers. 🥋🏹🎸`;
+            return `Outside of design, Gastón practices Judo (he's a black belt and trained at the Kodokan in Tokyo during his Japan trip) and archery with his wife, both help him stay focused and disciplined. He plays bass, guitar, and drums, loves jazz (Herbie Hancock, Miles Davis) but listens to everything from Queen to Red Hot Chili Peppers. And there's Toto, his Dachshund, who has strong feelings about delivery drivers. 🥋🏹🎸`;
         }
 
         if (message.includes('coffee') || message.includes('tea') || message.includes('drink') || message.includes('beverage') || (message.includes('fuel') && !message.includes('web'))) {
