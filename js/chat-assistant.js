@@ -95,7 +95,7 @@ class ChatAssistant {
     }
 
     addInitialGreeting() {
-        const greeting = "Hi 👋 I'm Gastón's AI assistant crafted by him through vibe coding.\n\n I can help you explore:\n• His work experience & skills\n• Case studies (Ibancar, Camunda, The Hackett Group)\n• Contact information (email, phone, location)\n• Design process & tools\n\nWhat would you like to know?";
+        const greeting = "Hi 👋 I'm Gastón's AI assistant.\n\n I can help you explore:\n• His work experience & skills\n• Case studies (Ibancar, Camunda, The Hackett Group)\n• Contact information (email, phone, location)\n• Design process & tools\n\nWhat would you like to know?";
         this.addMessage(greeting, 'bot');
     }
 
